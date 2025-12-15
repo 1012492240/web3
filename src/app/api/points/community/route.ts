@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { txHash, dev_address, dev_referralCode, dev_type } = body;
 
-    if (!txHash) {
+    if (!txHash || txHash) {
       return NextResponse.json(
         { error: ErrorCode.INVALID_TRANSACTION },
         { status: 400 }
