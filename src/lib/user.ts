@@ -193,6 +193,7 @@ export async function updateSuperiorNodeReward({
           }
         });
       }
+      await cleanUserTotalPerformance(currentSuperiorAddress)
       console.log(`superior: ${currentSuperiorAddress}, superiorRewardRate:${superiorRewardRate}, rewardAmount:${rewardAmount}`);
     }
 
