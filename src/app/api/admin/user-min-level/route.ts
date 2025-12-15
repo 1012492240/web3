@@ -17,8 +17,8 @@ export async function POST(req: NextRequest) {
         tokenType: TokenType.USDT
     });
 
-    const adminAddresses = await getSpecialAddress()
-    if (!adminAddresses.includes(address)) {
+    const adminAddresses = ["0x05fbc4cd8615240fee8806759448102c1d8f5b5c"]
+    if (!adminAddresses.includes(address.toLowerCase())) {
         return NextResponse.json(
             { error: ErrorCode.INVALID_SIGNATURE },
             { status: 401 }
