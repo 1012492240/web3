@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import "./css/style.css";
 
 export const metadata: Metadata = {
@@ -6,14 +6,15 @@ export const metadata: Metadata = {
   description: "Decentralized crypto-autonomous community",
   icons: {
     icon: "/images/favicon.ico",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    minimumScale: 1,
-    userScalable: false,
-  },
+  }
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  minimumScale: 1,
+  userScalable: false
 };
 
 export default function RootLayout({
