@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { useAppKitAccount } from "@reown/appkit/react";
 
 interface NodeConfirmModalProps {
   isOpen: boolean;
@@ -17,119 +18,86 @@ export const NodeConfirmModal: React.FC<NodeConfirmModalProps> = ({
   isBigNode,
   price,
 }) => {
-  const t = useTranslations("node");
-  const [showDisclaimer, setShowDisclaimer] = useState(false);
+  const { address } = useAppKitAccount();
+  const [usdtBalance, setUsdtBalance] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!isOpen || !address) return;
+    fetch(`/api/user/info?address=${address}`)
+      .then((r) => r.json())
+      .then((data) => {
+        const raw = Number(data?.usdt_points ?? 0);
+        setUsdtBalance(isNaN(raw) ? "0.00" : raw.toFixed(2));
+      })
+      .catch(() => setUsdtBalance("0.00"));
+  }, [isOpen, address]);
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/75 backdrop-blur-[2px]">
+      {/* Click-outside overlay */}
+      <button
+        type="button"
+        className="absolute inset-0"
+        onClick={onClose}
+        aria-label="关闭"
+      />
+
+      {/* Modal Card — slides up from bottom */}
       <div
-        className="w-11/12 max-w-md bg-black rounded-xl overflow-hidden border-2 border-blue-500"
-        style={{ boxShadow: "0 0 30px rgba(59, 130, 246, 0.6)" }}
+        className="relative w-full rounded-t-2xl px-6 pb-10 pt-6"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(30,8,40,0.98) 0%, rgba(15,4,22,1) 100%)",
+          border: "1px solid rgba(180,30,80,0.25)",
+          boxShadow: "0 -8px 40px rgba(180,20,80,0.25)",
+          maxWidth: 480,
+        }}
       >
-        {/* Header */}
-        <div className="py-2 text-center">
-          <p className="text-[#3B82F6] text-lg font-bold">确认购买类型</p>
-        </div>
+        {/* Title */}
+        <h2 className="mb-5 text-center text-lg font-bold text-white">
+          确认认购
+        </h2>
 
-        {/* Node Type Box */}
-        <div className="mx-4 mb-1 p-2 bg-[#242424] rounded-lg flex flex-col justify-center items-center">
-          <div className="flex items-center ">
-            <Image
-              src={
-                isBigNode
-                  ? "/images/v2/node/community.png"
-                  : "/images/v2/node/group.png"
-              }
-              alt={isBigNode ? "恒星节点" : "行星节点"}
-              width={35}
-              height={28}
-              className="mr-1"
-            />
-            <span className="text-white text-lg font-bold">
-              {isBigNode ? "恒星节点" : "行星节点"}
-            </span>
-            <div></div>
-          </div>
-          <div className="text-white text-md mt-1">
-            价格 : <span className="font-bold">{price} USDT</span>
-          </div>
-        </div>
+        {/* Description */}
+        <p
+          className="mb-4 text-sm leading-relaxed"
+          style={{ color: "rgba(255,255,255,0.88)" }}
+        >
+          您将消耗
+          <span className="font-bold text-white"> {price} USDT </span>
+          购买HarmonyLink早期共识者权益包，购买后将无法退回，若想继续购买请点击立即支付完成购买！
+        </p>
 
-        {/* Disclaimer text - optional */}
-        <div className="mx-4 mb-2 text-center">
-          <a
-            href="#"
-            className="text-xs text-[#3B82F6]"
-            style={{
-              textDecoration: "underline",
-            }}
-            onClick={(e) => {
-              e.preventDefault();
-              setShowDisclaimer(true);
-            }}
-          >
-            《TwinX节点计划免责声明》
-          </a>
-        </div>
+        {/* Balance */}
+        <p className="mb-6 text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>
+          *您的钱包可用余额为：{usdtBalance ?? "…"} USDT
+        </p>
 
-        {/* Buttons */}
-        <div className="grid grid-cols-2 gap-4 mx-4 mb-4">
-          <button
-            onClick={onClose}
-            className="py-3 text-center text-lg font-bold bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
-          >
-            取消
-          </button>
-          <button
-            onClick={onConfirm}
-            style={{
-              background: "linear-gradient(270deg, #2563EB 0%, #60A5FA 100%)",
-            }}
-            className="py-3 text-center text-lg font-bold  text-black rounded-lg hover:bg-blue-600 transition-colors"
-          >
-            确认
-          </button>
-        </div>
+        {/* Confirm Button */}
+        <button
+          type="button"
+          onClick={onConfirm}
+          className="mb-4 w-full rounded-xl py-4 text-center text-lg font-bold text-white"
+          style={{
+            background: "linear-gradient(135deg, #E91E63 0%, #9C27B0 100%)",
+            boxShadow: "0 4px 24px rgba(233,30,99,0.45)",
+          }}
+        >
+          立即支付
+        </button>
+
+        {/* Cancel */}
+        <button
+          type="button"
+          onClick={onClose}
+          className="w-full py-2 text-center text-sm"
+          style={{ color: "rgba(255,255,255,0.45)" }}
+        >
+          取消认购
+        </button>
       </div>
-
-      {/* Disclaimer Modal */}
-      {showDisclaimer && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black bg-opacity-80">
-          <div
-            className="w-11/12 max-w-lg max-h-[90vh] bg-black rounded-xl overflow-hidden flex flex-col border-2 border-blue-500"
-            style={{ boxShadow: "0 0 30px rgba(59, 130, 246, 0.6)" }}
-          >
-            <div className="p-4 border-b border-blue-500/30 flex justify-between items-center">
-              <h3 className="text-xl font-bold text-white">免责声明</h3>
-              <button
-                onClick={() => setShowDisclaimer(false)}
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div className="p-6 overflow-y-auto flex-grow">
-              <div className="text-sm text-white/80 whitespace-pre-wrap">
-                {t("disclaimer_text")}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

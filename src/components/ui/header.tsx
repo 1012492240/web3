@@ -71,7 +71,7 @@ export default function Header() {
   }, [address, refFromUrl]);
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-30 bg-[#005d54] shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-30 bg-[#005d54] shadow-sm">
       <div className="mx-auto max-w-[1900px] px-4 sm:px-6 lg:px-8 2xl:px-16">
         <div className="grid h-14 grid-cols-[1fr_auto_1fr] items-center gap-2">
           <div className="flex min-w-0 justify-start">

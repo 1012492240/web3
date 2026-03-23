@@ -846,61 +846,129 @@ const NodeMarket: React.FC<NodeMarketProps> = ({
   userInfo,
   handleCommunity,
 }) => {
-  const t = useTranslations("node");
+  const tSub = useTranslations("subscribe_page");
+  const { address } = useAppKitAccount();
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
 
   if (!nodeData) {
     return <LoadingSpinner />;
   }
 
-  return (
-    <div className="flex flex-col h-full">
-      <div className="flex-1 pb-16 pt-28">
-        <div className="p-4 bg-black text-white">
-          {/* <h1 className="text-2xl font-bold mb-6 flex items-center">
-            <div className="w-1 h-6 bg-gradient-to-b from-gradient-purple-0% to-gradient-purple-100% mr-2"></div>
-            {t('market_title')}
-          </h1> */}
-          {/* 行星节点 (Planet Node) */}
-          <NodeCard
-            price={nodeData.groupNode.price_display.toString()}
-            present={`${nodeData.groupNode.leftNum}`}
-            total={nodeData.groupNode.maxNum.toString()}
-            referralReward={`${new decimal(nodeData.groupNode.referralReward)
-              .mul(100)
-              .toString()}% USDT`}
-            dividendsReward={`${new decimal(0.1).mul(100).toString()}% ${t(
-              "total_fee"
-            )}`}
-            rewardCap={`${new decimal(
-              nodeData.groupNode.dynamicRewardCap
-            ).toString()} USDT`}
-            nodeType={UserType.GROUP}
-            hasSuperior={!!userInfo?.superior}
-            handleCommunity={handleCommunity}
-          />
+  const price = nodeData.communityNode.price_display.toString();
+  const leftNum = nodeData.communityNode.leftNum;
 
-          {/* 恒星节点 (Star Node) */}
-          <NodeCard
-            price={nodeData.communityNode.price_display.toString()}
-            present={`${nodeData.communityNode.leftNum}`}
-            total={nodeData.communityNode.maxNum.toString()}
-            referralReward={`${new decimal(
-              nodeData.communityNode.referralReward
-            )
-              .mul(100)
-              .toString()}% USDT`}
-            dividendsReward={`${new decimal(0.1).mul(100).toString()}% ${t(
-              "total_fee"
-            )}`}
-            rewardCap={`${new decimal(
-              nodeData.communityNode.dynamicRewardCap
-            ).toString()} USDT`}
-            nodeType={UserType.COMMUNITY}
-            hasSuperior={!!userInfo?.superior}
-            handleCommunity={handleCommunity}
-          />
+  const benefits = [
+    tSub("benefit_1"),
+    tSub("benefit_2"),
+    tSub("benefit_3"),
+    tSub("benefit_4"),
+    tSub("benefit_5"),
+  ];
+
+  return (
+    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* Background glow */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 28%, rgba(140, 15, 75, 0.55) 0%, rgba(0,0,0,0) 62%)",
+        }}
+      />
+
+      <div className="relative pb-16 pt-28 px-5">
+        {/* Title */}
+        <h1 className="mb-6 text-center text-xl font-bold text-white">
+          {tSub("title")}
+        </h1>
+
+        {/* Content Card */}
+        <div
+          className="mb-5 rounded-xl p-4 text-xs leading-relaxed"
+          style={{
+            background:
+              "linear-gradient(145deg, rgba(100, 12, 50, 0.72) 0%, rgba(38, 6, 42, 0.82) 100%)",
+            border: "1px solid rgba(210, 45, 95, 0.38)",
+          }}
+        >
+          <p className="mb-4" style={{ color: "rgba(255,255,255,0.88)" }}>
+            {tSub("intro")}
+          </p>
+
+          <div className="space-y-2.5">
+            {benefits.map((benefit, i) => (
+              <div key={i} className="flex gap-2">
+                <span className="shrink-0 font-bold text-white">{i + 1}</span>
+                <p style={{ color: "rgba(255,255,255,0.88)" }}>{benefit}</p>
+              </div>
+            ))}
+          </div>
+
+          <p
+            className="mt-4 text-[11px]"
+            style={{ color: "rgba(255,255,255,0.58)" }}
+          >
+            {tSub("note")}
+          </p>
         </div>
+
+        {/* Urgency */}
+        <p
+          className="mb-1 text-center text-sm font-semibold"
+          style={{ color: "#f0507a" }}
+        >
+          {tSub("urgency")}
+        </p>
+        <p
+          className="mb-6 text-center text-xs"
+          style={{ color: "rgba(255,255,255,0.68)" }}
+        >
+          {tSub("price_line")}
+        </p>
+
+        {/* CTA Button */}
+        <button
+          onClick={() => {
+            if (!address) {
+              triggerWalletConnect();
+              return;
+            }
+            setShowConfirmModal(true);
+          }}
+          disabled={leftNum === 0}
+          className="mb-8 w-full rounded-xl py-4 text-center text-lg font-bold text-white"
+          style={{
+            background:
+              leftNum === 0
+                ? "rgba(80,80,80,0.5)"
+                : "linear-gradient(135deg, #E91E63 0%, #9C27B0 100%)",
+            boxShadow:
+              leftNum === 0 ? "none" : "0 4px 24px rgba(233,30,99,0.4)",
+          }}
+        >
+          {tSub("cta")}
+        </button>
+
+        {/* Footer Notes */}
+        <p className="mb-3 text-xs" style={{ color: "rgba(255,255,255,0.58)" }}>
+          {tSub("footer_1")}
+        </p>
+        <p className="text-xs" style={{ color: "rgba(255,255,255,0.58)" }}>
+          {tSub("footer_2")}
+        </p>
       </div>
+
+      {/* Confirm Modal — calls COMMUNITY (isBigNode=true) */}
+      <NodeConfirmModal
+        isOpen={showConfirmModal}
+        onClose={() => setShowConfirmModal(false)}
+        onConfirm={() => {
+          setShowConfirmModal(false);
+          handleCommunity(true, "");
+        }}
+        isBigNode={true}
+        price={price}
+      />
     </div>
   );
 };

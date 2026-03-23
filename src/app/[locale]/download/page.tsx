@@ -27,20 +27,20 @@ export default function DownloadPage() {
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
         <path
           d="M12 4v12"
-          stroke={disabled ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.65)"}
+          stroke={disabled ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.95)"}
           strokeWidth="2"
           strokeLinecap="round"
         />
         <path
           d="M8 11l4 4 4-4"
-          stroke={disabled ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.65)"}
+          stroke={disabled ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.95)"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M5 20h14"
-          stroke={disabled ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.65)"}
+          stroke={disabled ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.95)"}
           strokeWidth="2"
           strokeLinecap="round"
         />
@@ -111,13 +111,11 @@ export default function DownloadPage() {
   }) {
     return (
       <section id={id} className="scroll-mt-[160px]">
-        <div className="flex justify-center">
-          <div className="w-[320px] rounded-md border border-[#21c7a2]/40 bg-[#0c6d60]/70 px-4 py-2 text-center shadow-[0_12px_30px_-18px_rgba(0,0,0,0.9)]">
-            <h2 className="text-sm font-semibold tracking-wide text-white/90">{title}</h2>
-          </div>
+        <div className="w-full rounded-md border border-[#21c7a2]/40 bg-[#0c6d60]/70 px-4 py-1.5 text-left shadow-[0_12px_30px_-18px_rgba(0,0,0,0.9)]">
+          <h2 className="text-sm font-semibold tracking-wide text-white/95">{title}</h2>
         </div>
 
-        <ul className="mt-5 space-y-3">
+        <ul className="mt-3 space-y-2">
           {items.map((it) => {
             const disabled = !it.href;
             return (
@@ -135,7 +133,7 @@ export default function DownloadPage() {
                 >
                   <div className="flex min-w-0 items-center gap-4">
                     <FileIcon type={it.type} />
-                    <span className="truncate text-sm font-medium text-white/90">{it.label}</span>
+                    <span className="truncate text-sm font-medium text-white">{it.label}</span>
                   </div>
 
                   <div className="flex shrink-0 items-center justify-center pr-2 transition-colors group-hover:text-white/90">
@@ -176,25 +174,17 @@ export default function DownloadPage() {
         }}
       />
 
-      <div className="relative mx-auto flex w-full max-w-[420px] flex-col items-center">
-        <h1 className="text-center text-[20px] font-semibold tracking-wider text-white/95">
+      <div className="relative flex w-full flex-col items-start">
+        <h1 className="text-left text-[20px] font-semibold tracking-wider text-white/95">
           HarmonyLink资料下载
         </h1>
 
-        <div className="mt-8 w-full space-y-10">
-          <div className="w-full">
-            <Section id="business" title="商业计划书下载" items={businessItems} />
-          </div>
-
-          <div className="w-full">
-            <div className="mb-6 h-px w-full bg-white/10" />
-            <Section id="whitepaper" title="白皮书下载" items={whitepaperItems} />
-          </div>
-
-          <div className="w-full">
-            <div className="mb-6 h-px w-full bg-white/10" />
-            <Section id="app" title="其它资料下载" items={otherItems} />
-          </div>
+        <div className="mt-8 w-[40vw] min-w-[280px] max-w-[360px] space-y-8">
+          <Section id="business" title="商业计划书下载" items={businessItems} />
+          <div className="h-px w-full bg-white/10" />
+          <Section id="whitepaper" title="白皮书下载" items={whitepaperItems} />
+          <div className="h-px w-full bg-white/10" />
+          <Section id="app" title="其它资料下载" items={otherItems} />
         </div>
       </div>
     </div>
