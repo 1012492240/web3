@@ -462,369 +462,346 @@ function MyContent() {
     },
   ];
 
+  // Benefits data for the grid
+  const benefitsData = [
+    {
+      key: "activate_tier",
+      label: t("activate_tier") || "激活越高套餐账户",
+      icon: "☆",
+    },
+    {
+      key: "verifier_identity",
+      label: t("verifier_identity") || "鉴定者身份",
+      icon: "◉",
+    },
+    {
+      key: "trading_dividends",
+      label: t("trading_dividends") || "交易税点分红",
+      icon: "$",
+    },
+    {
+      key: "team_level_t2",
+      label: t("team_level_t2") || "团队级别T2",
+      icon: "T2",
+    },
+    {
+      key: "ad_revenue",
+      label: t("ad_revenue") || "广告收益分红",
+      icon: "◈",
+    },
+  ];
+
   return (
     <div className="flex flex-col h-full">
-      {/* Main content area with bottom padding for nav and top padding for header */}
+      {/* Main content area */}
       <div className="flex-1 pb-16 pt-24">
         <div className="p-4 bg-black text-white">
-          {/* Header Section with Logo and Identity */}
-          <div className="mb-2">
-            <div className="flex items-center justify-between">
-              {/* Logo */}
-              <div
-                className="w-16 h-16  flex items-center justify-center"
-                style={{
-                  border: "1px solid #3B82F6",
-                  borderRadius: "4px",
-                }}
-              >
-                <Image
-                  src="/images/v2/my/avatar.png"
-                  alt="Logo"
-                  width={36}
-                  height={40}
-                />
-              </div>
+          {/* Page Title */}
+          <div className="text-center mb-6">
+            <h1 className="text-xl font-bold" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+              {t("personal_center") || "个人中心"}
+            </h1>
+          </div>
 
-              {/* Identity and Community Info */}
-              <div className="flex-1 ml-4">
+          {/* User Info Section with Purple Gradient Background */}
+          <div
+            className="relative rounded-2xl mb-8 p-6"
+            style={{
+              background: "linear-gradient(135deg, rgba(100, 50, 150, 0.4) 0%, rgba(50, 20, 100, 0.3) 100%)",
+              border: "1px solid rgba(150, 100, 200, 0.3)",
+              boxShadow: "0 0 40px rgba(150, 100, 200, 0.2)",
+            }}
+          >
+            {/* Decorative circles background */}
+            <div
+              className="absolute inset-0 rounded-2xl pointer-events-none"
+              style={{
+                background: "radial-gradient(circle at 20% 50%, rgba(100, 50, 150, 0.15) 0%, transparent 50%)",
+              }}
+            />
+
+            <div className="relative flex gap-6">
+              {/* Left: Avatar with glow effect */}
+              <div className="flex-shrink-0 flex justify-center">
                 <div
-                  className="flex items-center mb-2 "
+                  className="relative flex items-center justify-center"
                   style={{
-                    border: "1px solid #3B82F6",
-                    borderRadius: "4px",
-                    letterSpacing: "0.5em",
-                    padding: "2px 8px",
-                    width: "fit-content",
+                    width: "120px",
+                    height: "120px",
                   }}
                 >
-                  <span className="text-white text-sm font-medium">
-                    {t("identity")}:
-                  </span>
-                  <span
-                    className="text-sm"
+                  {/* Glow effect circles */}
+                  <div
+                    className="absolute inset-0 rounded-full"
                     style={{
-                      color: "rgba(255, 255, 255, 0.65)",
+                      border: "3px dashed rgba(255, 100, 150, 0.4)",
+                      animation: "spin 20s linear infinite",
+                    }}
+                  />
+                  <div
+                    className="absolute inset-4 rounded-full"
+                    style={{
+                      border: "2px solid rgba(100, 150, 255, 0.3)",
+                    }}
+                  />
+                  {/* Avatar */}
+                  <div
+                    className="relative flex items-center justify-center"
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      border: "2px solid #E91E63",
+                      borderRadius: "8px",
+                      background: "rgba(233, 30, 99, 0.1)",
                     }}
                   >
+                    <Image
+                      src="/images/v2/my/avatar.png"
+                      alt="Logo"
+                      width={50}
+                      height={56}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: User Info */}
+              <div className="flex-1 flex flex-col justify-center space-y-4">
+                {/* Wallet Address */}
+                <div>
+                  <p className="text-xs mb-1" style={{ color: "rgba(255, 255, 255, 0.6)" }}>
+                    {t("my_address") || "钱包地址"}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-mono text-white font-bold tracking-wider">
+                      {address ? address : "0x088888888888888888888888"}
+                    </span>
+                    <button
+                      onClick={handleCopy}
+                      className="p-1 rounded"
+                      style={{
+                        background: "rgba(255, 255, 255, 0.1)",
+                        border: "1px solid rgba(255, 255, 255, 0.2)",
+                      }}
+                    >
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M8 3a1 1 0 011-1h2a1 1 0 011 1v1H8V3z" />
+                        <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2h-1V2a2 2 0 00-2-2H8a2 2 0 00-2 2v1H6z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Identity */}
+                <div>
+                  <p className="text-xs mb-1" style={{ color: "rgba(255, 255, 255, 0.6)" }}>
+                    {t("identity") || "身份"}
+                  </p>
+                  <p className="text-sm text-white">
                     {userInfo?.type == UserType.GALAXY ? 
                       (userInfo?.interest_active ? t("activated") : t("unactivated")) : ""
                     }
                     {roleTypes.find((item) => item.type === userInfo?.type)
                       ?.label || tUserType(UserType.NORMAL)}
-                  </span>
-                  <Image
-                    src={
-                      userInfo?.type == UserType.GALAXY ? 
-                        (userInfo?.interest_active ? "/images/v2/my/GALAXY-node.png" : "/images/v2/my/GALAXY-unactive-node.png") :
-                        roleTypes.find((item) => item.type === userInfo?.type)
-                          ?.icon || "/images/v2/my/GALAXY-unactive-node.png"
-                    }
-                    alt="Role"
-                    width={30}
-                    height={24}
-                  />
+                  </p>
                 </div>
+
+                {/* Invite Link */}
+                <div>
+                  <p className="text-xs mb-1" style={{ color: "rgba(255, 255, 255, 0.6)" }}>
+                    {t("my_recommender") || "邀请链接"}
+                  </p>
+                  <div
+                    className="flex items-center gap-3 cursor-pointer p-2 rounded"
+                    style={{ background: "rgba(255, 255, 255, 0.05)" }}
+                    onClick={() => {
+                      if (!address) {
+                        triggerWalletConnect();
+                        return;
+                      }
+                      if (userInfo?.superior_referral_code) {
+                        handleCopy();
+                        return;
+                      }
+                      setRecommenderError("");
+                      setShowRecommenderModal(true);
+                    }}
+                  >
+                    <span className="text-xs text-white">
+                      www.harmony.Link{address ? formatAddress(address).replace("...", "") : "X088..."}
+                    </span>
+                    <svg
+                      className="w-4 h-4 text-white flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M8 3a1 1 0 011-1h2a1 1 0 011 1v1H8V3z" />
+                      <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2h-1V2a2 2 0 00-2-2H8a2 2 0 00-2 2v1H6z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* My Benefits Section */}
+          <div className="mb-8">
+            <h2 className="text-lg font-bold mb-4 text-white">
+              {t("my_benefits") || "我的权益"}
+            </h2>
+
+            {/* Grid Layout: 2 columns on first row */}
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              {benefitsData.slice(0, 2).map((benefit) => (
                 <div
-                  className="flex items-center"
+                  key={benefit.key}
+                  className="rounded-xl p-4 flex flex-col items-center justify-center text-center"
                   style={{
-                    border: "1px solid #3B82F6",
-                    borderRadius: "4px",
-                    letterSpacing: "0.5em",
-                    padding: "2px 8px",
-                    width: "fit-content",
+                    background: "linear-gradient(135deg, #E91E63 0%, #C2185B 100%)",
+                    minHeight: "120px",
+                    boxShadow: "0 4px 15px rgba(233, 30, 99, 0.3)",
                   }}
                 >
-                  <span className="text-white text-sm font-medium">
-                    {t("community_level")}: L{userInfo?.level || 0}
-                  </span>
-                  <Image
-                    src={`/images/badges/v${userInfo?.level || 0}.svg`}
-                    alt="Level"
-                    width={20}
-                    height={20}
-                    className="mr-2"
-                  />
+                  <p className="text-4xl mb-2 font-bold" style={{ color: "#fff" }}>
+                    {benefit.icon}
+                  </p>
+                  <p className="text-xs font-semibold text-white leading-tight">
+                    {benefit.label}
+                  </p>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Wallet Address Section */}
-          <BorderCustom
-            className="flex items-center justify-between mb-2"
-            style={{
-              border: "1px solid rgba(59, 130, 246, 0.3)",
-              padding: "2px 0",
-              fontSize: "10px",
-              color: "rgba(255, 255, 255, 0.8)",
-            }}
-          >
-            <div
-              className="flex-1 flex flex-col px-2"
-              style={{
-                color: "rgba(255, 255, 255, 0.74)",
-              }}
-            >
-              <span className=" text-sm font-medium">{t("my_address")}</span>
-              <span className=" text-sm font-mono max-w-[260px] truncate">
-                {address
-                  ? address
-                  : "0x21286acbcd2b7c8f5bfd7ffbf8587elf09571e38"}
-              </span>
+              ))}
             </div>
 
-            <div
-              onClick={handleCopy}
-              className="w-[50px] h-[42px] text-xs text-white  flex items-center justify-center "
-              style={{
-                borderLeft: "1px solid rgba(59, 130, 246, 0.3)",
-              }}
-            >
-              {t("copy")}
+            {/* Grid Layout: 2 columns on second row */}
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              {benefitsData.slice(2, 4).map((benefit) => (
+                <div
+                  key={benefit.key}
+                  className="rounded-xl p-4 flex flex-col items-center justify-center text-center"
+                  style={{
+                    background: "linear-gradient(135deg, #E91E63 0%, #9C27B0 100%)",
+                    minHeight: "120px",
+                    boxShadow: "0 4px 15px rgba(233, 30, 99, 0.3)",
+                  }}
+                >
+                  <p className="text-4xl mb-2 font-bold" style={{ color: "#fff" }}>
+                    {benefit.icon}
+                  </p>
+                  <p className="text-xs font-semibold text-white leading-tight">
+                    {benefit.label}
+                  </p>
+                </div>
+              ))}
             </div>
-          </BorderCustom>
 
-          {/* Balance Section */}
-          <BorderCustom
-            className="mb-2 py-2"
-            style={{
-              border: "1px solid rgba(59, 130, 246, 0.3)",
-              color: "rgba(255, 255, 255, 0.8)",
-            }}
-          >
-            <div className="flex ">
-              {/* TXT Balance Card */}
+            {/* Grid Layout: 1 column on third row */}
+            <div className="flex gap-4">
               <div
+                className="flex-1 rounded-xl p-4 flex flex-col items-center justify-center text-center"
                 style={{
-                  borderRight: "1px solid rgba(59, 130, 246, 0.3)",
-                }}
-                className="flex-1 flex flex-col items-center justify-center"
-              >
-                <div className="flex items-center justify-center ">
-                  <Image
-                    src="/images/v2/my/avatar.png"
-                    alt="TXT"
-                    width={14}
-                    height={16}
-                  />
-                  <span className="text-white text-sm font-semibold ml-1">
-                    TXT
-                  </span>
-                </div>
-                <div className="text-lg font-bold text-white">
-                  {loading ? (
-                    <div className="flex justify-center">
-                      <LoadingSpinner size="sm" />
-                    </div>
-                  ) : (
-                    truncateDecimals(userInfo?.token_points || 0)
-                  )}
-                </div>
-              </div>
-
-              {/* USDT Balance Card */}
-              <div className="flex-1 flex flex-col items-center justify-center">
-                <div className="flex items-center justify-center ">
-                  <Image
-                    src="/images/v2/my/usdt.png"
-                    alt="USDT"
-                    width={14}
-                    height={14}
-                  />
-                  <span className="text-white text-sm font-semibold ml-1">
-                    USDT
-                  </span>
-                </div>
-                <div className="text-lg font-bold text-white">
-                  {loading ? (
-                    <div className="flex justify-center">
-                      <LoadingSpinner size="sm" />
-                    </div>
-                  ) : (
-                    truncateDecimals(userInfo?.usdt_points || 0)
-                  )}
-                </div>
-              </div>
-            </div>
-          </BorderCustom>
-
-          {/* Action Buttons Section */}
-          <div className="mb-3">
-            <div className="flex flex-col space-y-3">
-              {/* Top Row */}
-              <div className="flex space-x-3">
-                <button
-                  onClick={() => {
-                    if (!address) {
-                      triggerWalletConnect();
-                      return;
-                    }
-                    setWithdrawError("");
-                    setTransferMode("cashout");
-                    setShowCashOutModal(true);
-                  }}
-                  className="flex-1  text-black py-3 px-4 rounded-lg font-bold text-center"
-                  style={{
-                    WebkitTapHighlightColor: "transparent",
-                    background:
-                      "linear-gradient(270deg, #2563EB 0%, #60A5FA 100%)",
-                  }}
-                >
-                  {t("cash_out")}
-                </button>
-                <button
-                  onClick={() => {
-                    if (!address) {
-                      triggerWalletConnect();
-                      return;
-                    }
-                    setWithdrawError("");
-                    setShowFlashSwapModal(true);
-                  }}
-                  className="flex-1 text-black py-3 px-4 rounded-lg font-bold text-center"
-                  style={{
-                    WebkitTapHighlightColor: "transparent",
-                    background:
-                      "linear-gradient(270deg, #2563EB 0%, #60A5FA 100%)",
-                  }}
-                >
-                  {t("flash_swap")}
-                </button>
-              </div>
-              {/* Bottom Row */}
-              <button
-                onClick={() => {
-                  if (!address) {
-                    triggerWalletConnect();
-                    console.log("address", address);
-                    return;
-                  }
-                  setShowQRModal(true);
-                  console.log("1address", address);
-
-                  // Add invite friends functionality here
-                }}
-                className="w-full text-black py-3 px-4 rounded-lg font-bold text-center flex items-center justify-center"
-                style={{
-                  WebkitTapHighlightColor: "transparent",
-                  background:
-                    "linear-gradient(270deg, #2563EB 0%, #60A5FA 100%)",
+                  background: "linear-gradient(135deg, #FF1744 0%, #C2185B 100%)",
+                  minHeight: "120px",
+                  boxShadow: "0 4px 15px rgba(233, 30, 99, 0.3)",
                 }}
               >
-                <Image
-                  src="/images/v2/my/invite.png"
-                  alt="Invite"
-                  width={17}
-                  height={14}
-                  className="mr-1"
-                />
-                {t("invite_friends")}
-              </button>
+                <p className="text-4xl mb-2 font-bold" style={{ color: "#fff" }}>
+                  {benefitsData[4].icon}
+                </p>
+                <p className="text-xs font-semibold text-white leading-tight">
+                  {benefitsData[4].label}
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Navigation List Section */}
-          {/* My Inviter with Input Field */}
-          <div
-            className="flex justify-between items-center py-3 border-b  cursor-pointer"
-            style={{
-              borderBottom: "1px solid rgba(59, 130, 246, 0.5)",
-            }}
-            onClick={() => {
-              if (!address) {
-                triggerWalletConnect();
-                return;
-              }
-              // 如果有推荐人代码，不弹窗
-              if (userInfo?.superior_referral_code) {
-                return;
-              }
-              setRecommenderError("");
-              setShowRecommenderModal(true);
-            }}
-          >
-            <span className="text-white text-sm font-semibold">
-              {t("my_recommender")}
-            </span>
-            <div
-              className="flex items-center"
-              style={{
-                border: "1px solid rgba(59, 130, 246, 0.3)",
-              }}
-            >
-              <input
-                type="text"
-                placeholder={
-                  userInfo?.superior_referral_code
-                    ? userInfo.superior_referral_code
-                    : t("enter_invite_code")
-                }
-                value={userInfo?.superior_referral_code || ""}
-                className="bg-transparent text-white text-sm border-none outline-none w-24 text-right py-1"
-                readOnly
-              />
-            </div>
+          {/* Tips Section */}
+          <div className="mb-8 p-6 rounded-xl" style={{ background: "rgba(0, 0, 0, 0.5)" }}>
+            <h3 className="text-center text-sm font-semibold mb-3 text-white">
+              {t("tips") || "温馨提示"}
+            </h3>
+            <p className="text-xs leading-relaxed" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+              参与早期认购的用户请注意保管好认购钱包的私钥，并确保账户安全。HarmonyLink APP上线后，只需导入认购户的私钥到APP中即可获得早期认购的全部权益及收益！
+            </p>
+            <br />
+            <p className="text-xs leading-relaxed" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+              HarmonyLink APP 正式上线前3天将面向参与早期认购用户开放，正式上线前隐于内容创造期，每位用户每天日发布11条视频内容，内容不可包含政治立场、黄、赌、毒等内容，也不可包含有其它平台LOGO的内容、内容可搬运抖音、Facebook等平台内容，内容质量越好，上线后获得的点赞、评论等收益越高，请用好您手里的特权！
+            </p>
           </div>
 
-          {/* Other Menu Items */}
-          {[
-            {
-              key: "invite_records",
-              label: t("invite_records"),
-              href: "/my/invites",
-            },
-            {
-              key: "my_community",
-              label: t("my_community"),
-              href: "/my/community",
-            },
-            { key: "my_minting", label: t("my_minting"), href: "/my/burning" },
-            {
-              key: "my_withdrawals",
-              label: t("my_withdrawals"),
-              href: "/my/withdrawals",
-            },
-            {
-              key: "announcements",
-              label: t("announcements"),
-              href: "/my/proclaim",
-            },
-          ].map((item, index) => (
-            <Link href={item.href} key={item.key}>
-              <div
-                className="flex justify-between items-center py-3 border-b  last:border-b-0"
-                style={{
-                  borderBottom: "1px solid rgba(59, 130, 246, 0.5)",
-                }}
-              >
-                <span className="text-white text-sm font-semibold">
-                  {item.label}
-                </span>
-                <svg
-                  className="w-5 h-5 text-blue-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+          {/* Menu Items Section */}
+          <div className="mb-4">
+            {[
+              {
+                key: "invite_records",
+                label: t("invite_records") || "邀请记录",
+                href: "/my/invites",
+              },
+              {
+                key: "my_community",
+                label: t("my_community") || "我的社区",
+                href: "/my/community",
+              },
+              { key: "my_minting", label: t("my_minting") || "我的铸造", href: "/my/burning" },
+              {
+                key: "my_withdrawals",
+                label: t("my_withdrawals") || "我的提现",
+                href: "/my/withdrawals",
+              },
+              {
+                key: "announcements",
+                label: t("announcements") || "公告",
+                href: "/my/proclaim",
+              },
+            ].map((item) => (
+              <Link href={item.href} key={item.key}>
+                <div
+                  className="flex justify-between items-center py-3 border-b"
+                  style={{
+                    borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                  }}
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-            </Link>
-          ))}
+                  <span className="text-sm text-white">{item.label}</span>
+                  <svg
+                    className="w-4 h-4 text-blue-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
 
           {/* Version */}
-          <div className="flex justify-between items-center py-3 ">
-            <span className="text-white text-sm font-semibold">
-              {t("version_number")}
+          <div className="flex justify-between items-center py-3">
+            <span className="text-xs text-white">
+              {t("version_number") || "版本号"}
             </span>
-            <span className="text-[#3B82F6] font-semibold">{version}</span>
+            <span className="text-[#3B82F6] font-semibold text-xs">{version}</span>
           </div>
 
           {/* Copied Notification Modal */}
+          {showCopiedNotification && (
+            <div className="fixed inset-0 flex items-center justify-center z-[60]">
+              <div className="bg-[#1A1A1A] py-3 px-6 rounded-xl border border-[#0066CC] shadow-lg">
+                <p className="text-[#50C8FF] text-center font-bold">
+                  {t("copy_success")}
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Cash Out Modal */}
+          
           {showCopiedNotification && (
             <div className="fixed inset-0 flex items-center justify-center z-[60]">
               <div className="bg-[#1A1A1A] py-3 px-6 rounded-xl border border-[#0066CC] shadow-lg">
@@ -1397,6 +1374,16 @@ function MyContent() {
 export default function MyPage() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <style>{`
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
       <MyContent />
     </div>
   );

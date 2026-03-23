@@ -1,24 +1,20 @@
 "use client";
 
 import React, { Suspense, useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import LoadingSpinnerWithText from "@/components/LoadingSpinnerWithText";
 import decimal from "decimal.js";
-import {
-  COMMUNITY_TYPE,
-  DEV_ENV,
-  GROUP_TYPE,
-  MEMO_PROGRAM_ID,
-} from "@/constants";
+import { COMMUNITY_TYPE, GROUP_TYPE } from "@/constants";
 import { formatDate } from "@/utils/dateUtils";
-import bs58 from "bs58";
 import Image from "next/image";
 import { QRCodeModal } from "@/components/ui/qr-code-modal";
-import { useWalletRef, triggerWalletConnect } from "@/components/ui/wallet-ref";
+import { triggerWalletConnect } from "@/components/ui/wallet-ref";
 import { useAppKitAccount } from "@reown/appkit/react";
-import { useWriteContract } from "wagmi";
+import {
+  useCommunityNodePurchase,
+  type NodesDataShape,
+} from "@/hooks/useCommunityNodePurchase";
 import { TransactionModal } from "@/components/TransactionModal";
 import { NodeConfirmModal } from "@/components/NodeConfirmModal";
 import { RecommenderAlertModal } from "@/components/RecommenderAlertModal";
@@ -831,33 +827,9 @@ const ConnectedNodeDetails: React.FC<ConnectedNodeDetailsProps> = ({
   );
 };
 
-// Node data type definitions
-interface NodeData {
-  price_display: number;
-  price_transfer: number;
-  maxNum: number;
-  leftNum: number;
-  referralReward: number;
-  minLevel: number;
-  incubationReward: number;
-  dynamicRewardCap: number;
-  dynamicRewardCapIncrement: number;
-  dividendReward: number;
-}
-
-interface NodesData {
-  groupNode: NodeData;
-  communityNode: NodeData;
-}
-
-interface Env {
-  environment: string;
-  hotWalletAddress: string;
-}
-
 // Node Market Component (shown when wallet is not connected or user doesn't own a node)
 interface NodeMarketProps {
-  nodeData: NodesData | null;
+  nodeData: NodesDataShape | null;
   userInfo: {
     type: string | null;
     level: number | null;
@@ -945,15 +917,6 @@ function NodeContent() {
     active_percent: number | null;
     interest_active?: boolean;
   } | null>(null);
-  const [nodeData, setNodeData] = useState<NodesData | null>(null);
-  const [env, setEnv] = useState<Env | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<string | null>(null);
-  const [isJoining, setIsJoining] = useState(false);
-  const [txSignature, setTxSignature] = useState<string | null>(null);
-  const [showTxModal, setShowTxModal] = useState(false);
-  const [showTxErrorModal, setShowTxErrorModal] = useState(false);
-  const [txErrorMessage, setTxErrorMessage] = useState<string | null>(null);
   const t = useTranslations("node");
 
   const fetchUserInfo = async () => {
@@ -974,205 +937,17 @@ function NodeContent() {
     }
   };
 
-  // Define USDT ABI for the transfer function
-  const usdtAbi = [
-    {
-      name: "transfer",
-      type: "function",
-      stateMutability: "nonpayable",
-      inputs: [
-        { name: "to", type: "address" },
-        { name: "value", type: "uint256" },
-      ],
-      outputs: [{ name: "", type: "bool" }],
-    },
-  ] as const;
-
-  // Setup contract write hook
-  const { writeContractAsync, isPending: isWritePending } = useWriteContract();
-
-  const transferTokens = async (amount: number): Promise<string> => {
-    if (!address) {
-      setError("Wallet not connected");
-      throw new Error("Wallet not connected");
-    }
-
-    try {
-      setError(null);
-
-      // Check if hot wallet address is set
-      if (!env?.hotWalletAddress) {
-        throw new Error("Hot wallet address environment variable is not set");
-      }
-
-      // Convert amount to proper decimals
-      // Since the API now returns price_transfer as a string without scientific notation,
-      // we can safely convert it to BigInt
-      const amountInWei = BigInt(amount);
-
-      setIsJoining(true);
-      // Get the USDT contract address from environment variables
-      const tokenAddress = process.env.NEXT_PUBLIC_USDT_ADDRESS;
-      if (!tokenAddress) {
-        throw new Error(
-          "USDT contract address not found in environment variables"
-        );
-      }
-
-      // Use wagmi's writeContractAsync function to send the transaction
-      // In wagmi v2, we need to use the async version to get the hash
-      const hash = await writeContractAsync({
-        address: tokenAddress as `0x${string}`,
-        abi: usdtAbi,
-        functionName: "transfer",
-        args: [env.hotWalletAddress as `0x${string}`, amountInWei],
-      });
-
-      // If hash is undefined, throw an error
-      if (!hash) {
-        throw new Error("Transaction failed to return a hash");
-      }
-
-      const tx = { hash };
-
-      // Set transaction signature and show modal
-      setTxSignature(tx.hash);
-      setShowTxModal(true);
-
-      return tx.hash;
-    } catch (error) {
-      console.error("Error sending transaction:", error);
-      setError("Failed to send transaction. Please try again.");
-      throw error;
-    } finally {
-      setIsJoining(false);
-    }
-  };
-
-  const handleCommunity = async (isBigNode: boolean, recommender: string) => {
-    if (!address) {
-      triggerWalletConnect();
-      return;
-    }
-    if (isJoining) return;
-    setIsJoining(true);
-    try {
-      setError(null);
-      setSuccess(null);
-
-      if (!address) {
-        setError("Please connect your wallet first");
-        return;
-      }
-
-      if (!nodeData) {
-        setError("Node data not found");
-        return;
-      }
-
-      const points = isBigNode
-        ? nodeData.communityNode.price_transfer
-        : nodeData.groupNode.price_transfer;
-      if (isNaN(points) || points <= 0) {
-        setError("Please enter a valid positive number");
-        return;
-      }
-
-      // Convert points to USDT amount (6 decimals)
-      const type = isBigNode ? COMMUNITY_TYPE : GROUP_TYPE;
-      if (!type) {
-        throw new Error(
-          `Invalid points amount. Must be either ${nodeData?.groupNode?.price_display} USDT or ${nodeData?.communityNode?.price_display} USDT, present points: ${points}`
-        );
-      }
-
-      let txSig;
-      if (env?.environment === DEV_ENV) {
-        console.warn("Using mock transaction hash in development mode");
-        // Generate a random base58 string of correct length for Solana tx hash
-        const randomBytes = new Uint8Array(32);
-        crypto.getRandomValues(randomBytes);
-        txSig = bs58.encode(randomBytes);
-      } else {
-        txSig = await transferTokens(points);
-      }
-
-      // Show transaction signature in modal
-      setTxSignature(txSig);
-      setShowTxModal(true);
-
-      // Call points/community endpoint with transaction signature
-      const response = await fetch("/api/points/community", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          txHash: txSig,
-          dev_address: address.toString(),
-          dev_referralCode: recommender,
-          dev_type: type,
-        }),
-      });
-
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.error || "Failed to verify transaction");
-      }
-      setSuccess("Joined successfully");
-
-      // Refresh the page after successful transaction
-    } catch (err) {
-      setTxErrorMessage(
-        err instanceof Error ? err.message : "Failed to verify transaction"
-      );
-      setShowTxErrorModal(true);
-    } finally {
-      fetchUserInfo();
-      setIsJoining(false);
-    }
-  };
-
-  // Effect for fetching node data - only runs once
-  useEffect(() => {
-    const fetchEnv = async () => {
-      try {
-        // Check if we already have node data
-        if (env) return;
-
-        const response = await fetch("/api/info/env", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const data = await response.json();
-        setEnv(data);
-      } catch (error) {
-        console.error("Error fetching node data:", error);
-      }
-    };
-    const fetchNodeData = async () => {
-      try {
-        // Check if we already have node data
-        if (nodeData) return;
-
-        const response = await fetch("/api/info/node", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const data = await response.json();
-        setNodeData(data);
-      } catch (error) {
-        console.error("Error fetching node data:", error);
-      }
-    };
-
-    fetchEnv();
-    fetchNodeData();
-  }, []); // Empty dependency array means this only runs once
+  const {
+    nodeData,
+    isJoining,
+    handleCommunity,
+    showTxModal,
+    setShowTxModal,
+    showTxErrorModal,
+    setShowTxErrorModal,
+    txSignature,
+    txErrorMessage,
+  } = useCommunityNodePurchase({ onAfterPurchase: fetchUserInfo });
 
   // Effect for fetching user info - runs when address changes
   useEffect(() => {

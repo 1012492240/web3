@@ -326,11 +326,23 @@ export async function cleanUserTotalPerformance(address: string) {
     await deleteKey(`${PERFORMANCE_KEY}:${address}`)
 }
 
+/** 防止异常上下级成环导致无限递归栈溢出 */
+const MAX_PERFORMANCE_RECURSION_DEPTH = 100;
+
 /**
  * getUserTotalPerformance
  * @param address 
  */
-export async function getUserTotalPerformance(address: string): Promise<decimal> {
+export async function getUserTotalPerformance(
+    address: string,
+    depth = 0
+): Promise<decimal> {
+    if (depth > MAX_PERFORMANCE_RECURSION_DEPTH) {
+        console.warn(
+            `[getUserTotalPerformance] max depth (${MAX_PERFORMANCE_RECURSION_DEPTH}) at ${address}`
+        );
+        return new decimal(0);
+    }
     // Define keys for computation state
     const cacheKey = `${PERFORMANCE_KEY}:${address}`;
     const computingKey = `${PERFORMANCE_KEY}:computing:${address}`;
@@ -363,7 +375,7 @@ export async function getUserTotalPerformance(address: string): Promise<decimal>
             await new Promise(resolve => setTimeout(resolve, delay));
             
             // Try again
-            const finalPerformance = await getUserTotalPerformance(address);
+            const finalPerformance = await getUserTotalPerformance(address, 0);
             if (!finalPerformance.lessThan(0)) {
                 return finalPerformance;
             }
@@ -385,7 +397,10 @@ export async function getUserTotalPerformance(address: string): Promise<decimal>
             if (isActive(subordinate) && subordinate.balance) {
                 totalAmount = totalAmount.add(subordinate.balance.token_staked_points);
             }
-            const subPerformance = await getUserTotalPerformance(subordinate.address);
+            const subPerformance = await getUserTotalPerformance(
+                subordinate.address,
+                depth + 1
+            );
             totalAmount = totalAmount.add(subPerformance);
         }
         

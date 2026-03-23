@@ -94,29 +94,46 @@ export const withRedis = async <T>(operation: (client: ReturnType<typeof createC
 
 // Set a key with expiration
 export const setWithExpiry = async (key: string, value: string, expiryInMs: number) => {
-  const client = await getRedisClient();
-  await client.set(key, value, {
-    PX: expiryInMs // PX sets expiry in milliseconds
-  });
+  try {
+    const client = await getRedisClient();
+    await client.set(key, value, {
+      PX: expiryInMs // PX sets expiry in milliseconds
+    });
+  } catch (e) {
+    console.warn('[redis] setWithExpiry failed (cache disabled for this op):', key, e);
+  }
 };
 
-// Get a value by key
+// Get a value by key（Redis 不可用时视为未命中，避免整站接口 500）
 export const getValue = async (key: string): Promise<string | null> => {
-  const client = await getRedisClient();
-  return await client.get(key);
+  try {
+    const client = await getRedisClient();
+    return await client.get(key);
+  } catch (e) {
+    console.warn('[redis] getValue failed (treating as miss):', key, e);
+    return null;
+  }
 };
 
-// Delete a key
+// Delete a key（finally 中调用时不能抛错，否则会把业务逻辑拖成 500）
 export const deleteKey = async (key: string) => {
-  const client = await getRedisClient();
-  await client.del(key);
+  try {
+    const client = await getRedisClient();
+    await client.del(key);
+  } catch (e) {
+    console.warn('[redis] deleteKey failed:', key, e);
+  }
 };
 
 // Delete keys by pattern
 export const deleteKeysByPattern = async (pattern: string) => {
-  const client = await getRedisClient();
-  const keys = await client.keys(pattern);
-  if (keys.length > 0) {
-    await client.del(keys);
+  try {
+    const client = await getRedisClient();
+    const keys = await client.keys(pattern);
+    if (keys.length > 0) {
+      await client.del(keys);
+    }
+  } catch (e) {
+    console.warn('[redis] deleteKeysByPattern failed:', pattern, e);
   }
 };

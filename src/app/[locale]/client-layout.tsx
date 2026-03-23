@@ -1,11 +1,11 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Theme from '../theme-provider'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Header from '@/components/ui/header'
-import BottomNav from '@/components/ui/bottom-nav'
+import ConnectWallet from '@/components/connect-wallet'
 import { WalletRefProvider } from '@/components/ui/wallet-ref'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WagmiProvider } from 'wagmi'
@@ -25,8 +25,8 @@ export default function ClientLayout({
     })
   })
 
-  // Create a client for React Query
-  const queryClient = new QueryClient()
+  // 单例：避免每次 layout 重渲染时 new QueryClient，导致缓存丢失与额外开销
+  const [queryClient] = useState(() => new QueryClient())
 
   return (
     <Theme>
@@ -34,11 +34,13 @@ export default function ClientLayout({
         <QueryClientProvider client={queryClient}>
           <WalletRefProvider>
             <div className="flex flex-col min-h-screen overflow-hidden bg-black">
+              <div className="sr-only" aria-hidden>
+                <ConnectWallet size="small" />
+              </div>
               <Header />
               <main className="grow">
                 {children}
               </main>
-              <BottomNav />
             </div>
           </WalletRefProvider>
         </QueryClientProvider>

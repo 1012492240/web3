@@ -27,6 +27,7 @@ export async function GET(req: NextRequest) {
     const userInfo = await prisma.user_info.findUnique({
       where: { address: walletAddress },
       select: {
+        id: true,
         type: true,
         level: true,
         referral_code: true,
@@ -60,6 +61,9 @@ export async function GET(req: NextRequest) {
 
     if (!userInfo) {
       return NextResponse.json({
+        id: null,
+        referral_code: null,
+        superior_referral_code: null,
         type: null,
         level: 0,
         performance: new decimal(0),
@@ -115,6 +119,9 @@ export async function GET(req: NextRequest) {
     });
   } catch (error) {
     console.error('Error getting points:', error);
+    if (error instanceof Error) {
+      console.error(error.message, error.stack);
+    }
     return NextResponse.json(
       { error: ErrorCode.SERVER_ERROR },
       { status: 500 }

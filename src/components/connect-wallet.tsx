@@ -47,7 +47,8 @@ const MyConnectButton: React.FC<Props> = ({ size, className }) => {
         }
       }
 
-      // If no existing data, call user creation API
+      // If no existing data, call user creation API（带上 URL ?ref= 以便绑定上级）
+      const refParam = searchParams.get("ref");
       fetch("/api/user/init", {
         method: "POST",
         headers: {
@@ -55,6 +56,7 @@ const MyConnectButton: React.FC<Props> = ({ size, className }) => {
         },
         body: JSON.stringify({
           address: userAddress.toLowerCase(),
+          referralCode: refParam || undefined,
         }),
       })
         .then((response) => {
@@ -74,7 +76,7 @@ const MyConnectButton: React.FC<Props> = ({ size, className }) => {
           console.error("Error creating user:", error);
         });
     }
-  }, [address, isConnected]);
+  }, [address, isConnected, searchParams]);
 
   // Function to handle wallet modal opening
   /* const openWalletModal = useCallback(() => {

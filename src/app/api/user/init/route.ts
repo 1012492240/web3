@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server'
 import prisma from '@/lib/prisma'
 import { randomReferralCode } from '@/utils/auth';
 import { updateUserPath } from '@/lib/user';
-import { Prisma } from '@prisma/client';
-
 export async function POST(request: Request) {
 
     const body = await request.json();
@@ -30,26 +28,34 @@ export async function POST(request: Request) {
     }
 
 
-    prisma.$transaction(async (tx) => {
-        const user = await tx.user_info.create({
-            data: {
-                address: address.toLowerCase(),
-                superior: superior?.address || null,
-                referral_code: randomReferralCode(address.toLowerCase()),
-                last_activity: new Date(),
-                balance: {
-                    create: {
-                        usdt_points: 0,
-                        token_points: 0,
-                        token_locked_points: 0,
-                        token_staked_points: 0
+    try {
+        await prisma.$transaction(async (tx) => {
+            const user = await tx.user_info.create({
+                data: {
+                    address: address.toLowerCase(),
+                    superior: superior?.address || null,
+                    referral_code: randomReferralCode(address.toLowerCase()),
+                    last_activity: new Date(),
+                    balance: {
+                        create: {
+                            usdt_points: 0,
+                            token_points: 0,
+                            token_locked_points: 0,
+                            token_staked_points: 0
+                        }
                     }
                 }
-            }
-        });
+            });
 
-        await updateUserPath(user.id, superior?.path || null, tx);
-    });
+            await updateUserPath(user.id, superior?.path || null, tx);
+        });
+    } catch (e) {
+        console.error('user init transaction failed:', e);
+        return NextResponse.json(
+            { error: 'USER_INIT_FAILED' },
+            { status: 500 }
+        );
+    }
 
     return NextResponse.json({
         exist: true,
