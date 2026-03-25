@@ -285,7 +285,7 @@ export async function verifyChainTransfer(txHash: string, tokenType: TokenType):
  * @param txHash Ethereum transaction hash
  * @returns Verification result
  */
-export async function verifyTokenTransfer(txHash: string, equity: Boolean = false): Promise<{
+export async function verifyTokenTransfer(txHash: string, equity: boolean = false): Promise<{
   isValid: boolean;
   error?: string;
   fromAddress?: string;

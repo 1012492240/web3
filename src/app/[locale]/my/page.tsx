@@ -495,47 +495,26 @@ function MyContent() {
   ];
 
   function BenefitCircleIcon({ iconKey, label }: { iconKey: string; label: string }) {
+    let iconSrc = "";
+    if (iconKey === "activate_tier") iconSrc = "/imgs/my/1.png";
+    else if (iconKey === "verifier_identity") iconSrc = "/imgs/my/2.png";
+    else if (iconKey === "trading_dividends") iconSrc = "/imgs/my/3.png";
+    else if (iconKey === "team_level_t2") iconSrc = "/imgs/my/4.png";
+    else if (iconKey === "ad_revenue") iconSrc = "/imgs/my/5.png";
+
     return (
       <div className="flex flex-col items-center gap-2">
         <div
           style={{
             width: 56,
             height: 56,
-            borderRadius: "50%",
-            border: "1.5px solid rgba(255,255,255,0.6)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            background: "rgba(255,255,255,0.04)",
           }}
         >
-          {iconKey === "activate_tier" && (
-            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.4">
-              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.3l-6.2 4 2.4-7.4L2 9.4h7.6z" strokeLinejoin="round" />
-            </svg>
-          )}
-          {iconKey === "verifier_identity" && (
-            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.4">
-              <circle cx="10.5" cy="10.5" r="6.5" />
-              <path d="M15.5 15.5l4.5 4.5" strokeLinecap="round" />
-            </svg>
-          )}
-          {iconKey === "trading_dividends" && (
-            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.4">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M12 7.5v9M9.5 9.5C9.5 8.7 10.6 8 12 8s2.5.7 2.5 1.7-.9 1.7-2.5 2c-1.6.3-2.5 1-2.5 2s1.1 1.8 2.5 1.8 2.5-.8 2.5-1.8" strokeLinecap="round" />
-            </svg>
-          )}
-          {iconKey === "team_level_t2" && (
-            <span style={{ fontFamily: "Arial, sans-serif", fontWeight: 700, fontSize: 15, color: "white", letterSpacing: "0.02em" }}>
-              T2
-            </span>
-          )}
-          {iconKey === "ad_revenue" && (
-            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.4">
-              <path d="M4 20h16M8 20v-7M12 20V5M16 20v-4" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="12" cy="5" r="1.3" fill="white" stroke="none" />
-            </svg>
+          {iconSrc && (
+            <Image src={iconSrc} alt={label} width={24} height={24} className="w-full h-full object-contain" />
           )}
         </div>
         <p className="text-xs text-white text-center leading-tight">{label}</p>
@@ -546,8 +525,8 @@ function MyContent() {
   return (
     <div className="flex flex-col h-full">
       {/* Main content area */}
-      <div className="flex-1 pb-16 pt-24">
-        <div className="p-4 bg-black text-white">
+      <div className="flex-1 pt-4">
+        <div className="p-4 text-white">
           {/* Page Title */}
           <div className="text-center mb-6">
             <h1 className="text-xl font-bold" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
@@ -558,11 +537,6 @@ function MyContent() {
           {/* User Info Section with Purple Gradient Background */}
           <div
             className="relative rounded-2xl mb-8 p-6"
-            style={{
-              background: "linear-gradient(135deg, rgba(100, 50, 150, 0.4) 0%, rgba(50, 20, 100, 0.3) 100%)",
-              border: "1px solid rgba(150, 100, 200, 0.3)",
-              boxShadow: "0 0 40px rgba(150, 100, 200, 0.2)",
-            }}
           >
             {/* Decorative circles background */}
             <div
@@ -573,48 +547,15 @@ function MyContent() {
             />
 
               <div className="relative flex gap-6">
-              {/* Left: Avatar with glow effect */}
-              <div className="flex-shrink-0 flex justify-center">
-                <div
-                  className="relative flex items-center justify-center"
-                  style={{
-                    width: "120px",
-                    height: "120px",
-                  }}
-                >
-                  {/* Glow effect circles */}
-                  <div
-                    className="absolute inset-0 rounded-full"
-                    style={{
-                      border: "3px dashed rgba(255, 100, 150, 0.4)",
-                      animation: "spin 20s linear infinite",
-                    }}
-                  />
-                  <div
-                    className="absolute inset-4 rounded-full"
-                    style={{
-                      border: "2px solid rgba(100, 150, 255, 0.3)",
-                    }}
-                  />
-                  {/* Avatar */}
-                  <div
-                    className="relative flex items-center justify-center"
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      border: "2px solid #E91E63",
-                      borderRadius: "8px",
-                      background: "rgba(233, 30, 99, 0.1)",
-                    }}
-                  >
-                    <Image
-                      src="/images/v2/my/avatar.png"
-                      alt="Logo"
-                      width={50}
-                      height={56}
-                    />
-                  </div>
-                </div>
+              {/* Left: Avatar */}
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <Image
+                  src="/imgs/my/logo.png"
+                  alt="Logo"
+                  width={120}
+                  height={120}
+                  className="object-contain"
+                />
               </div>
 
               {/* Right: User Info */}
@@ -680,17 +621,16 @@ function MyContent() {
           {/* My Benefits Section */}
           <div className="mb-8">
             <div
-              className="rounded-2xl p-5"
+              className="p-5"
               style={{
-                background:
-                  "linear-gradient(145deg, rgba(185, 35, 70, 0.92) 0%, rgba(120, 20, 145, 0.85) 50%, rgba(22, 10, 45, 0.97) 100%)",
-                border: "1px solid rgba(190, 80, 120, 0.3)",
-                boxShadow: "0 6px 30px rgba(160, 30, 80, 0.35)",
+                opacity: 0.78,
+                borderRadius: "15px",
+                backgroundImage: "linear-gradient(0deg, #e30e10 0%, #690a71 100%)",
               }}
             >
               {/* Section header */}
               <div className="flex items-center mb-5">
-                <div className="w-[3px] h-5 rounded-full bg-teal-400 mr-2" />
+
                 <h2 className="text-sm font-bold text-white">
                   {t("my_benefits") || "我的权益"}
                 </h2>
@@ -1310,18 +1250,24 @@ function MyContent() {
 
 export default function MyPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <style>{`
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
+    <div className="min-h-screen bg-black text-white relative">
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/imgs/my/my.png')" }}
+      />
+      <div className="relative z-10">
+        <style>{`
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
           }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      `}</style>
-      <MyContent />
+        `}</style>
+        <MyContent />
+      </div>
     </div>
   );
 }

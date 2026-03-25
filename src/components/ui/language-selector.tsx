@@ -71,7 +71,16 @@ const languageMap: Record<Locale, { name: string; flag: any }> = {
   // }
 }
 
-export default function LanguageSelector() {
+const localeShortCode: Record<Locale, string> = {
+  en: 'EN',
+  ja: 'JA',
+  ko: 'KO',
+  'zh-Hant': 'TW',
+  zh: 'CN',
+  vi: 'VI',
+}
+
+export default function LanguageSelector({ showLocaleCode }: { showLocaleCode?: boolean }) {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const currentLocale = useLocale() as Locale
@@ -113,17 +122,25 @@ export default function LanguageSelector() {
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <div 
-        className="w-6 h-6 cursor-pointer"
+      <button
+        type="button"
+        className={
+          showLocaleCode
+            ? 'flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-1.5 text-white/90 transition hover:bg-white/10'
+            : 'flex h-6 w-6 cursor-pointer items-center justify-center'
+        }
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        aria-label="Language"
       >
-        <Image 
-          src={globeIcon} 
-          alt="Language" 
-          width={20} 
-          height={20}
-        />
-      </div>
+        <Image src={globeIcon} alt="" width={18} height={18} className="shrink-0 opacity-90" />
+        {showLocaleCode && (
+          <span className="min-w-[1.5rem] text-left text-sm font-medium tracking-wide">
+            {localeShortCode[currentLocale]}
+          </span>
+        )}
+      </button>
       
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-black border border-gray-700 z-50">

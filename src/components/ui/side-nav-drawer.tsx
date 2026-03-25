@@ -5,8 +5,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import LanguageSelector from "@/components/ui/language-selector";
-import logo from "@/public/images/v2/logo.png";
-import gridIcon from "@/public/images/grid-icon.svg";
 
 type NavItem = {
   key: string;
@@ -16,7 +14,7 @@ type NavItem = {
 const menuItems: NavItem[] = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
-  { key: "early_consensus", href: "/subscribe" },
+  { key: "early_consensus", href: "/node" },
   { key: "personal_center", href: "/my" },
   { key: "download_app", href: "/download#app" },
   { key: "download_business_plan", href: "/download#business" },
@@ -99,7 +97,7 @@ const iconByKey: Record<string, string> = {
 
 function ChevronRight() {
   return (
-    <svg className="h-5 w-5 shrink-0 text-white/35" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+    <svg className="h-5 w-5 shrink-0 text-white/70" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
       <path
         fillRule="evenodd"
         d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -112,14 +110,11 @@ function ChevronRight() {
 export default function SideNavDrawer({
   open,
   onClose,
-  onOpenQR,
 }: {
   open: boolean;
   onClose: () => void;
-  onOpenQR?: () => void;
 }) {
   const t = useTranslations("nav_drawer");
-  const tQr = useTranslations("qr_code");
   const [mountedOpen, setMountedOpen] = useState(open);
   const [closing, setClosing] = useState(false);
 
@@ -184,17 +179,28 @@ export default function SideNavDrawer({
       />
 
       <aside
-        className="relative flex h-full w-[min(100%,360px)] max-w-[85vw] flex-col bg-[#0b0c10] shadow-2xl"
+        className="relative flex h-full w-full flex-col overflow-hidden shadow-2xl"
         style={{
           boxShadow: "8px 0 32px rgba(0,0,0,0.5)",
           animation: closing ? "xwechat_drawer_slide_out 240ms ease-in forwards" : "xwechat_drawer_slide_in 260ms ease-out forwards",
         }}
       >
+        <div className="pointer-events-none absolute inset-0 bg-[#0b0c10]" aria-hidden />
+        <div
+          className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/imgs/menu/menuBG.png')" }}
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30"
+          aria-hidden
+        />
+
         <button
           type="button"
           onClick={onClose}
           aria-label={t("close_menu")}
-          className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-xl bg-black/30 text-white/90 transition hover:bg-black/45"
+          className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-xl bg-black/30 text-white/90 backdrop-blur-sm transition hover:bg-black/45"
         >
           <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
             <path
@@ -205,27 +211,25 @@ export default function SideNavDrawer({
           </svg>
         </button>
 
-        <div
-          className="relative shrink-0 overflow-hidden px-6 pb-8 pt-10"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(120,30,50,0.55) 0%, rgba(40,20,60,0.35) 45%, transparent 100%), #0b0c10",
-          }}
-        >
-          <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/30 ring-2 ring-white/10">
-            <Image src={logo} alt="HarmonyLink" width={72} height={72} className="h-16 w-16 object-contain" priority />
-          </div>
-          <p className="mt-3 text-center text-[10px] font-medium tracking-[0.2em] text-white/50">WEB3.0</p>
+        <div className="relative z-10 flex shrink-0 justify-center overflow-hidden px-6 pb-6 pt-10">
+          <Image
+            src="/imgs/menu/logo.png"
+            alt="HarmonyLink"
+            width={150}
+            height={150}
+            className="h-[8.25rem] w-[8.25rem] max-w-full object-contain"
+            priority
+          />
         </div>
 
-        <nav className="min-h-0 flex-1 overflow-y-auto px-2 py-2">
-          <ul className="space-y-0.5">
+        <nav className="relative z-10 min-h-0 flex-1 overflow-y-auto  border-white/[0.06] bg-gradient-to-b from-white/[0.05] from-[8%] via-black/55 via-[55%] to-black to-[100%] py-2 backdrop-blur-md">
+          <ul className="space-y-0">
             {menuItems.map((item) => (
               <li key={item.key}>
                 <Link
                   href={item.href}
                   onClick={onClose}
-                  className="flex items-center gap-3 rounded-lg px-3 py-3.5 text-sm text-white transition hover:bg-white/5"
+                  className="flex items-center gap-3 px-4 py-3.5 text-[15px] font-medium text-white/95 transition hover:bg-white/[0.06]"
                 >
                   <MenuIcon name={iconByKey[item.key] ?? "home"} />
                   <span className="min-w-0 flex-1 leading-snug">{t(item.key)}</span>
@@ -236,23 +240,10 @@ export default function SideNavDrawer({
           </ul>
         </nav>
 
-        <div className="flex shrink-0 items-center justify-between border-t border-white/10 px-4 py-4">
-          <Image src={logo} alt="" width={36} height={36} className="h-8 w-auto object-contain opacity-90" />
-          <div className="flex items-center gap-3 text-white/80">
-            {onOpenQR && (
-              <button
-                type="button"
-                onClick={() => {
-                  onClose();
-                  onOpenQR();
-                }}
-                className="flex h-9 w-9 items-center justify-center rounded-lg transition hover:bg-white/10"
-                aria-label={tQr("grid_icon_alt")}
-              >
-                <Image src={gridIcon} alt="" width={20} height={20} className="opacity-90" />
-              </button>
-            )}
-            <LanguageSelector />
+        <div className="relative z-10 flex shrink-0 items-center justify-between border-t border-white/10 bg-black px-4 py-4">
+          <Image src="/imgs/menu/logo-samll.png" alt="" width={48} height={48} className="h-8 w-auto object-contain opacity-90" />
+          <div className="flex items-center text-white/80">
+            <LanguageSelector showLocaleCode />
           </div>
         </div>
       </aside>

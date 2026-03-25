@@ -12,9 +12,7 @@ import { processTokenPrice } from './tokenPrice';
 // Use a global variable to track initialization across all instances
 declare global {
   // Using var is required for mutable globals in TypeScript
-  // eslint-disable-next-line no-var
   var cronJobsInitialized: boolean;
-  // eslint-disable-next-line no-var
   var settlementRunning: boolean;
 }
 

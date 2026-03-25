@@ -2,10 +2,10 @@ import Logo from "./logo";
 import SideNavDrawer from "./side-nav-drawer";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { QRCodeModal } from "./qr-code-modal";
 import { RecommenderModal } from "./recommender-modal";
 import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, usePathname } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 function formatHeaderId(address: string | undefined) {
   if (!address) return "0X0888......888888";
@@ -27,15 +27,25 @@ function formatHeaderId(address: string | undefined) {
  *
  * @returns {JSX.Element} The header component.
  */
+/** Returns true if the current pathname is the home page (i.e. /{locale} with no sub-path). */
+function useIsHomePage(): boolean {
+  const pathname = usePathname();
+  // pathname looks like "/zh", "/en", "/zh/node", "/zh/my", etc.
+  const segments = pathname.split("/").filter(Boolean);
+  // If there is only one segment (the locale), it's the home page
+  const isLocaleOnly =
+    segments.length === 1 && (routing.locales as readonly string[]).includes(segments[0]);
+  // Also handle root "/" with no locale prefix
+  return isLocaleOnly || segments.length === 0;
+}
+
 export default function Header() {
+  const isHome = useIsHomePage();
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
-  const [showQRModal, setShowQRModal] = useState(false);
   const { address } = useAppKitAccount();
   const { open: openWallet } = useAppKit();
   const t = useTranslations();
   const tNav = useTranslations("nav_drawer");
-  const [userType, setUserType] = useState<string | null>(null);
-
   const searchParams = useSearchParams();
   const refFromUrl = searchParams.get("ref");
   const [showRecommenderModal, setShowRecommenderModal] = useState(false);
@@ -44,17 +54,14 @@ export default function Header() {
   useEffect(() => {
     const fetchUserInfo = async () => {
       if (!address) {
-        setUserType(null);
         return;
       }
       try {
         const response = await fetch(`/api/user/info?address=${address}`);
         if (!response.ok) {
-          setUserType(null);
           return;
         }
         const data = await response.json();
-        setUserType(data?.type || null);
         if (refFromUrl && !data.superior) {
           setReferralCodeFromUrl(refFromUrl);
 
@@ -63,22 +70,65 @@ export default function Header() {
             setShowRecommenderModal(true);
           }, 1000);
         }
-      } catch {
-        setUserType(null);
-      }
+      } catch {}
     };
     fetchUserInfo();
   }, [address, refFromUrl]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-30 bg-[#005d54] shadow-sm">
+    <header
+      className={`fixed top-0 left-0 right-0 z-30 transition-colors duration-300 ${
+        isHome ? "bg-[#005d54] shadow-sm" : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto max-w-[1900px] px-4 sm:px-6 lg:px-8 2xl:px-16">
-        <div className="grid h-14 grid-cols-[1fr_auto_1fr] items-center gap-2">
-          <div className="flex min-w-0 justify-start">
+        {isHome ? (
+          /* ── Home page: full header with logo + wallet address ── */
+          <div className="grid h-14 grid-cols-[1fr_auto_1fr] items-center gap-2">
+            <div className="flex min-w-0 justify-start">
+              <button
+                type="button"
+                onClick={() => setSideMenuOpen(true)}
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#005d54] shadow-sm transition hover:bg-white/95"
+                aria-label={tNav("open_menu")}
+              >
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  aria-hidden
+                >
+                  <line x1="4" y1="6" x2="20" y2="6" />
+                  <line x1="4" y1="12" x2="20" y2="12" />
+                  <line x1="4" y1="18" x2="20" y2="18" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="flex min-w-0 justify-center [&_img]:h-7 [&_img]:w-auto">
+              <Logo />
+            </div>
+
+            <div className="flex min-w-0 justify-end">
+              <button
+                type="button"
+                onClick={() => openWallet()}
+                className="max-w-[min(100%,11rem)] truncate font-mono text-[11px] font-medium tracking-tight text-white sm:max-w-[14rem] sm:text-xs"
+              >
+                {formatHeaderId(address)}
+              </button>
+            </div>
+          </div>
+        ) : (
+          /* ── Other pages: transparent, only menu icon ── */
+          <div className="flex h-14 items-center">
             <button
               type="button"
               onClick={() => setSideMenuOpen(true)}
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#005d54] shadow-sm transition hover:bg-white/95"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition hover:bg-white/25"
               aria-label={tNav("open_menu")}
             >
               <svg
@@ -96,21 +146,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
-
-          <div className="flex min-w-0 justify-center [&_img]:h-7 [&_img]:w-auto">
-            <Logo />
-          </div>
-
-          <div className="flex min-w-0 justify-end">
-            <button
-              type="button"
-              onClick={() => openWallet()}
-              className="max-w-[min(100%,11rem)] truncate font-mono text-[11px] font-medium tracking-tight text-white sm:max-w-[14rem] sm:text-xs"
-            >
-              {formatHeaderId(address)}
-            </button>
-          </div>
-        </div>
+        )}
       </div>
 
       {/* Recommender Modal */}
@@ -120,25 +156,7 @@ export default function Header() {
         initialReferralCode={referralCodeFromUrl}
       />
 
-      {/* QR Code Modal */}
-      <QRCodeModal
-        isOpen={showQRModal}
-        onClose={() => setShowQRModal(false)}
-        publicKey={address}
-        userType={userType}
-      />
-
-      <SideNavDrawer
-        open={sideMenuOpen}
-        onClose={() => setSideMenuOpen(false)}
-        onOpenQR={
-          address
-            ? () => {
-                setShowQRModal(true);
-              }
-            : undefined
-        }
-      />
+      <SideNavDrawer open={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
     </header>
   );
 }

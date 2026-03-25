@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-object-type */
 declare module 'lightweight-charts' {
   export interface ChartOptions {
     width?: number;
