@@ -1037,7 +1037,7 @@ function NodeContent() {
       ? `${new decimal(nodeData.communityNode.referralReward)
           .mul(100)
           .toString()}% USDT`
-      : `${new decimal(nodeData.groupNode.referralReward)
+      : `${new decimal(nodeData.communityNode.referralReward)
           .mul(100)
           .toString()}% USDT`;
 
@@ -1060,10 +1060,10 @@ function NodeContent() {
   //     ? `${new decimal(nodeData.communityNode.dynamicRewardCap).toString()} TXT`
   //     : `${new decimal(nodeData.groupNode.dynamicRewardCap).toString()} TXT`;
 
-  const rewardCap =
-    hasNode && userInfo.type === COMMUNITY_TYPE
-      ? new decimal(nodeData.communityNode.dynamicRewardCap)
-      : new decimal(nodeData.groupNode.dynamicRewardCap);
+  // const rewardCap =
+  //   hasNode && userInfo.type === COMMUNITY_TYPE
+  //     ? new decimal(nodeData.communityNode.dynamicRewardCap)
+  //     : new decimal(nodeData.groupNode.dynamicRewardCap);
 
   if (isJoining) {
     return <LoadingSpinnerWithText />;
