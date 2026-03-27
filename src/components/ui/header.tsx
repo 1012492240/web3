@@ -28,16 +28,15 @@ function formatHeaderId(address: string | undefined) {
  *
  * @returns {JSX.Element} The header component.
  */
-/** Returns true if the current pathname is the home page (i.e. /{locale} with no sub-path). */
+/** 与首页使用同一套顶栏样式：根首页或「首页2」/home2 */
 function useIsHomePage(): boolean {
   const pathname = usePathname();
-  // pathname looks like "/zh", "/en", "/zh/node", "/zh/my", etc.
   const segments = pathname.split("/").filter(Boolean);
-  // If there is only one segment (the locale), it's the home page
-  const isLocaleOnly =
-    segments.length === 1 && (routing.locales as readonly string[]).includes(segments[0]);
-  // Also handle root "/" with no locale prefix
-  return isLocaleOnly || segments.length === 0;
+  const locales = routing.locales as readonly string[];
+  const isLocaleOnly = segments.length === 1 && locales.includes(segments[0]!);
+  const isHome2 =
+    segments.length === 2 && locales.includes(segments[0]!) && segments[1] === "home2";
+  return isLocaleOnly || segments.length === 0 || isHome2;
 }
 
 export default function Header() {
@@ -80,18 +79,13 @@ export default function Header() {
   const homeLogoHref = `/node/${searchParams.toString() ? `?${searchParams.toString()}` : ""}`;
 
   return (
+    <>
     <header
-      className={`fixed left-0 right-0 top-0 z-30 transition-colors duration-300 ${
-        isHome ? "shadow-sm" : "bg-transparent"
-      }`}
-      style={
+      className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 ${
         isHome
-          ? {
-              backgroundImage:
-                "linear-gradient(0deg, rgb(229, 14, 15) 0%, rgb(104, 10, 113) 100%)",
-            }
-          : undefined
-      }
+          ? "border-b border-white/[0.06] bg-[#050608]/92 shadow-[0_4px_24px_rgba(0,0,0,0.45)] backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-[#050608]/80"
+          : "bg-transparent"
+      }`}
     >
       <div className="mx-auto max-w-[1900px] px-4 sm:px-6 lg:px-8 2xl:px-16">
         {isHome ? (
@@ -101,7 +95,7 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setSideMenuOpen(true)}
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#680a71] shadow-sm transition hover:bg-white/95"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition hover:bg-white/15"
                 aria-label={tNav("open_menu")}
               >
                 <svg
@@ -143,8 +137,8 @@ export default function Header() {
                 onClick={() => openWallet()}
                 className={
                   walletConnected
-                    ? "max-w-[min(100%,11rem)] truncate font-mono text-[11px] font-medium tracking-tight text-white sm:max-w-[14rem] sm:text-xs"
-                    : "rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#680a71] shadow-sm transition hover:bg-white/95"
+                    ? "max-w-[min(100%,11rem)] truncate font-mono text-[11px] font-medium tracking-tight text-white/90 sm:max-w-[14rem] sm:text-xs"
+                    : "rounded-full border border-cyan-500/35 bg-cyan-500/15 px-3 py-1.5 text-xs font-semibold text-cyan-100 shadow-[0_0_20px_rgba(34,211,238,0.12)] transition hover:border-cyan-400/45 hover:bg-cyan-500/25"
                 }
               >
                 {walletConnected ? formatHeaderId(address) : tWallet("connect_wallet")}
@@ -195,8 +189,10 @@ export default function Header() {
         onClose={() => setShowRecommenderModal(false)}
         initialReferralCode={referralCodeFromUrl}
       />
-
-      <SideNavDrawer open={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
     </header>
+
+    {/* 与顶栏平级，避免被限制在 header 的 z-30 层叠上下文内，导致侧栏被 main 盖住 */}
+    <SideNavDrawer open={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
+    </>
   );
 }

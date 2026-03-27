@@ -9,8 +9,15 @@ const nextConfig: NextConfig = {
   // Reown / WalletConnect：避免服务端打包 pino 等导致 vendor-chunks 引用异常
   serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "cdn.simpleicons.org"],
     dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.simpleicons.org",
+        pathname: "/**",
+      },
+    ],
   },
   webpack: (config, { isServer }) => {
     config.resolve.fallback = {
