@@ -20,7 +20,7 @@ const timeIntervals = [
 ];
 
 export default function TokenPage() {
-  const t = useTranslations();
+  const t = useTranslations("token");
   const [selectedInterval, setSelectedInterval] = useState("ONE_HOUR");
   const [candleData, setCandleData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -92,7 +92,7 @@ export default function TokenPage() {
         setCandleData(data.candles || []);
       } catch (err) {
         console.error("Error fetching candle data:", err);
-        setError("Failed to load chart data. Please try again later.");
+        setError(t("chart_load_failed"));
       } finally {
         setLoading(false);
       }
@@ -136,7 +136,7 @@ export default function TokenPage() {
                     }}
                     className={`px-1 py-0.5 text-white border-r border-gray-600 ${selectedInterval === "FIVE_MIN" ? "bg-gray-700" : ""}`}
                   >
-                    5分
+                    {t("interval_5m")}
                   </button> */}
                   <button 
                     onClick={() => {
@@ -146,7 +146,7 @@ export default function TokenPage() {
                     }}
                     className={`px-1 py-0.5 text-white border-r border-gray-600 ${selectedInterval === "FIFTEEN_MIN" ? "bg-gray-700" : ""}`}
                   >
-                    15分
+                    {t("interval_15m")}
                   </button>
                   <button 
                     onClick={() => {
@@ -156,7 +156,7 @@ export default function TokenPage() {
                     }}
                     className={`px-1 py-0.5 text-white border-r border-gray-600 ${selectedInterval === "ONE_HOUR" ? "bg-gray-700" : ""}`}
                   >
-                    1时
+                    {t("interval_1h")}
                   </button>
                   <button 
                     onClick={() => {
@@ -166,7 +166,7 @@ export default function TokenPage() {
                     }}
                     className={`px-1 py-0.5 text-white border-r border-gray-600 ${selectedInterval === "ONE_DAY" ? "bg-gray-700" : ""}`}
                   >
-                    1日
+                    {t("interval_1d")}
                   </button>
                   <button 
                     onClick={() => {
@@ -176,7 +176,7 @@ export default function TokenPage() {
                     }}
                     className={`px-1 py-0.5 text-white ${selectedInterval === "ONE_WEEK" ? "bg-gray-700" : ""}`}
                   >
-                    1周
+                    {t("interval_1w")}
                   </button>
                 </div>
               </div>
@@ -185,19 +185,19 @@ export default function TokenPage() {
             {/* Market stats */}
             <div className="self-start text-xs">
               <div className="flex justify-between">
-                <span className="text-gray-400 mr-2">24h最高</span>
+                <span className="text-gray-400 mr-2">{t("high_24h")}</span>
                 <span className="text-white">{marketInfo.high24h}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-400 mr-2">24h最低</span>
+                <span className="text-gray-400 mr-2">{t("low_24h")}</span>
                 <span className="text-white">{marketInfo.low24h}</span>
               </div>
               {/* <div className="flex justify-between">
-                <span className="text-gray-400 mr-2">24h量 (TXT)</span>
+                <span className="text-gray-400 mr-2">{t("volume_24h_txt")}</span>
                 <span className="text-white">{marketInfo.volume24h}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-400 mr-2">市值</span>
+                <span className="text-gray-400 mr-2">{t("market_cap")}</span>
                 <span className="text-white">${marketInfo.marketCap}</span>
               </div> */}
             </div>

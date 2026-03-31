@@ -1,0 +1,2619 @@
+{
+  "baseLocale": "zh",
+  "locales": [
+    "ar",
+    "en",
+    "ja",
+    "ko",
+    "vi",
+    "zh-Hant"
+  ],
+  "generatedAt": "2026-03-30T12:55:23.784Z",
+  "summary": {
+    "ar": {
+      "totalChecked": 579,
+      "flagged": 6,
+      "sameAsZh": 6,
+      "containsCJK": 0
+    },
+    "en": {
+      "totalChecked": 579,
+      "flagged": 8,
+      "sameAsZh": 8,
+      "containsCJK": 0
+    },
+    "ja": {
+      "totalChecked": 579,
+      "flagged": 418,
+      "sameAsZh": 21,
+      "containsCJK": 397
+    },
+    "ko": {
+      "totalChecked": 579,
+      "flagged": 8,
+      "sameAsZh": 8,
+      "containsCJK": 0
+    },
+    "vi": {
+      "totalChecked": 579,
+      "flagged": 7,
+      "sameAsZh": 7,
+      "containsCJK": 0
+    },
+    "zh-Hant": {
+      "totalChecked": 579,
+      "flagged": 64,
+      "sameAsZh": 64,
+      "containsCJK": 0
+    }
+  },
+  "issues": {
+    "ar": [
+      {
+        "key": "common.brand_name",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink"
+      },
+      {
+        "key": "home.harmony.footer_sdk",
+        "reason": "same_as_zh",
+        "value": "SDK"
+      },
+      {
+        "key": "home.harmony.footer_devbox",
+        "reason": "same_as_zh",
+        "value": "DevBox Studio"
+      },
+      {
+        "key": "home.harmony.footer_account_kit",
+        "reason": "same_as_zh",
+        "value": "Account Kit"
+      },
+      {
+        "key": "home.harmony.footer_ads_kit",
+        "reason": "same_as_zh",
+        "value": "ADS Kit"
+      },
+      {
+        "key": "home.harmony.footer_game_kit",
+        "reason": "same_as_zh",
+        "value": "Game Kit"
+      }
+    ],
+    "en": [
+      {
+        "key": "common.brand_name",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink"
+      },
+      {
+        "key": "home.harmony.footer_sdk",
+        "reason": "same_as_zh",
+        "value": "SDK"
+      },
+      {
+        "key": "home.harmony.footer_wallet",
+        "reason": "same_as_zh",
+        "value": "Wallet"
+      },
+      {
+        "key": "home.harmony.footer_devbox",
+        "reason": "same_as_zh",
+        "value": "DevBox Studio"
+      },
+      {
+        "key": "home.harmony.footer_account_kit",
+        "reason": "same_as_zh",
+        "value": "Account Kit"
+      },
+      {
+        "key": "home.harmony.footer_ads_kit",
+        "reason": "same_as_zh",
+        "value": "ADS Kit"
+      },
+      {
+        "key": "home.harmony.footer_game_kit",
+        "reason": "same_as_zh",
+        "value": "Game Kit"
+      },
+      {
+        "key": "download_page.app_title",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink APP"
+      }
+    ],
+    "ja": [
+      {
+        "key": "common.language_menu",
+        "reason": "contains_cjk",
+        "value": "言語"
+      },
+      {
+        "key": "common.brand_name",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink"
+      },
+      {
+        "key": "common.please_stay",
+        "reason": "contains_cjk",
+        "value": "このページを離れないでください。"
+      },
+      {
+        "key": "token.chart_load_failed",
+        "reason": "contains_cjk",
+        "value": "チャートの読み込みに失敗しました。しばらくしてからもう一度お試しください。"
+      },
+      {
+        "key": "token.interval_5m",
+        "reason": "same_as_zh",
+        "value": "5分"
+      },
+      {
+        "key": "token.interval_15m",
+        "reason": "same_as_zh",
+        "value": "15分"
+      },
+      {
+        "key": "token.interval_1h",
+        "reason": "contains_cjk",
+        "value": "1時間"
+      },
+      {
+        "key": "token.interval_1d",
+        "reason": "same_as_zh",
+        "value": "1日"
+      },
+      {
+        "key": "token.interval_1w",
+        "reason": "contains_cjk",
+        "value": "1週間"
+      },
+      {
+        "key": "token.high_24h",
+        "reason": "contains_cjk",
+        "value": "24時間高値"
+      },
+      {
+        "key": "token.low_24h",
+        "reason": "contains_cjk",
+        "value": "24時間安値"
+      },
+      {
+        "key": "token.volume_24h_txt",
+        "reason": "contains_cjk",
+        "value": "24時間出来高 (TXT)"
+      },
+      {
+        "key": "token.market_cap",
+        "reason": "contains_cjk",
+        "value": "時価総額"
+      },
+      {
+        "key": "history",
+        "reason": "contains_cjk",
+        "value": "収益記録"
+      },
+      {
+        "key": "calculate",
+        "reason": "contains_cjk",
+        "value": "計算"
+      },
+      {
+        "key": "home.project_intro.title",
+        "reason": "contains_cjk",
+        "value": "プロジェクト紹介"
+      },
+      {
+        "key": "home.project_intro.description",
+        "reason": "contains_cjk",
+        "value": "TwinXはAI駆動のWeb3ショートビデオプラットフォームで、AIアバターとスマート推薦を融合し、没入型インタラクションと分散型価値システムを構築します。すべての表現と交流はブロックチェーンに記録され、クリエイター、ユーザー、ブランド、開発者をつなぎ、グローバルなコンテンツエコシステムを共同構築することを目指しています"
+      },
+      {
+        "key": "home.ai_flow.title",
+        "reason": "contains_cjk",
+        "value": "AIアバター生成プロセス"
+      },
+      {
+        "key": "home.ai_flow.description",
+        "reason": "contains_cjk",
+        "value": "ユーザーはソーシャル、チャット、メディアデータをTwinXにアップロードし、プラットフォームはそのスタイルを模倣した生き生きとしたAIアバターをトレーニングし、パーソナライズされたインタラクションとコンテンツ作成に使用します。"
+      },
+      {
+        "key": "home.total_c_staking",
+        "reason": "contains_cjk",
+        "value": "コミュニティ総焼却量"
+      },
+      {
+        "key": "home.app_ecosystem.title",
+        "reason": "contains_cjk",
+        "value": "エコシステム三体系"
+      },
+      {
+        "key": "home.app_ecosystem.items.0.title",
+        "reason": "contains_cjk",
+        "value": "AI創作 · 高効率生成"
+      },
+      {
+        "key": "home.app_ecosystem.items.0.description",
+        "reason": "contains_cjk",
+        "value": "コミュニティの交流を促進するため、クリエイター、アクティブユーザー、開発者に報酬を与えます。"
+      },
+      {
+        "key": "home.app_ecosystem.items.1.title",
+        "reason": "contains_cjk",
+        "value": "アバター交流 · 24時間365日オンライン"
+      },
+      {
+        "key": "home.app_ecosystem.items.1.description",
+        "reason": "contains_cjk",
+        "value": "ユーザーとプラットフォームの相互作用データを通じて、AIモデルを最適化しデジタルイメージを強化します。"
+      },
+      {
+        "key": "home.app_ecosystem.items.2.title",
+        "reason": "contains_cjk",
+        "value": "ビジネスループ · 一体化収益化"
+      },
+      {
+        "key": "home.app_ecosystem.items.2.description",
+        "reason": "contains_cjk",
+        "value": "TXTを通じてエコシステム参加者に公平かつ透明に利益を配分します。"
+      },
+      {
+        "key": "home.app_ecosystem.items.3.title",
+        "reason": "contains_cjk",
+        "value": "没入体験 · 全方位融合"
+      },
+      {
+        "key": "home.app_ecosystem.items.3.description",
+        "reason": "contains_cjk",
+        "value": "推薦と交流に報酬を与えることでユーザー成長を促進し、プラットフォームの魅力を高め、より多くのユーザーを引き付けます。"
+      },
+      {
+        "key": "home.roadmap.phase1.date",
+        "reason": "contains_cjk",
+        "value": "フェーズ1 完了"
+      },
+      {
+        "key": "home.roadmap.phase1.title",
+        "reason": "contains_cjk",
+        "value": "AIアバター構築·スマート推薦のブロックチェーン化"
+      },
+      {
+        "key": "home.roadmap.phase2.title",
+        "reason": "contains_cjk",
+        "value": "音声交流 · ショートビデオ公開 · コミュニティ育成と資金調達"
+      },
+      {
+        "key": "home.roadmap.phase3.title",
+        "reason": "contains_cjk",
+        "value": "ベータ公開テスト · KOL参加 · 取引所上場"
+      },
+      {
+        "key": "home.roadmap.phase4.title",
+        "reason": "contains_cjk",
+        "value": "バーチャルギフト · サブスクリプションサービス · ビジネス実装"
+      },
+      {
+        "key": "home.roadmap.phase5.title",
+        "reason": "contains_cjk",
+        "value": "Eコマース拡張 · AIアドバイザー · ブランド全チェーン"
+      },
+      {
+        "key": "home.roadmap.phase6.title",
+        "reason": "contains_cjk",
+        "value": "VR/AR交流 · AI創作 · グローバル展開"
+      },
+      {
+        "key": "home.harmony.footer_sdk",
+        "reason": "same_as_zh",
+        "value": "SDK"
+      },
+      {
+        "key": "home.harmony.footer_wallet",
+        "reason": "same_as_zh",
+        "value": "Wallet"
+      },
+      {
+        "key": "home.harmony.footer_devbox",
+        "reason": "same_as_zh",
+        "value": "DevBox Studio"
+      },
+      {
+        "key": "home.harmony.footer_account_kit",
+        "reason": "same_as_zh",
+        "value": "Account Kit"
+      },
+      {
+        "key": "home.harmony.footer_ads_kit",
+        "reason": "same_as_zh",
+        "value": "ADS Kit"
+      },
+      {
+        "key": "home.harmony.footer_game_kit",
+        "reason": "same_as_zh",
+        "value": "Game Kit"
+      },
+      {
+        "key": "home.harmony.marquee_empty",
+        "reason": "contains_cjk",
+        "value": "公開予定はありません"
+      },
+      {
+        "key": "home.harmony.detail_link",
+        "reason": "contains_cjk",
+        "value": "プロジェクト詳細を表示"
+      },
+      {
+        "key": "home.harmony.hero_subtitle_harmony",
+        "reason": "contains_cjk",
+        "value": "Web3アテンション経済を再構成"
+      },
+      {
+        "key": "home.harmony.hero_description_harmony",
+        "reason": "contains_cjk",
+        "value": "ユーザー行動をプログラム可能な資産に"
+      },
+      {
+        "key": "home.harmony.about_subtitle",
+        "reason": "contains_cjk",
+        "value": "高スループット、低レイテンシー、EVM互換のシャーディングパブリックチェーン"
+      },
+      {
+        "key": "home.harmony.about_founding",
+        "reason": "contains_cjk",
+        "value": "Harmony (ONE) は2018年にアメリカのカリフォルニア州マウンテンビューで設立されました。2019年5月にBinance Launchpad IEOでL1パブリックチェーンとしてローンチし、500万ドルのIEOが5分で売り切れて、当時のブロックチェーン伝説となりました。7年間の探索を経て、私たちは以下を実現しました："
+      },
+      {
+        "key": "home.harmony.card_shards_title",
+        "reason": "contains_cjk",
+        "value": "4本"
+      },
+      {
+        "key": "home.harmony.card_shards_desc",
+        "reason": "contains_cjk",
+        "value": "高速道路のような並列シャーディングチェーン"
+      },
+      {
+        "key": "home.harmony.card_fees_title",
+        "reason": "contains_cjk",
+        "value": "万分の一"
+      },
+      {
+        "key": "home.harmony.card_fees_desc",
+        "reason": "contains_cjk",
+        "value": "クロスチェーン取引手数料を1ドルの万分の一まで削減"
+      },
+      {
+        "key": "home.harmony.card_ecosystem_title",
+        "reason": "contains_cjk",
+        "value": "412個"
+      },
+      {
+        "key": "home.harmony.card_ecosystem_desc",
+        "reason": "contains_cjk",
+        "value": "エコシステムプロジェクトが根付き成長するのを支援"
+      },
+      {
+        "key": "home.harmony.value_os_title",
+        "reason": "contains_cjk",
+        "value": "Web3トラフィック現金化を再構成"
+      },
+      {
+        "key": "home.harmony.value_os_description",
+        "reason": "contains_cjk",
+        "value": "数年の探索後、Web3の3つの柱である<span class=\"text-amber-300 font-medium\">分散化ガバナンス</span>、<span class=\"text-amber-300 font-medium\">ユーザー主権の回復</span>、<span class=\"text-amber-300 font-medium\">デジタル資産確認メカニズム</span>は依然としてパラダイム構築中です。Harmony(ONE)は先駆的実践によってブレークスルーを達成し、チェーン上動作資産化エンジンを通じて、ユーザーのソーシャル、創作、インタラクションデータを検証可能なデジタル資産に変換し、<span class=\"text-white font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] border-b border-amber-500/50 pb-1\">データ主権の改ざん不可能な権利化</span>を実現します。"
+      },
+      {
+        "key": "home.harmony.value_os_conclusion",
+        "reason": "contains_cjk",
+        "value": "HarmonyLinkは技術的な反復産物ではなく、資産確認パラダイムの進化跳躍です。その本質は<span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 font-bold text-lg sm:text-2xl px-0.5 sm:px-1\">「行動と財産権」</span>の価値操作システムを再形成することであり、Web3が概念レイヤーから価値レイヤーへの<span class=\"text-orange-400 font-bold\">産業革命</span>が既に始まっていることを示しています。"
+      },
+      {
+        "key": "home.harmony.about_location",
+        "reason": "contains_cjk",
+        "value": "米国 カリフォルニア州 マウンテンビュー"
+      },
+      {
+        "key": "home.harmony.engines_heading_line1",
+        "reason": "contains_cjk",
+        "value": "5つのエコシステム・エンジンで構築"
+      },
+      {
+        "key": "home.harmony.engines_heading_line2",
+        "reason": "contains_cjk",
+        "value": "価値の事後検証メカニズム"
+      },
+      {
+        "key": "home.harmony.engines_intro",
+        "reason": "contains_cjk",
+        "value": "ブロックチェーン業界には革新的なモデルが不足しているわけではありませんが、多くのプロジェクトは<pink>持続的な自走（造血）メカニズムの欠如</pink>により行き詰まります。収益モデルがユーザー参加の実態から乖離したり、資本の物語に堕したりし、成長が止まればシステミックリスクへと変わります。HarmonyLinkは<strong>5つのエコシステム・エンジン</strong>でユーザー価値の獲得を支えます。"
+      },
+      {
+        "key": "qr_code.grid_icon_alt",
+        "reason": "contains_cjk",
+        "value": "招待QRコード"
+      },
+      {
+        "key": "qr_code.invite_friends",
+        "reason": "contains_cjk",
+        "value": "友達を招待"
+      },
+      {
+        "key": "qr_code.invite_link",
+        "reason": "contains_cjk",
+        "value": "招待リンク"
+      },
+      {
+        "key": "qr_code.download_image",
+        "reason": "contains_cjk",
+        "value": "画像をダウンロード"
+      },
+      {
+        "key": "qr_code.error_load",
+        "reason": "contains_cjk",
+        "value": "コピーに失敗しました。もう一度お試しください。"
+      },
+      {
+        "key": "qr_code.invite_code",
+        "reason": "contains_cjk",
+        "value": "招待コード"
+      },
+      {
+        "key": "qr_code.warning",
+        "reason": "contains_cjk",
+        "value": "あなたはノードになっていないため、ノード推薦報酬を受け取れません"
+      },
+      {
+        "key": "qr_code.screenshot_tip_title",
+        "reason": "contains_cjk",
+        "value": "QRコードを保存"
+      },
+      {
+        "key": "qr_code.screenshot_tip_message",
+        "reason": "contains_cjk",
+        "value": "ウォレットアプリでQRコードを保存するには、スマートフォンのスクリーンショット機能またはウォレット内蔵のスクリーンショット機能を使用してください。"
+      },
+      {
+        "key": "qr_code.got_it",
+        "reason": "contains_cjk",
+        "value": "了解しました"
+      },
+      {
+        "key": "recommender_confirm.title",
+        "reason": "contains_cjk",
+        "value": "招待者を確認"
+      },
+      {
+        "key": "recommender_confirm.connect_wallet_first",
+        "reason": "contains_cjk",
+        "value": "まずウォレットを接続してください"
+      },
+      {
+        "key": "recommender_confirm.tip",
+        "reason": "contains_cjk",
+        "value": "バインド後は変更できません。確認してください"
+      },
+      {
+        "key": "recommender_confirm.updating",
+        "reason": "same_as_zh",
+        "value": "更新中..."
+      },
+      {
+        "key": "recommender_confirm.ok",
+        "reason": "contains_cjk",
+        "value": "確認"
+      },
+      {
+        "key": "foot.earnings",
+        "reason": "contains_cjk",
+        "value": "収益"
+      },
+      {
+        "key": "history_page.title",
+        "reason": "contains_cjk",
+        "value": "履歴"
+      },
+      {
+        "key": "history_page.col_amount",
+        "reason": "contains_cjk",
+        "value": "金額(USDT)"
+      },
+      {
+        "key": "history_page.col_time",
+        "reason": "contains_cjk",
+        "value": "時間"
+      },
+      {
+        "key": "history_page.col_purpose",
+        "reason": "same_as_zh",
+        "value": "用途"
+      },
+      {
+        "key": "history_page.purpose_account_activation",
+        "reason": "contains_cjk",
+        "value": "アカウント有効化"
+      },
+      {
+        "key": "history_page.purpose_EQUITY",
+        "reason": "contains_cjk",
+        "value": "エクイティ購読"
+      },
+      {
+        "key": "history_page.connect_wallet",
+        "reason": "contains_cjk",
+        "value": "履歴を表示するにはウォレットを接続してください"
+      },
+      {
+        "key": "history_page.loading",
+        "reason": "contains_cjk",
+        "value": "読み込み中…"
+      },
+      {
+        "key": "history_page.empty",
+        "reason": "contains_cjk",
+        "value": "記録がありません"
+      },
+      {
+        "key": "history_page.error_load",
+        "reason": "contains_cjk",
+        "value": "読み込みに失敗しました。しばらくしてからお試しください。"
+      },
+      {
+        "key": "history_page.load_more",
+        "reason": "contains_cjk",
+        "value": "さらに読み込む"
+      },
+      {
+        "key": "equity_activation_page.title",
+        "reason": "contains_cjk",
+        "value": "アカウント有効化"
+      },
+      {
+        "key": "equity_activation_page.intro",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink では本ページで権益パッケージを選びアカウントを有効化します。「有効化」とはオンチェーン上で身元を作り、価値のやり取りを起こすプロセスです。HarmonyLink では有効化ユーザー＝オンチェーンアドレス（主権的身份）＋インタラクション用燃料（最低限のガス）＋主要アクションのクローズドループであり、正式なプラットフォーム権益の対象となります。\n\nパッケージごとに内容は異なり、いずれも 50 日間の有効期間があります。期間中はパッケージ内の権益を利用でき、期限後に同じ権益が必要な場合は本ページで再度「有効化」してください。"
+      },
+      {
+        "key": "equity_activation_page.table_col_benefits",
+        "reason": "contains_cjk",
+        "value": "1日あたりの権益"
+      },
+      {
+        "key": "equity_activation_page.row_benefit_base",
+        "reason": "contains_cjk",
+        "value": "1日: 動画投稿 1、いいね 3、コメント 1、コメントいいね 10（詳細はアプリへ）。"
+      },
+      {
+        "key": "equity_activation_page.row_benefit_plus",
+        "reason": "contains_cjk",
+        "value": "1日: 動画投稿 5、いいね 17、コメント 7、コメントいいね 50（詳細はアプリへ）。"
+      },
+      {
+        "key": "equity_activation_page.row_benefit_premium",
+        "reason": "contains_cjk",
+        "value": "1日: 動画投稿 11、いいね 35、コメント 15、コメントいいね 120（詳細はアプリへ）。"
+      },
+      {
+        "key": "equity_activation_page.table_footer",
+        "reason": "contains_cjk",
+        "value": "* ライブいいね等は HAK 等の報酬対象になる場合があります（ルールはプラットフォームに準拠）。"
+      },
+      {
+        "key": "equity_activation_page.select_hint",
+        "reason": "contains_cjk",
+        "value": "権益パッケージを選び、対応する USDT を支払ってください"
+      },
+      {
+        "key": "equity_activation_page.confirm_line",
+        "reason": "contains_cjk",
+        "value": "{amount} USDT のパッケージを選択しました。下の「支払い」で決済し、アカウントを有効化してください。"
+      },
+      {
+        "key": "equity_activation_page.referral_label",
+        "reason": "contains_cjk",
+        "value": "紹介コード（任意）"
+      },
+      {
+        "key": "equity_activation_page.referral_placeholder",
+        "reason": "contains_cjk",
+        "value": "あれば入力、または招待リンクを利用"
+      },
+      {
+        "key": "equity_activation_page.cta_pay",
+        "reason": "contains_cjk",
+        "value": "支払いを開始"
+      },
+      {
+        "key": "equity_activation_page.paying",
+        "reason": "contains_cjk",
+        "value": "処理中…"
+      },
+      {
+        "key": "equity_activation_page.history_link",
+        "reason": "contains_cjk",
+        "value": "履歴"
+      },
+      {
+        "key": "equity_activation_page.disclaimer",
+        "reason": "contains_cjk",
+        "value": "* 権益をよくお読みください。支払い後の変更・返金はできません。権益は投稿・いいね・コメント等の日次行動に適用されます。"
+      },
+      {
+        "key": "download_page.title",
+        "reason": "contains_cjk",
+        "value": "ダウンロードと資料"
+      },
+      {
+        "key": "download_page.subtitle",
+        "reason": "contains_cjk",
+        "value": "アプリと PDF は順次更新されます。"
+      },
+      {
+        "key": "download_page.page_heading",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink 資料ダウンロード"
+      },
+      {
+        "key": "download_page.section_business",
+        "reason": "contains_cjk",
+        "value": "事業計画書"
+      },
+      {
+        "key": "download_page.section_other",
+        "reason": "contains_cjk",
+        "value": "その他の資料"
+      },
+      {
+        "key": "download_page.file_business_zh",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink 事業計画書（中国語版）"
+      },
+      {
+        "key": "download_page.file_business_en",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink 事業計画書（英語版）"
+      },
+      {
+        "key": "download_page.file_whitepaper_zh",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink ホワイトペーパー（中国語版）"
+      },
+      {
+        "key": "download_page.file_whitepaper_en",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink ホワイトペーパー（英語版）"
+      },
+      {
+        "key": "download_page.file_long_pic_zh",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink ロング画像（中国語）"
+      },
+      {
+        "key": "download_page.file_long_pic_en",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink ロング画像（英語）"
+      },
+      {
+        "key": "download_page.file_tutorial_zh",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink チュートリアル動画（中国語）"
+      },
+      {
+        "key": "download_page.file_tutorial_en",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink チュートリアル動画（英語）"
+      },
+      {
+        "key": "download_page.app_title",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink APP"
+      },
+      {
+        "key": "download_page.app_hint",
+        "reason": "contains_cjk",
+        "value": "モバイル向けダウンロードは近日公開予定です。"
+      },
+      {
+        "key": "download_page.business_title",
+        "reason": "contains_cjk",
+        "value": "事業計画書"
+      },
+      {
+        "key": "download_page.business_hint",
+        "reason": "contains_cjk",
+        "value": "PDF は公開後にダウンロード可能になります。"
+      },
+      {
+        "key": "download_page.whitepaper_hint",
+        "reason": "contains_cjk",
+        "value": "PDF は公開後にダウンロード可能になります。"
+      },
+      {
+        "key": "nav_drawer.open_menu",
+        "reason": "contains_cjk",
+        "value": "メニューを開く"
+      },
+      {
+        "key": "nav_drawer.close_menu",
+        "reason": "contains_cjk",
+        "value": "メニューを閉じる"
+      },
+      {
+        "key": "nav_drawer.early_consensus",
+        "reason": "contains_cjk",
+        "value": "早期コンセンサス購読"
+      },
+      {
+        "key": "nav_drawer.download_business_plan",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink事業計画書（PDF）"
+      },
+      {
+        "key": "nav_drawer.account_activation",
+        "reason": "contains_cjk",
+        "value": "アカウント有効化"
+      },
+      {
+        "key": "nav_drawer.history_records",
+        "reason": "contains_cjk",
+        "value": "履歴"
+      },
+      {
+        "key": "user_type.NORMAL",
+        "reason": "contains_cjk",
+        "value": "未アクティブノード"
+      },
+      {
+        "key": "user_type.GROUP",
+        "reason": "contains_cjk",
+        "value": "惑星ノード"
+      },
+      {
+        "key": "user_type.COMMUNITY",
+        "reason": "contains_cjk",
+        "value": "恒星ノード"
+      },
+      {
+        "key": "user_type.common",
+        "reason": "contains_cjk",
+        "value": "一般"
+      },
+      {
+        "key": "user_type.SYSTEM_INIT",
+        "reason": "contains_cjk",
+        "value": "システム創設者ノード"
+      },
+      {
+        "key": "user_type.COMMUNITY_INIT",
+        "reason": "contains_cjk",
+        "value": "コミュニティ創設者ノード"
+      },
+      {
+        "key": "user_type.GALAXY",
+        "reason": "contains_cjk",
+        "value": "銀河ノード"
+      },
+      {
+        "key": "tx_type.NODE_REWARD",
+        "reason": "contains_cjk",
+        "value": "ノード収益"
+      },
+      {
+        "key": "tx_type.NODE_DIFF_REWARD",
+        "reason": "contains_cjk",
+        "value": "ノードレベル差収益"
+      },
+      {
+        "key": "tx_type.FEE_DIVIDEND",
+        "reason": "contains_cjk",
+        "value": "手数料配当"
+      },
+      {
+        "key": "tx_type.FEE_DIVIDEND_TOKEN",
+        "reason": "contains_cjk",
+        "value": "手数料配当（TXT）"
+      },
+      {
+        "key": "tx_type.STAKE_STATIC_REWARD",
+        "reason": "contains_cjk",
+        "value": "焼却マイニング収益"
+      },
+      {
+        "key": "tx_type.STAKE_STATIC_DIRECT_REWARD",
+        "reason": "contains_cjk",
+        "value": "直接推薦報酬"
+      },
+      {
+        "key": "tx_type.STAKE_DYNAMIC_REWARD",
+        "reason": "contains_cjk",
+        "value": "コミュニティマイニング収益"
+      },
+      {
+        "key": "tx_type.STAKE_DYNAMIC_INCUBATION_REWARD",
+        "reason": "contains_cjk",
+        "value": "同レベル収益"
+      },
+      {
+        "key": "tx_type.STAKE_DYNAMIC_NODE_REWARD",
+        "reason": "contains_cjk",
+        "value": "ノードマイニング収益"
+      },
+      {
+        "key": "tx_type.STAKE_DYNAMIC_NODE_INCUBATION_REWARD",
+        "reason": "contains_cjk",
+        "value": "ノード育成収益"
+      },
+      {
+        "key": "tx_type.MARKET_EXPENSE",
+        "reason": "contains_cjk",
+        "value": "マーケティング費用"
+      },
+      {
+        "key": "tx_type.SECURITY_FUND",
+        "reason": "contains_cjk",
+        "value": "セキュリティ基金"
+      },
+      {
+        "key": "node.equity_status_or_activation_progress",
+        "reason": "contains_cjk",
+        "value": "特典ステータス / 有効化の進捗"
+      },
+      {
+        "key": "node.invite_friends_button",
+        "reason": "contains_cjk",
+        "value": "友達を招待"
+      },
+      {
+        "key": "node.purchase_button",
+        "reason": "contains_cjk",
+        "value": "購入"
+      },
+      {
+        "key": "node.benefits_list",
+        "reason": "contains_cjk",
+        "value": "特典一覧"
+      },
+      {
+        "key": "node.modal_close",
+        "reason": "contains_cjk",
+        "value": "閉じる"
+      },
+      {
+        "key": "node.confirm_purchase_title",
+        "reason": "contains_cjk",
+        "value": "購入の確認"
+      },
+      {
+        "key": "node.confirm_purchase_spend_prefix",
+        "reason": "contains_cjk",
+        "value": "消費予定："
+      },
+      {
+        "key": "node.confirm_purchase_spend_suffix",
+        "reason": "contains_cjk",
+        "value": "で HarmonyLink 早期コンセンサス特典パックを購入します。購入後は返金できません。続行する場合は「今すぐ支払う」をタップして完了してください。"
+      },
+      {
+        "key": "node.confirm_purchase_balance",
+        "reason": "contains_cjk",
+        "value": "*ウォレットの利用可能残高：{balance} USDT"
+      },
+      {
+        "key": "node.confirm_purchase_pay_now",
+        "reason": "contains_cjk",
+        "value": "今すぐ支払う"
+      },
+      {
+        "key": "node.community_title",
+        "reason": "contains_cjk",
+        "value": "恒星ノード"
+      },
+      {
+        "key": "node.group_title",
+        "reason": "contains_cjk",
+        "value": "惑星ノード"
+      },
+      {
+        "key": "node.system_init_title",
+        "reason": "contains_cjk",
+        "value": "システム創設者ノード"
+      },
+      {
+        "key": "node.community_init_title",
+        "reason": "contains_cjk",
+        "value": "コミュニティ創設者ノード"
+      },
+      {
+        "key": "node.price",
+        "reason": "contains_cjk",
+        "value": "価格"
+      },
+      {
+        "key": "node.left",
+        "reason": "contains_cjk",
+        "value": "残り"
+      },
+      {
+        "key": "node.referral_reward",
+        "reason": "contains_cjk",
+        "value": "紹介報酬"
+      },
+      {
+        "key": "node.confirm_purchase_type",
+        "reason": "contains_cjk",
+        "value": "購入タイプを確認"
+      },
+      {
+        "key": "node.confirm",
+        "reason": "contains_cjk",
+        "value": "確認"
+      },
+      {
+        "key": "node.disclaimer_link",
+        "reason": "contains_cjk",
+        "value": "《TwinXスーパーノード計画免責事項》"
+      },
+      {
+        "key": "node.disclaimer_title",
+        "reason": "contains_cjk",
+        "value": "TwinXスーパーノード計画免責事項"
+      },
+      {
+        "key": "node.disclaimer_text",
+        "reason": "contains_cjk",
+        "value": "本計画に関わるTwinXスーパーノードの権益、収益モデルなどは、現段階の開発計画と市場予測に基づいています。TwinXノードシステムに参加する前に、以下の内容を十分に理解してください：\n\n投資約束ではない声明：TwinXスーパーノード計画はいかなる形の投資アドバイスや資金調達行為を構成するものではありません。プラットフォームはトークン価格の変動や潜在的な経済的利益について約束や保証をしません。\n\n収益の不確実性：ノード関連のインセンティブ（TXTエアドロップ、配当メカニズム、ガバナンス権など）は、プラットフォームの実際の運営状況に応じて配分され、調整や遅延の可能性があります。\n\n技術および運営リスク：TwinXプラットフォームはWeb3スマートコントラクト、AIシステム、分散型ストレージなどの先端技術を含み、システムの脆弱性、アップグレードの中断、アルゴリズムの変更などのリスクに直面する可能性があります。プラットフォームは継続的に最適化されますが、不可抗力または第三者の事象による損失に対して責任を負いません。\n\n参加は自主的：ノード参加は完全に個人の判断に基づきます。自身のリスク許容度を明確にした上で合理的に参加してください。\n\n法的コンプライアンス説明：暗号資産およびWeb3プロジェクトに関する各国の政策法律には違いがあります。TwinXノード計画に参加する前に、お住まいの国/地域の関連法律規制を理解し遵守していることを確認してください。\n\nTwinXチームはスーパーノード計画のメカニズム、スケジュール、権益詳細を動的に調整する権利を留保し、コミュニティおよび公式チャネルで事前に公表します。最終的な解釈権はIAT財団に帰属します。"
+      },
+      {
+        "key": "node.node_info_text.GROUP.title",
+        "reason": "contains_cjk",
+        "value": "惑星ノード"
+      },
+      {
+        "key": "node.node_info_text.GROUP.title_format",
+        "reason": "same_as_zh",
+        "value": "(2000席)-500USDT/席"
+      },
+      {
+        "key": "node.node_info_text.GROUP.min_level",
+        "reason": "contains_cjk",
+        "value": "L2コミュニティ報酬を直接アンロック"
+      },
+      {
+        "key": "node.node_info_text.GROUP.reward_cap",
+        "reason": "contains_cjk",
+        "value": "報酬資産パック1000U"
+      },
+      {
+        "key": "node.node_info_text.GROUP.direct_reward",
+        "reason": "contains_cjk",
+        "value": "直接推薦報酬 10%"
+      },
+      {
+        "key": "node.node_info_text.GROUP.dividends_reward",
+        "reason": "contains_cjk",
+        "value": "1% 出金手数料全ネットワーク配当"
+      },
+      {
+        "key": "node.node_info_text.GROUP.platform_reward",
+        "reason": "contains_cjk",
+        "value": "配信者ギルド配当：プラットフォーム配信チップ総流通の2%を共有"
+      },
+      {
+        "key": "node.node_info_text.GROUP.mining",
+        "reason": "contains_cjk",
+        "value": "日次マイニング収益 0.6%"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.title",
+        "reason": "contains_cjk",
+        "value": "恒星ノード"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.title_format",
+        "reason": "same_as_zh",
+        "value": "(200席)-2000USDT/席"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.min_level",
+        "reason": "contains_cjk",
+        "value": "L4コミュニティ報酬を直接アンロック"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.reward_cap",
+        "reason": "contains_cjk",
+        "value": "報酬資産パック4000U"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.direct_reward",
+        "reason": "contains_cjk",
+        "value": "直接推薦報酬 10%"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.diff_reward",
+        "reason": "contains_cjk",
+        "value": "傘下に新しいノードが追加されるごとに、50/200U（惑星/恒星）の報酬"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.dividends_reward",
+        "reason": "contains_cjk",
+        "value": "1% 出金手数料全ネットワーク配当"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.platform_reward",
+        "reason": "contains_cjk",
+        "value": "配信者ギルド配当：プラットフォーム配信チップ総流通の2%を共有"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.mining",
+        "reason": "contains_cjk",
+        "value": "日次マイニング収益 0.6%"
+      },
+      {
+        "key": "node.node_info_text.GALAXY.title",
+        "reason": "contains_cjk",
+        "value": "銀河ノード"
+      },
+      {
+        "key": "node.node_info_text.GALAXY.min_level",
+        "reason": "contains_cjk",
+        "value": "L6コミュニティ報酬を直接アンロック"
+      },
+      {
+        "key": "node.node_info_text.GALAXY.direct_reward",
+        "reason": "contains_cjk",
+        "value": "直接推薦報酬 10%"
+      },
+      {
+        "key": "node.node_info_text.GALAXY.diff_reward",
+        "reason": "contains_cjk",
+        "value": "傘下コミュニティノード販売総業績の20%"
+      },
+      {
+        "key": "node.node_info_text.GALAXY.dividends_reward",
+        "reason": "contains_cjk",
+        "value": "1% 出金手数料全ネットワーク配当"
+      },
+      {
+        "key": "node.node_info_text.GALAXY.platform_reward",
+        "reason": "contains_cjk",
+        "value": "配信者ギルド配当：プラットフォーム配信チップ総流通の2%を共有"
+      },
+      {
+        "key": "node.node_info_text.GALAXY.active_percent",
+        "reason": "contains_cjk",
+        "value": "現在の進捗："
+      },
+      {
+        "key": "node.node_info_text.GALAXY.active_condition",
+        "reason": "contains_cjk",
+        "value": "100個のノードを招待すると自動的にアクティブ化"
+      },
+      {
+        "key": "node.invite_friends",
+        "reason": "contains_cjk",
+        "value": "友達を招待"
+      },
+      {
+        "key": "node.equity_effective",
+        "reason": "contains_cjk",
+        "value": "権益有効中"
+      },
+      {
+        "key": "node.dividends_reward",
+        "reason": "contains_cjk",
+        "value": "全ネットワーク配当"
+      },
+      {
+        "key": "node.platform_reward",
+        "reason": "contains_cjk",
+        "value": "流通チップ配当"
+      },
+      {
+        "key": "node.total_fee",
+        "reason": "contains_cjk",
+        "value": "全ネットワーク手数料"
+      },
+      {
+        "key": "node.node_equity",
+        "reason": "contains_cjk",
+        "value": "ノード権益"
+      },
+      {
+        "key": "node.community_node_equity",
+        "reason": "contains_cjk",
+        "value": "最高特権"
+      },
+      {
+        "key": "node.group_node_equity",
+        "reason": "contains_cjk",
+        "value": "専属特権"
+      },
+      {
+        "key": "node.reward_cap",
+        "reason": "contains_cjk",
+        "value": "マイニング権益"
+      },
+      {
+        "key": "node.referrals",
+        "reason": "contains_cjk",
+        "value": "紹介"
+      },
+      {
+        "key": "node.activated",
+        "reason": "contains_cjk",
+        "value": "アクティブ化済み"
+      },
+      {
+        "key": "node.unactivated",
+        "reason": "contains_cjk",
+        "value": "未アクティブ"
+      },
+      {
+        "key": "node.invite",
+        "reason": "contains_cjk",
+        "value": "友達を招待"
+      },
+      {
+        "key": "node.buy_now",
+        "reason": "contains_cjk",
+        "value": "今すぐ購入"
+      },
+      {
+        "key": "node.node_reward_data",
+        "reason": "contains_cjk",
+        "value": "ノード報酬"
+      },
+      {
+        "key": "node.node_reward",
+        "reason": "contains_cjk",
+        "value": "ノード推薦報酬"
+      },
+      {
+        "key": "node.community_reward",
+        "reason": "contains_cjk",
+        "value": "ノードコミュニティ報酬"
+      },
+      {
+        "key": "node.incubation_reward",
+        "reason": "contains_cjk",
+        "value": "ノード育成報酬"
+      },
+      {
+        "key": "node.reward_pool",
+        "reason": "contains_cjk",
+        "value": "ノード報酬プール"
+      },
+      {
+        "key": "node.direct_community_count",
+        "reason": "contains_cjk",
+        "value": "直接推薦恒星ノード数"
+      },
+      {
+        "key": "node.direct_group_count",
+        "reason": "contains_cjk",
+        "value": "直接推薦惑星ノード数"
+      },
+      {
+        "key": "node.indirect_community_count",
+        "reason": "contains_cjk",
+        "value": "傘下恒星ノード数"
+      },
+      {
+        "key": "node.indirect_group_count",
+        "reason": "contains_cjk",
+        "value": "傘下惑星ノード数"
+      },
+      {
+        "key": "node.time",
+        "reason": "contains_cjk",
+        "value": "時間"
+      },
+      {
+        "key": "node.no_referrals_found",
+        "reason": "contains_cjk",
+        "value": "見つかりません"
+      },
+      {
+        "key": "node.no_superior_found",
+        "reason": "contains_cjk",
+        "value": "まず紹介者をバインドしてください"
+      },
+      {
+        "key": "earnings.earnings",
+        "reason": "contains_cjk",
+        "value": "私の収益"
+      },
+      {
+        "key": "earnings.to_claim",
+        "reason": "contains_cjk",
+        "value": "受け取り待ち"
+      },
+      {
+        "key": "earnings.claimed",
+        "reason": "contains_cjk",
+        "value": "受け取り済み"
+      },
+      {
+        "key": "earnings.total",
+        "reason": "contains_cjk",
+        "value": "総収益"
+      },
+      {
+        "key": "earnings.claim_rewards",
+        "reason": "contains_cjk",
+        "value": "報酬をアカウントに受け取る"
+      },
+      {
+        "key": "earnings.time",
+        "reason": "contains_cjk",
+        "value": "時間"
+      },
+      {
+        "key": "earnings.amount",
+        "reason": "contains_cjk",
+        "value": "金額"
+      },
+      {
+        "key": "earnings.history",
+        "reason": "contains_cjk",
+        "value": "収益記録"
+      },
+      {
+        "key": "earnings.no_records",
+        "reason": "contains_cjk",
+        "value": "記録なし"
+      },
+      {
+        "key": "earnings.available",
+        "reason": "contains_cjk",
+        "value": "受け取り金額"
+      },
+      {
+        "key": "earnings.confirm",
+        "reason": "contains_cjk",
+        "value": "確認"
+      },
+      {
+        "key": "earnings.market_expenses",
+        "reason": "contains_cjk",
+        "value": "マーケティング費用"
+      },
+      {
+        "key": "earnings.security_fund",
+        "reason": "contains_cjk",
+        "value": "セキュリティ基金"
+      },
+      {
+        "key": "earnings.claim_error_title",
+        "reason": "contains_cjk",
+        "value": "受け取りに失敗しました"
+      },
+      {
+        "key": "earnings.claim_success_title",
+        "reason": "contains_cjk",
+        "value": "受け取りが完了しました"
+      },
+      {
+        "key": "stake.staking_mining",
+        "reason": "contains_cjk",
+        "value": "焼却マイニング"
+      },
+      {
+        "key": "stake.staked",
+        "reason": "contains_cjk",
+        "value": "焼却済み"
+      },
+      {
+        "key": "stake.staking_amount",
+        "reason": "contains_cjk",
+        "value": "鋳造数量を入力"
+      },
+      {
+        "key": "stake.duration",
+        "reason": "contains_cjk",
+        "value": "期間"
+      },
+      {
+        "key": "stake.daily_yield",
+        "reason": "contains_cjk",
+        "value": "日次収益"
+      },
+      {
+        "key": "stake.balance",
+        "reason": "contains_cjk",
+        "value": "残高"
+      },
+      {
+        "key": "stake.confirm_stake",
+        "reason": "contains_cjk",
+        "value": "鋳造を確認"
+      },
+      {
+        "key": "stake.staking_records",
+        "reason": "contains_cjk",
+        "value": "鋳造記録"
+      },
+      {
+        "key": "stake.time",
+        "reason": "contains_cjk",
+        "value": "時間"
+      },
+      {
+        "key": "stake.amount",
+        "reason": "same_as_zh",
+        "value": "数量"
+      },
+      {
+        "key": "stake.days",
+        "reason": "contains_cjk",
+        "value": "日"
+      },
+      {
+        "key": "stake.status_staking",
+        "reason": "contains_cjk",
+        "value": "確認中"
+      },
+      {
+        "key": "stake.status_completed",
+        "reason": "contains_cjk",
+        "value": "焼却済み"
+      },
+      {
+        "key": "stake.comming_soon",
+        "reason": "contains_cjk",
+        "value": "近日公開"
+      },
+      {
+        "key": "stake.comming_soon_text",
+        "reason": "contains_cjk",
+        "value": "マイニング機能は近日公開予定です。更新をお待ちください！"
+      },
+      {
+        "key": "stake.personal_records",
+        "reason": "contains_cjk",
+        "value": "私の鋳造"
+      },
+      {
+        "key": "stake.subordinates_performance",
+        "reason": "contains_cjk",
+        "value": "招待鋳造"
+      },
+      {
+        "key": "stake.one_click_destroy",
+        "reason": "contains_cjk",
+        "value": "ワンクリック即時鋳造"
+      },
+      {
+        "key": "stake.real_time_price",
+        "reason": "contains_cjk",
+        "value": "リアルタイム価格"
+      },
+      {
+        "key": "stake.minimum",
+        "reason": "contains_cjk",
+        "value": "最低金額"
+      },
+      {
+        "key": "stake.dip",
+        "reason": "contains_cjk",
+        "value": "鋳造マイニング"
+      },
+      {
+        "key": "stake.total_produced",
+        "reason": "contains_cjk",
+        "value": "総産出量"
+      },
+      {
+        "key": "stake.v_privileges",
+        "reason": "contains_cjk",
+        "value": "V{level} 特典：より高いコミュニティ報酬と特権"
+      },
+      {
+        "key": "stake.stake_error",
+        "reason": "contains_cjk",
+        "value": "鋳造に失敗しました"
+      },
+      {
+        "key": "user.history",
+        "reason": "contains_cjk",
+        "value": "履歴"
+      },
+      {
+        "key": "my.loading",
+        "reason": "contains_cjk",
+        "value": "読み込み中..."
+      },
+      {
+        "key": "my.unit",
+        "reason": "contains_cjk",
+        "value": "単位"
+      },
+      {
+        "key": "my.mining_total",
+        "reason": "contains_cjk",
+        "value": "マイニング総量"
+      },
+      {
+        "key": "my.my_recommender",
+        "reason": "contains_cjk",
+        "value": "私の紹介者"
+      },
+      {
+        "key": "my.invite",
+        "reason": "contains_cjk",
+        "value": "招待"
+      },
+      {
+        "key": "my.my_invites",
+        "reason": "contains_cjk",
+        "value": "私の招待"
+      },
+      {
+        "key": "my.my_community",
+        "reason": "contains_cjk",
+        "value": "私のコミュニティ"
+      },
+      {
+        "key": "my.my_stake",
+        "reason": "contains_cjk",
+        "value": "私の鋳造"
+      },
+      {
+        "key": "my.my_withdrawals",
+        "reason": "contains_cjk",
+        "value": "私の出金"
+      },
+      {
+        "key": "my.my_proclaim",
+        "reason": "contains_cjk",
+        "value": "お知らせ"
+      },
+      {
+        "key": "my.cash_out",
+        "reason": "contains_cjk",
+        "value": "出金"
+      },
+      {
+        "key": "my.internal_transfer",
+        "reason": "contains_cjk",
+        "value": "即時交換（お楽しみに）"
+      },
+      {
+        "key": "my.destination",
+        "reason": "contains_cjk",
+        "value": "宛先アドレス"
+      },
+      {
+        "key": "my.enter_wallet_address",
+        "reason": "contains_cjk",
+        "value": "ウォレットアドレスを入力"
+      },
+      {
+        "key": "my.official_site",
+        "reason": "contains_cjk",
+        "value": "公式サイト"
+      },
+      {
+        "key": "my.copy_success",
+        "reason": "contains_cjk",
+        "value": "コピー成功"
+      },
+      {
+        "key": "my.got_it",
+        "reason": "contains_cjk",
+        "value": "了解しました"
+      },
+      {
+        "key": "my.minimum_withdrawal",
+        "reason": "contains_cjk",
+        "value": "最低出金額"
+      },
+      {
+        "key": "my.token_fees",
+        "reason": "contains_cjk",
+        "value": "手数料"
+      },
+      {
+        "key": "my.token_withdrawable",
+        "reason": "contains_cjk",
+        "value": "利用可能残高"
+      },
+      {
+        "key": "my.flash_swap",
+        "reason": "contains_cjk",
+        "value": "即時交換"
+      },
+      {
+        "key": "my.token_amount",
+        "reason": "contains_cjk",
+        "value": "TXT量"
+      },
+      {
+        "key": "my.usdt_amount",
+        "reason": "contains_cjk",
+        "value": "USDT額"
+      },
+      {
+        "key": "my.current_price",
+        "reason": "contains_cjk",
+        "value": "現在価格"
+      },
+      {
+        "key": "my.activated",
+        "reason": "contains_cjk",
+        "value": "アクティブ化済み"
+      },
+      {
+        "key": "my.unactivated",
+        "reason": "contains_cjk",
+        "value": "未アクティブ"
+      },
+      {
+        "key": "my.my_address",
+        "reason": "contains_cjk",
+        "value": "私のアドレス"
+      },
+      {
+        "key": "my.my_minting",
+        "reason": "contains_cjk",
+        "value": "私の鋳造"
+      },
+      {
+        "key": "my.announcements",
+        "reason": "contains_cjk",
+        "value": "お知らせ"
+      },
+      {
+        "key": "my.version_number",
+        "reason": "contains_cjk",
+        "value": "バージョン番号"
+      },
+      {
+        "key": "my.withdrawal",
+        "reason": "contains_cjk",
+        "value": "出金"
+      },
+      {
+        "key": "my.enter_invite_code",
+        "reason": "contains_cjk",
+        "value": "招待コードを入力"
+      },
+      {
+        "key": "my.please_enter_invite_code",
+        "reason": "contains_cjk",
+        "value": "招待コードを入力してください"
+      },
+      {
+        "key": "my.network_fee_note",
+        "reason": "contains_cjk",
+        "value": "受け取った金額に基づき、手数料はネットワーク負荷によって異なる場合があります"
+      },
+      {
+        "key": "my.deposit_time_note",
+        "reason": "contains_cjk",
+        "value": "入金予想到着時間：約5-10分"
+      },
+      {
+        "key": "my.ai_creation",
+        "reason": "contains_cjk",
+        "value": "AI創作 · 高効率生成"
+      },
+      {
+        "key": "my.avatar_interaction",
+        "reason": "contains_cjk",
+        "value": "アバター交流 · 24時間365日オンライン"
+      },
+      {
+        "key": "my.business_loop",
+        "reason": "contains_cjk",
+        "value": "ビジネスループ · 一体化収益化"
+      },
+      {
+        "key": "my.immersive_experience",
+        "reason": "contains_cjk",
+        "value": "没入体験 · 全方位融合"
+      },
+      {
+        "key": "my.completed",
+        "reason": "contains_cjk",
+        "value": "完了"
+      },
+      {
+        "key": "my.ai_avatar_setup",
+        "reason": "contains_cjk",
+        "value": "AIアバター構築·スマート推薦のブロックチェーン化"
+      },
+      {
+        "key": "my.phase_one_desc",
+        "reason": "contains_cjk",
+        "value": "音声交流 · ショートビデオ公開 · コミュニティ育成と資金調達"
+      },
+      {
+        "key": "my.phase_two_desc",
+        "reason": "contains_cjk",
+        "value": "ベータ公開テスト · KOL参加 · 取引所上場"
+      },
+      {
+        "key": "my.phase_three_desc",
+        "reason": "contains_cjk",
+        "value": "バーチャルギフト · サブスクリプションサービス · ビジネス実装"
+      },
+      {
+        "key": "my.phase_four_desc",
+        "reason": "contains_cjk",
+        "value": "Eコマース拡張 · AIアドバイザー · ブランド全チェーン"
+      },
+      {
+        "key": "my.phase_five_desc",
+        "reason": "contains_cjk",
+        "value": "VR/AR交流 · AI創作 · グローバル展開"
+      },
+      {
+        "key": "my.project_intro",
+        "reason": "contains_cjk",
+        "value": "プロジェクト紹介"
+      },
+      {
+        "key": "my.project_description",
+        "reason": "contains_cjk",
+        "value": "TwinXはAI駆動のWeb3ショートビデオプラットフォームで、AIアバターとスマート推薦を融合し、没入型インタラクションと分散型価値システムを構築します。すべての表現と交流はブロックチェーンに記録され、クリエイター、ユーザー、ブランド、開発者をつなぎ、グローバルなコンテンツエコシステムを共同構築することを目指しています"
+      },
+      {
+        "key": "my.ecosystem_system",
+        "reason": "contains_cjk",
+        "value": "エコシステム三体系"
+      },
+      {
+        "key": "my.roadmap_content",
+        "reason": "contains_cjk",
+        "value": "ロードマップ内容 - タイムラインあり"
+      },
+      {
+        "key": "my.timeline_vertical_line",
+        "reason": "contains_cjk",
+        "value": "タイムライン垂直線 - 円形ノード間のみ接続"
+      },
+      {
+        "key": "my.one_click_destroy",
+        "reason": "contains_cjk",
+        "value": "ワンクリック焼却"
+      },
+      {
+        "key": "my.v_privileges",
+        "reason": "contains_cjk",
+        "value": "V{level}権益でより高いコミュニティ報酬と特権を享受"
+      },
+      {
+        "key": "my.total_produced",
+        "reason": "contains_cjk",
+        "value": "総生産量"
+      },
+      {
+        "key": "my.claimable",
+        "reason": "contains_cjk",
+        "value": "受け取り可能"
+      },
+      {
+        "key": "my.total_earnings",
+        "reason": "contains_cjk",
+        "value": "総収益"
+      },
+      {
+        "key": "my.claimed",
+        "reason": "contains_cjk",
+        "value": "受け取り済み"
+      },
+      {
+        "key": "my.my_earnings",
+        "reason": "contains_cjk",
+        "value": "私の収益"
+      },
+      {
+        "key": "my.earnings_records",
+        "reason": "contains_cjk",
+        "value": "収益記録"
+      },
+      {
+        "key": "my.time",
+        "reason": "contains_cjk",
+        "value": "時間"
+      },
+      {
+        "key": "my.amount",
+        "reason": "same_as_zh",
+        "value": "数量"
+      },
+      {
+        "key": "my.claim_type",
+        "reason": "contains_cjk",
+        "value": "受け取りタイプ"
+      },
+      {
+        "key": "my.claim_amount",
+        "reason": "contains_cjk",
+        "value": "受け取り金額"
+      },
+      {
+        "key": "my.withdrawal_note",
+        "reason": "contains_cjk",
+        "value": "出金操作は、マイウォレットページで出金をクリックしてください"
+      },
+      {
+        "key": "my.confirm",
+        "reason": "contains_cjk",
+        "value": "確認"
+      },
+      {
+        "key": "my.node_title_format",
+        "reason": "same_as_zh",
+        "value": "({total}席)-{price}USDT/席"
+      },
+      {
+        "key": "my.unlock_l2_rewards",
+        "reason": "contains_cjk",
+        "value": "L2コミュニティ報酬を直接アンロック"
+      },
+      {
+        "key": "my.mining_equity_1500",
+        "reason": "contains_cjk",
+        "value": "マイニング権益 1000U"
+      },
+      {
+        "key": "my.direct_reward_10",
+        "reason": "contains_cjk",
+        "value": "直接推薦報酬10%"
+      },
+      {
+        "key": "my.withdrawal_fee_dividend_1",
+        "reason": "contains_cjk",
+        "value": "1% 出金手数料全ネットワーク配当"
+      },
+      {
+        "key": "my.streamer_guild_dividend",
+        "reason": "contains_cjk",
+        "value": "配信者ギルド配当: プラットフォーム配信チップ総流通の2%を共有"
+      },
+      {
+        "key": "my.mining",
+        "reason": "contains_cjk",
+        "value": "日次マイニング収益 0.6%"
+      },
+      {
+        "key": "my.unlock_l4_rewards",
+        "reason": "contains_cjk",
+        "value": "L4コミュニティ報酬を直接アンロック"
+      },
+      {
+        "key": "my.mining_equity_6000",
+        "reason": "contains_cjk",
+        "value": "マイニング権益 4000U"
+      },
+      {
+        "key": "my.galaxy_benefits_1",
+        "reason": "contains_cjk",
+        "value": "直接推薦報酬10%"
+      },
+      {
+        "key": "my.galaxy_benefits_2",
+        "reason": "contains_cjk",
+        "value": "1% 出金手数料全ネットワーク配当"
+      },
+      {
+        "key": "my.galaxy_benefits_3",
+        "reason": "contains_cjk",
+        "value": "傘下コミュニティノード販売総業績の20%"
+      },
+      {
+        "key": "my.galaxy_benefits_4",
+        "reason": "contains_cjk",
+        "value": "配信者ギルド配当: プラットフォーム配信チップ総流通の2%を共有"
+      },
+      {
+        "key": "my.equity_effective",
+        "reason": "contains_cjk",
+        "value": "権益有効中"
+      },
+      {
+        "key": "my.current_progress",
+        "reason": "contains_cjk",
+        "value": "現在の進捗: {percent}%"
+      },
+      {
+        "key": "my.invite_100_nodes",
+        "reason": "contains_cjk",
+        "value": "100個のノードを招待すると自動的にアクティブ化"
+      },
+      {
+        "key": "my.invite_friends",
+        "reason": "contains_cjk",
+        "value": "友達を招待"
+      },
+      {
+        "key": "my.node_reward_data",
+        "reason": "contains_cjk",
+        "value": "ノード報酬データ"
+      },
+      {
+        "key": "my.referral_reward",
+        "reason": "contains_cjk",
+        "value": "紹介報酬"
+      },
+      {
+        "key": "my.network_dividend",
+        "reason": "contains_cjk",
+        "value": "全ネットワーク配当"
+      },
+      {
+        "key": "my.stream_dividend",
+        "reason": "contains_cjk",
+        "value": "チップ流通配当"
+      },
+      {
+        "key": "my.node_promotion_records",
+        "reason": "contains_cjk",
+        "value": "ノードプロモーション記録"
+      },
+      {
+        "key": "my.community_mining_total",
+        "reason": "contains_cjk",
+        "value": "コミュニティ鋳造マイニングTXT総量"
+      },
+      {
+        "key": "my.invite_records",
+        "reason": "contains_cjk",
+        "value": "招待記録"
+      },
+      {
+        "key": "my.identity",
+        "reason": "contains_cjk",
+        "value": "身分"
+      },
+      {
+        "key": "my.my_benefits",
+        "reason": "contains_cjk",
+        "value": "マイ特典"
+      },
+      {
+        "key": "my.invite_link",
+        "reason": "contains_cjk",
+        "value": "招待リンク"
+      },
+      {
+        "key": "my.activate_tier",
+        "reason": "contains_cjk",
+        "value": "最高ランクでアカウントを有効化"
+      },
+      {
+        "key": "my.verifier_identity",
+        "reason": "contains_cjk",
+        "value": "査定者としての身分"
+      },
+      {
+        "key": "my.trading_dividends",
+        "reason": "contains_cjk",
+        "value": "取引税配当"
+      },
+      {
+        "key": "my.ad_revenue",
+        "reason": "contains_cjk",
+        "value": "広告収益配当"
+      },
+      {
+        "key": "my.personal_mining",
+        "reason": "contains_cjk",
+        "value": "個人鋳造"
+      },
+      {
+        "key": "my.community_mining",
+        "reason": "contains_cjk",
+        "value": "コミュニティ鋳造"
+      },
+      {
+        "key": "my.join_time",
+        "reason": "contains_cjk",
+        "value": "参加時間"
+      },
+      {
+        "key": "my.invite_page.mining",
+        "reason": "contains_cjk",
+        "value": "個人焼却数量"
+      },
+      {
+        "key": "my.invite_page.performance",
+        "reason": "contains_cjk",
+        "value": "コミュニティ焼却総量"
+      },
+      {
+        "key": "my.invite_page.type",
+        "reason": "contains_cjk",
+        "value": "身分"
+      },
+      {
+        "key": "my.invite_page.join_time",
+        "reason": "contains_cjk",
+        "value": "参加時間"
+      },
+      {
+        "key": "my.invite_page.achievement.title",
+        "reason": "contains_cjk",
+        "value": "友達 {address} の業績"
+      },
+      {
+        "key": "my.invite_page.achievement.mining_total",
+        "reason": "contains_cjk",
+        "value": "コミュニティ焼却マイニングTXT総量"
+      },
+      {
+        "key": "my.invite_page.achievement.loading",
+        "reason": "contains_cjk",
+        "value": "読み込み中..."
+      },
+      {
+        "key": "my.invite_page.achievement.unit",
+        "reason": "contains_cjk",
+        "value": "{count} 個"
+      },
+      {
+        "key": "my.stake_page.time",
+        "reason": "contains_cjk",
+        "value": "時間"
+      },
+      {
+        "key": "my.stake_page.amount",
+        "reason": "same_as_zh",
+        "value": "数量"
+      },
+      {
+        "key": "my.stake_page.duration",
+        "reason": "contains_cjk",
+        "value": "期間"
+      },
+      {
+        "key": "my.withdrawals_page.time",
+        "reason": "contains_cjk",
+        "value": "時間"
+      },
+      {
+        "key": "my.withdrawals_page.amount",
+        "reason": "same_as_zh",
+        "value": "数量"
+      },
+      {
+        "key": "my.withdrawals_page.earning_details.transaction_details",
+        "reason": "contains_cjk",
+        "value": "取引詳細"
+      },
+      {
+        "key": "my.withdrawals_page.earning_details.fee",
+        "reason": "contains_cjk",
+        "value": "手数料"
+      },
+      {
+        "key": "my.withdrawals_page.earning_details.from_address",
+        "reason": "contains_cjk",
+        "value": "送信アドレス"
+      },
+      {
+        "key": "my.withdrawals_page.earning_details.to_address",
+        "reason": "contains_cjk",
+        "value": "受信アドレス"
+      },
+      {
+        "key": "my.withdrawals_page.earning_details.tx_hash",
+        "reason": "contains_cjk",
+        "value": "取引ハッシュ"
+      },
+      {
+        "key": "my.community_page.progress",
+        "reason": "contains_cjk",
+        "value": "進捗"
+      },
+      {
+        "key": "my.community_page.community_pledge",
+        "reason": "contains_cjk",
+        "value": "コミュニティ業績"
+      },
+      {
+        "key": "my.community_page.cultivate",
+        "reason": "contains_cjk",
+        "value": "育成"
+      },
+      {
+        "key": "my.community_page.friends",
+        "reason": "contains_cjk",
+        "value": "友達"
+      },
+      {
+        "key": "my.community_page.need_more_stake",
+        "reason": "contains_cjk",
+        "value": "コミュニティ業績にはさらに焼却が必要"
+      },
+      {
+        "key": "my.community_page.minor_zone_stake",
+        "reason": "contains_cjk",
+        "value": "コミュニティ総鋳造"
+      },
+      {
+        "key": "my.community_page.performance",
+        "reason": "contains_cjk",
+        "value": "総業績"
+      },
+      {
+        "key": "my.community_page.personal_stake",
+        "reason": "contains_cjk",
+        "value": "個人総鋳造"
+      },
+      {
+        "key": "my.community_page.reward_cap",
+        "reason": "contains_cjk",
+        "value": "生産待ち総量"
+      },
+      {
+        "key": "my.community_page.need_more_referrals",
+        "reason": "contains_cjk",
+        "value": "育成が必要"
+      },
+      {
+        "key": "my.community_page.ready_to_upgrade",
+        "reason": "contains_cjk",
+        "value": "アップグレード条件を満たしています"
+      },
+      {
+        "key": "my.community_page.max_level_reached",
+        "reason": "contains_cjk",
+        "value": "最大レベルに達しました"
+      },
+      {
+        "key": "my.community_page.train",
+        "reason": "contains_cjk",
+        "value": "さらに育成"
+      },
+      {
+        "key": "my.community_page.more",
+        "reason": "contains_cjk",
+        "value": "個"
+      },
+      {
+        "key": "my.community_page.referral",
+        "reason": "contains_cjk",
+        "value": "友達"
+      },
+      {
+        "key": "my.community_page.to_reach",
+        "reason": "contains_cjk",
+        "value": "に到達するため"
+      },
+      {
+        "key": "my.proclaim_page.title",
+        "reason": "contains_cjk",
+        "value": "お知らせ"
+      },
+      {
+        "key": "my.proclaim_page.no_announcements",
+        "reason": "contains_cjk",
+        "value": "お知らせはありません"
+      },
+      {
+        "key": "my.proclaim_page.announcement_not_found",
+        "reason": "contains_cjk",
+        "value": "お知らせが見つかりません"
+      },
+      {
+        "key": "my.proclaim_page.back_to_announcements",
+        "reason": "contains_cjk",
+        "value": "お知らせ一覧へ戻る"
+      },
+      {
+        "key": "my.tips_line1",
+        "reason": "contains_cjk",
+        "value": "早期認購に参加したユーザーは、認購用ウォレットの秘密鍵を安全に保管し、アカウントの安全を確保してください。HarmonyLink アプリの公開後は、認購用ウォレットの秘密鍵をアプリにインポートするだけで、早期認購のすべての特典と収益を受け取れます。"
+      },
+      {
+        "key": "my.tips_line2",
+        "reason": "contains_cjk",
+        "value": "HarmonyLink アプリは正式リリースの3日前から早期認購参加者に先行公開されます。正式リリース前はコンテンツ創作期となり、各ユーザーは1日最大11本の動画を投稿できます。投稿内容には政治的立場、ポルノ、ギャンブル、薬物などの禁止要素を含めないでください。また他プラットフォームのロゴを含めてはいけません。TikTok や Facebook などのコンテンツを転載することは可能です。コンテンツ品質が高いほど、正式リリース後に得られる「いいね」「コメント」などの収益が高くなります。ぜひ特権を有効に活用してください。"
+      },
+      {
+        "key": "wallet.connect_wallet",
+        "reason": "contains_cjk",
+        "value": "ウォレットを接続"
+      },
+      {
+        "key": "wallet.connecting",
+        "reason": "contains_cjk",
+        "value": "接続中..."
+      },
+      {
+        "key": "errors.DUPLICATED_OPERATION",
+        "reason": "contains_cjk",
+        "value": "重複操作"
+      },
+      {
+        "key": "errors.FREQUENT_OPERATION",
+        "reason": "contains_cjk",
+        "value": "頻繁な操作"
+      },
+      {
+        "key": "errors.OPERATION_FAILED",
+        "reason": "contains_cjk",
+        "value": "操作失敗"
+      },
+      {
+        "key": "errors.INVALID_SIGNATURE",
+        "reason": "contains_cjk",
+        "value": "無効な署名"
+      },
+      {
+        "key": "errors.INVALID_TRANSACTION",
+        "reason": "contains_cjk",
+        "value": "無効な取引"
+      },
+      {
+        "key": "errors.TRANSACTION_FAILED",
+        "reason": "contains_cjk",
+        "value": "取引失敗"
+      },
+      {
+        "key": "errors.INVALID_AMOUNT",
+        "reason": "contains_cjk",
+        "value": "無効な金額"
+      },
+      {
+        "key": "errors.NOT_FOUND",
+        "reason": "contains_cjk",
+        "value": "見つかりません"
+      },
+      {
+        "key": "page.showing",
+        "reason": "contains_cjk",
+        "value": "表示中"
+      },
+      {
+        "key": "page.of",
+        "reason": "contains_cjk",
+        "value": "全"
+      },
+      {
+        "key": "page.previous",
+        "reason": "contains_cjk",
+        "value": "前へ"
+      },
+      {
+        "key": "page.next",
+        "reason": "contains_cjk",
+        "value": "次へ"
+      },
+      {
+        "key": "page.rows_per_page",
+        "reason": "contains_cjk",
+        "value": "ページあたりの行数"
+      },
+      {
+        "key": "tx_status.AUDITING",
+        "reason": "contains_cjk",
+        "value": "審査中"
+      },
+      {
+        "key": "tx_status.PENDING",
+        "reason": "contains_cjk",
+        "value": "処理中"
+      },
+      {
+        "key": "tx_status.CONFIRMED",
+        "reason": "same_as_zh",
+        "value": "成功"
+      },
+      {
+        "key": "tx_status.FAILED",
+        "reason": "contains_cjk",
+        "value": "失敗"
+      },
+      {
+        "key": "tx_status.REFUSED",
+        "reason": "contains_cjk",
+        "value": "拒否"
+      }
+    ],
+    "ko": [
+      {
+        "key": "common.brand_name",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink"
+      },
+      {
+        "key": "home.harmony.footer_sdk",
+        "reason": "same_as_zh",
+        "value": "SDK"
+      },
+      {
+        "key": "home.harmony.footer_wallet",
+        "reason": "same_as_zh",
+        "value": "Wallet"
+      },
+      {
+        "key": "home.harmony.footer_devbox",
+        "reason": "same_as_zh",
+        "value": "DevBox Studio"
+      },
+      {
+        "key": "home.harmony.footer_account_kit",
+        "reason": "same_as_zh",
+        "value": "Account Kit"
+      },
+      {
+        "key": "home.harmony.footer_ads_kit",
+        "reason": "same_as_zh",
+        "value": "ADS Kit"
+      },
+      {
+        "key": "home.harmony.footer_game_kit",
+        "reason": "same_as_zh",
+        "value": "Game Kit"
+      },
+      {
+        "key": "download_page.app_title",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink APP"
+      }
+    ],
+    "vi": [
+      {
+        "key": "common.brand_name",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink"
+      },
+      {
+        "key": "home.harmony.footer_sdk",
+        "reason": "same_as_zh",
+        "value": "SDK"
+      },
+      {
+        "key": "home.harmony.footer_wallet",
+        "reason": "same_as_zh",
+        "value": "Wallet"
+      },
+      {
+        "key": "home.harmony.footer_devbox",
+        "reason": "same_as_zh",
+        "value": "DevBox Studio"
+      },
+      {
+        "key": "home.harmony.footer_account_kit",
+        "reason": "same_as_zh",
+        "value": "Account Kit"
+      },
+      {
+        "key": "home.harmony.footer_ads_kit",
+        "reason": "same_as_zh",
+        "value": "ADS Kit"
+      },
+      {
+        "key": "home.harmony.footer_game_kit",
+        "reason": "same_as_zh",
+        "value": "Game Kit"
+      }
+    ],
+    "zh-Hant": [
+      {
+        "key": "common.brand_name",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink"
+      },
+      {
+        "key": "token.market_cap",
+        "reason": "same_as_zh",
+        "value": "市值"
+      },
+      {
+        "key": "home.ai_flow.title",
+        "reason": "same_as_zh",
+        "value": "AI Avatar 生成流程"
+      },
+      {
+        "key": "home.partners",
+        "reason": "same_as_zh",
+        "value": "合作伙伴"
+      },
+      {
+        "key": "home.harmony.footer_tools",
+        "reason": "same_as_zh",
+        "value": "工具"
+      },
+      {
+        "key": "home.harmony.footer_sdk",
+        "reason": "same_as_zh",
+        "value": "SDK"
+      },
+      {
+        "key": "home.harmony.footer_wallet",
+        "reason": "same_as_zh",
+        "value": "Wallet"
+      },
+      {
+        "key": "home.harmony.footer_devbox",
+        "reason": "same_as_zh",
+        "value": "DevBox Studio"
+      },
+      {
+        "key": "home.harmony.footer_account_kit",
+        "reason": "same_as_zh",
+        "value": "Account Kit"
+      },
+      {
+        "key": "home.harmony.footer_ads_kit",
+        "reason": "same_as_zh",
+        "value": "ADS Kit"
+      },
+      {
+        "key": "home.harmony.footer_game_kit",
+        "reason": "same_as_zh",
+        "value": "Game Kit"
+      },
+      {
+        "key": "qr_code.got_it",
+        "reason": "same_as_zh",
+        "value": "我知道了"
+      },
+      {
+        "key": "recommender_confirm.cancel",
+        "reason": "same_as_zh",
+        "value": "取消"
+      },
+      {
+        "key": "recommender_confirm.updating",
+        "reason": "same_as_zh",
+        "value": "更新中..."
+      },
+      {
+        "key": "foot.earnings",
+        "reason": "same_as_zh",
+        "value": "收益"
+      },
+      {
+        "key": "foot.my",
+        "reason": "same_as_zh",
+        "value": "我的"
+      },
+      {
+        "key": "history_page.col_hash",
+        "reason": "same_as_zh",
+        "value": "哈希值"
+      },
+      {
+        "key": "history_page.col_purpose",
+        "reason": "same_as_zh",
+        "value": "用途"
+      },
+      {
+        "key": "download_page.app_title",
+        "reason": "same_as_zh",
+        "value": "HarmonyLink APP"
+      },
+      {
+        "key": "user_type.common",
+        "reason": "same_as_zh",
+        "value": "普通"
+      },
+      {
+        "key": "tx_type.SECURITY_FUND",
+        "reason": "same_as_zh",
+        "value": "安全基金"
+      },
+      {
+        "key": "node.confirm_purchase_pay_now",
+        "reason": "same_as_zh",
+        "value": "立即支付"
+      },
+      {
+        "key": "node.cancel",
+        "reason": "same_as_zh",
+        "value": "取消"
+      },
+      {
+        "key": "node.node_info_text.GROUP.title_format",
+        "reason": "same_as_zh",
+        "value": "(2000席)-500USDT/席"
+      },
+      {
+        "key": "node.node_info_text.COMMUNITY.title_format",
+        "reason": "same_as_zh",
+        "value": "(200席)-2000USDT/席"
+      },
+      {
+        "key": "node.activated",
+        "reason": "same_as_zh",
+        "value": "已激活"
+      },
+      {
+        "key": "node.unactivated",
+        "reason": "same_as_zh",
+        "value": "未激活"
+      },
+      {
+        "key": "node.address",
+        "reason": "same_as_zh",
+        "value": "地址"
+      },
+      {
+        "key": "node.no_referrals_found",
+        "reason": "same_as_zh",
+        "value": "未找到"
+      },
+      {
+        "key": "earnings.earnings",
+        "reason": "same_as_zh",
+        "value": "我的收益"
+      },
+      {
+        "key": "earnings.cancel",
+        "reason": "same_as_zh",
+        "value": "取消"
+      },
+      {
+        "key": "earnings.security_fund",
+        "reason": "same_as_zh",
+        "value": "安全基金"
+      },
+      {
+        "key": "stake.duration",
+        "reason": "same_as_zh",
+        "value": "期限"
+      },
+      {
+        "key": "stake.daily_yield",
+        "reason": "same_as_zh",
+        "value": "每日收益"
+      },
+      {
+        "key": "stake.days",
+        "reason": "same_as_zh",
+        "value": "天"
+      },
+      {
+        "key": "my.title",
+        "reason": "same_as_zh",
+        "value": "我的"
+      },
+      {
+        "key": "my.my_proclaim",
+        "reason": "same_as_zh",
+        "value": "公告"
+      },
+      {
+        "key": "my.version",
+        "reason": "same_as_zh",
+        "value": "版本"
+      },
+      {
+        "key": "my.twitter",
+        "reason": "same_as_zh",
+        "value": "推特"
+      },
+      {
+        "key": "my.got_it",
+        "reason": "same_as_zh",
+        "value": "我知道了"
+      },
+      {
+        "key": "my.token_all",
+        "reason": "same_as_zh",
+        "value": "全部"
+      },
+      {
+        "key": "my.activated",
+        "reason": "same_as_zh",
+        "value": "已激活"
+      },
+      {
+        "key": "my.unactivated",
+        "reason": "same_as_zh",
+        "value": "未激活"
+      },
+      {
+        "key": "my.my_address",
+        "reason": "same_as_zh",
+        "value": "我的地址"
+      },
+      {
+        "key": "my.announcements",
+        "reason": "same_as_zh",
+        "value": "公告"
+      },
+      {
+        "key": "my.completed",
+        "reason": "same_as_zh",
+        "value": "已完成"
+      },
+      {
+        "key": "my.partners",
+        "reason": "same_as_zh",
+        "value": "合作伙伴"
+      },
+      {
+        "key": "my.my_earnings",
+        "reason": "same_as_zh",
+        "value": "我的收益"
+      },
+      {
+        "key": "my.cancel",
+        "reason": "same_as_zh",
+        "value": "取消"
+      },
+      {
+        "key": "my.node_title_format",
+        "reason": "same_as_zh",
+        "value": "({total}席)-{price}USDT/席"
+      },
+      {
+        "key": "my.address",
+        "reason": "same_as_zh",
+        "value": "地址"
+      },
+      {
+        "key": "my.identity",
+        "reason": "same_as_zh",
+        "value": "身份"
+      },
+      {
+        "key": "my.invite_page.type",
+        "reason": "same_as_zh",
+        "value": "身份"
+      },
+      {
+        "key": "my.stake_page.duration",
+        "reason": "same_as_zh",
+        "value": "期限"
+      },
+      {
+        "key": "my.withdrawals_page.earning_details.to_address",
+        "reason": "same_as_zh",
+        "value": "接收地址"
+      },
+      {
+        "key": "my.withdrawals_page.earning_details.tx_hash",
+        "reason": "same_as_zh",
+        "value": "交易哈希"
+      },
+      {
+        "key": "my.community_page.friends",
+        "reason": "same_as_zh",
+        "value": "好友"
+      },
+      {
+        "key": "my.community_page.referral",
+        "reason": "same_as_zh",
+        "value": "好友"
+      },
+      {
+        "key": "my.proclaim_page.title",
+        "reason": "same_as_zh",
+        "value": "公告"
+      },
+      {
+        "key": "my.proclaim_page.announcement_not_found",
+        "reason": "same_as_zh",
+        "value": "公告不存在"
+      },
+      {
+        "key": "my.proclaim_page.back_to_announcements",
+        "reason": "same_as_zh",
+        "value": "返回公告列表"
+      },
+      {
+        "key": "errors.NOT_FOUND",
+        "reason": "same_as_zh",
+        "value": "未找到"
+      },
+      {
+        "key": "page.of",
+        "reason": "same_as_zh",
+        "value": "共"
+      },
+      {
+        "key": "tx_status.CONFIRMED",
+        "reason": "same_as_zh",
+        "value": "成功"
+      }
+    ]
+  }
+}

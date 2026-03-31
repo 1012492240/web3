@@ -1,10 +1,28 @@
 {
+  "common": {
+    "language_menu": "语言",
+    "brand_name": "HarmonyLink",
+    "please_stay": "请勿离开本页面"
+  },
+  "token": {
+    "chart_load_failed": "图表加载失败，请稍后重试。",
+    "interval_5m": "5分",
+    "interval_15m": "15分",
+    "interval_1h": "1时",
+    "interval_1d": "1日",
+    "interval_1w": "1周",
+    "high_24h": "24h最高",
+    "low_24h": "24h最低",
+    "volume_24h_txt": "24h量 (TXT)",
+    "market_cap": "市值"
+  },
   "welcome": "欢迎",
   "points": "积分",
   "history": "收益记录",
   "calculate": "计算",
   "community": "社区",
   "home": {
+    "home2_alt": "首页2",
     "project_intro": {
       "title": "项目介绍",
       "description": "TwinX是AI驱动的Web3短视频平台，融合AI分身与智能推荐，打造沉浸式互动与去中心化价值体系。每一次表达与互动都将确权上链，旨在连接创作者、用户、品牌与开发者，共建全球内容生态"
@@ -101,7 +119,25 @@
       "footer_dev_groups": "开发者社群",
       "footer_grants": "Grant 计划",
       "marquee_empty": "暂无公告",
-      "detail_link": "查看项目详情"
+      "detail_link": "查看项目详情",
+      "hero_subtitle_harmony": "重构web3注意力经济",
+      "hero_description_harmony": "让用户行为成为可编程资产",
+      "about_subtitle": "高吞吐量、低延迟、EVM兼容的分片公链",
+      "about_founding": "Harmony (ONE) 2018年成立于美国加利福尼亚州山景城；2019年05月在币安Launchpad IEO上线L1公链，5分钟售罄500万美元IEO成为当时区块链的神话。7年探索，我们实现了：",
+      "card_shards_title": "4条",
+      "card_shards_desc": "高速公路般并行的分片链",
+      "card_fees_title": "万分之一",
+      "card_fees_desc": "跨链交易手续费降低至万分之美元",
+      "card_ecosystem_title": "412个",
+      "card_ecosystem_desc": "扶持生态项目生根发芽",
+      "value_os_label": "价值操作系统",
+      "value_os_title": "重构WEB3流量货币化",
+      "value_os_description": "历经多年探索，WEB3核心支柱——<span class=\"text-amber-300 font-medium\">去中心化治理</span>、<span class=\"text-amber-300 font-medium\">用户主权回归</span>及<span class=\"text-amber-300 font-medium\">数字资产确权机制</span>仍处于范式构建期。Harmony(ONE)以开创性实践破局；通过链上行为资产化引擎，将用户社交、创作、交互数据转化为可验证数字资产，实现<span class=\"text-white font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] border-b border-amber-500/50 pb-1\">数据主权的不可篡改赋权</span>。",
+      "value_os_conclusion": "HarmonyLink非技术迭代产物，而是资产确权范式的进化跃迁，其本质是重塑<span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 font-bold text-lg sm:text-2xl px-0.5 sm:px-1\">「行为及产权」</span>的价值操作系统，标志着 WEB3从概念层到价值层的<span class=\"text-orange-400 font-bold\">工业革命</span>已然启幕。",
+      "about_location": "美国 加利福尼亚州山景城",
+      "engines_heading_line1": "五大生态引擎构建",
+      "engines_heading_line2": "价值性后验机制",
+      "engines_intro": "区块链行业不缺乏创新模式，然多数项目因<pink>持续性造血机制缺失</pink>终陷困局：所谓盈利模型或脱离用户参与实质，或沦为资本叙事工具，一旦增长遇阻即演变为系统性风险；HarmonyLink以<strong>五大生态引擎</strong>支撑用户价值捕获。"
     }
   },
   "qr_code": {
@@ -110,6 +146,8 @@
     "invite_link": "邀请链接",
     "download_image": "下载图片",
     "copy_link": "复制链接",
+    "copy_success": "复制成功",
+    "error_load": "复制失败，请重试",
     "invite_code": "邀请码",
     "warning": "您未成为节点，暂不享受节点推荐奖励",
     "screenshot_tip_title": "保存二维码",
@@ -209,6 +247,18 @@
   "download_page": {
     "title": "下载与文档",
     "subtitle": "APP 与 PDF 资料将在此更新，请保持关注。",
+    "page_heading": "HarmonyLink 资料下载",
+    "section_business": "商业计划书",
+    "section_whitepaper": "白皮书",
+    "section_other": "其他资料",
+    "file_business_zh": "HarmonyLink 商业计划书（中文版）",
+    "file_business_en": "HarmonyLink 商业计划书（英文版）",
+    "file_whitepaper_zh": "HarmonyLink 白皮书（中文版）",
+    "file_whitepaper_en": "HarmonyLink 白皮书（英文版）",
+    "file_long_pic_zh": "HarmonyLink 长图（中文）",
+    "file_long_pic_en": "HarmonyLink 长图（英文）",
+    "file_tutorial_zh": "HarmonyLink 使用教程视频（中文）",
+    "file_tutorial_en": "HarmonyLink 使用教程视频（英文）",
     "app_title": "HarmonyLink APP",
     "app_hint": "移动端应用下载链接即将上线，敬请期待。",
     "business_title": "商业计划书",
@@ -254,6 +304,19 @@
     "SECURITY_FUND": "安全基金"
   },
   "node": {
+    "title_and_status": "节点与状态",
+    "node_icon": "节点图标",
+    "equity_status_or_activation_progress": "权益状态 / 激活进度",
+    "invite_friends_button": "邀请好友",
+    "purchase_button": "购买",
+    "benefits_list": "权益列表",
+    "modal_close": "关闭",
+    "confirm_purchase_title": "确认认购",
+    "confirm_purchase_spend_prefix": "您将消耗",
+    "confirm_purchase_spend_suffix": "购买HarmonyLink早期共识者权益包，购买后将无法退回，若想继续购买请点击立即支付完成购买！",
+    "confirm_purchase_balance": "*您的钱包可用余额为：{balance} USDT",
+    "confirm_purchase_pay_now": "立即支付",
+    "confirm_purchase_cancel": "取消认购",
     "market_title": "市场",
     "community_title": "恒星节点",
     "group_title": "行星节点",
@@ -349,7 +412,11 @@
     "claim_type": "代币类型",
     "available": "领取金额",
     "cancel": "取消",
-    "confirm": "确认"
+    "confirm": "确认",
+    "market_expenses": "市场费用",
+    "security_fund": "安全基金",
+    "claim_error_title": "领取失败",
+    "claim_success_title": "领取成功"
   },
   "stake": {
     "staking_mining": "销毁挖矿",
@@ -374,7 +441,10 @@
     "real_time_price": "实时价格",
     "minimum": "最低金额",
     "dip": "铸造挖矿",
-    "community_level": "社区等级"
+    "community_level": "社区等级",
+    "total_produced": "已产出总量",
+    "v_privileges": "V{level}权益享受更高社区奖励和特权",
+    "stake_error": "铸造失败"
   },
   "user": {
     "profile": "个人资料",
@@ -382,6 +452,10 @@
     "history": "历史"
   },
   "my": {
+    "title": "我的",
+    "loading": "加载中...",
+    "unit": "单位",
+    "mining_total": "挖矿总量",
     "my_recommender": "邀请链接",
     "invite": "邀请",
     "my_invites": "我的邀请",
@@ -564,8 +638,12 @@
     },
     "proclaim_page": {
       "title": "公告",
-      "no_announcements": "暂无公告"
-    }
+      "no_announcements": "暂无公告",
+      "announcement_not_found": "公告不存在",
+      "back_to_announcements": "返回公告列表"
+    },
+    "tips_line1": "参与早期认购的用户请注意保管好认购钱包的私钥，并确保账户安全。HarmonyLink APP上线后，只需导入认购户的私钥到APP中即可获得早期认购的全部权益及收益！",
+    "tips_line2": "HarmonyLink APP 正式上线前3天将面向参与早期认购用户开放，正式上线前隐于内容创造期，每位用户每天日发布11条视频内容，内容不可包含政治立场、黄、赌、毒等内容，也不可包含有其它平台LOGO的内容、内容可搬运抖音、Facebook等平台内容，内容质量越好，上线后获得的点赞、评论等收益越高，请用好您手里的特权！"
   },
   "wallet": {
     "connect_wallet": "连接钱包",

@@ -99,10 +99,10 @@ export default function HarmonyLanding() {
           {/* Subtitle */}
           <div className="mt-5 sm:mt-8 md:mt-10 flex flex-col items-center gap-2.5 sm:gap-4">
             <p className="text-base sm:text-xl md:text-2xl lg:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400 tracking-wide px-1">
-              重构web3注意力经济
+              {t("harmony.hero_subtitle_harmony")}
             </p>
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-light tracking-wide sm:tracking-wider">
-              让用户行为成为可编程资产
+              {t("harmony.hero_description_harmony")}
             </p>
           </div>
 
@@ -138,19 +138,19 @@ export default function HarmonyLanding() {
           {/* Header */}
           <div className="scroll-reveal opacity-0 translate-y-10 transition-all duration-1000 flex flex-col items-center text-center mb-10 sm:mb-14 hover:-translate-y-2">
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3 sm:mb-4 drop-shadow-lg">
-              关于Harmony(ONE)
+              {t("harmony.about_title")}
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-medium mb-4 sm:mb-6 tracking-wide px-1">
-              高吞吐量、低延迟、EVM兼容的分片公链
+              {t("harmony.about_subtitle")}
             </p>
             <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-white/80 mb-5 sm:mb-8 shadow-lg backdrop-blur-sm">
               <svg className="w-4 h-4 text-rose-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
-              美国 加利福尼亚州山景城
+              {t("harmony.about_location")}
             </div>
             <p className="max-w-3xl text-sm sm:text-base md:text-lg leading-relaxed text-white/70 bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-sm">
-              Harmony(ONE) 2018年成立于美国加里亚福尼亚州山景城；2019年05月在币安Launchpad IEO上线L1公链，5分钟售罄500万美元IEO成为当时区块链的神话。7年探索，我们实现了：
+              {t("harmony.about_founding")}
             </p>
           </div>
 
@@ -166,14 +166,20 @@ export default function HarmonyLanding() {
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/20 backdrop-blur-md sm:h-10 sm:w-10 md:h-14 md:w-14 md:mb-0.5 group-hover:scale-105 transition-transform">
                   <span className="text-base sm:text-lg md:text-2xl">⚡</span>
                 </div>
-                <h3 className="text-sm sm:text-lg md:text-2xl font-black text-white drop-shadow-md leading-none">4条</h3>
+                <h3 className="text-sm sm:text-lg md:text-2xl font-black text-white drop-shadow-md leading-none">{t("harmony.card_shards_title")}</h3>
                 <p className="text-center text-[9px] leading-[1.25] text-white/85 font-medium sm:text-[11px] sm:leading-snug md:text-xs md:px-0.5">
                   <span className="sm:hidden">
-                    高速公路般
+                    {t("harmony.card_shards_desc")
+                      .split(/(?=[a-zA-Z])/)
+                      .slice(0, 2)
+                      .join(" ")}
                     <br />
-                    并行分片链
+                    {t("harmony.card_shards_desc")
+                      .split(/(?=[a-zA-Z])/)
+                      .slice(2)
+                      .join(" ")}
                   </span>
-                  <span className="hidden sm:inline">高速公路般并行的分片链</span>
+                  <span className="hidden sm:inline">{t("harmony.card_shards_desc")}</span>
                 </p>
               </div>
             </div>
@@ -189,15 +195,15 @@ export default function HarmonyLanding() {
                   <span className="text-base sm:text-lg md:text-2xl">💎</span>
                 </div>
                 <h3 className="text-[11px] sm:text-base md:text-xl font-black text-white drop-shadow-md leading-tight text-center px-0.5">
-                  万分之一
+                  {t("harmony.card_fees_title")}
                 </h3>
                 <p className="text-center text-[8px] leading-[1.2] text-white/85 font-medium sm:text-[10px] md:text-xs md:leading-snug">
                   <span className="sm:hidden">
-                    跨链手续费
+                    {t("harmony.card_fees_desc").substring(0, 12)}
                     <br />
-                    低至万分之$
+                    {t("harmony.card_fees_desc").substring(12)}
                   </span>
-                  <span className="hidden sm:inline">跨链交易手续费降低至万分之美元</span>
+                  <span className="hidden sm:inline">{t("harmony.card_fees_desc")}</span>
                 </p>
               </div>
             </div>
@@ -212,14 +218,14 @@ export default function HarmonyLanding() {
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-emerald-400/50 bg-emerald-500/20 backdrop-blur-md sm:h-10 sm:w-10 md:h-14 md:w-14 md:mb-0.5 group-hover:scale-105 transition-transform">
                   <span className="text-base sm:text-lg md:text-2xl">🌱</span>
                 </div>
-                <h3 className="text-sm sm:text-lg md:text-2xl font-black text-white drop-shadow-md leading-none">412个</h3>
+                <h3 className="text-sm sm:text-lg md:text-2xl font-black text-white drop-shadow-md leading-none">{t("harmony.card_ecosystem_title")}</h3>
                 <p className="text-center text-[9px] leading-[1.25] text-white/85 font-medium sm:text-[11px] sm:leading-snug md:text-xs md:px-0.5">
                   <span className="sm:hidden">
-                    扶持生态
+                    {t("harmony.card_ecosystem_desc").substring(0, 8)}
                     <br />
-                    项目生根发芽
+                    {t("harmony.card_ecosystem_desc").substring(8)}
                   </span>
-                  <span className="hidden sm:inline">扶持生态项目生根发芽</span>
+                  <span className="hidden sm:inline">{t("harmony.card_ecosystem_desc")}</span>
                 </p>
               </div>
             </div>
@@ -257,36 +263,18 @@ export default function HarmonyLanding() {
               <div className="inline-flex items-center justify-center rounded-full bg-amber-500/10 px-3.5 py-1.5 sm:px-5 sm:py-2 mb-5 sm:mb-8 ring-1 ring-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
                 <span className="text-[11px] sm:text-sm font-bold tracking-wider sm:tracking-widest text-amber-400 uppercase flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
-                  Value Operating System
+                  {t("harmony.value_os_label")}
                 </span>
               </div>
 
               <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white mb-6 sm:mb-10 drop-shadow-lg text-center px-1">
-                重构WEB3流量货币化
+                {t("harmony.value_os_title")}
               </h2>
 
               <div className="relative text-base sm:text-lg md:text-xl leading-relaxed sm:leading-loose text-white/80 max-w-4xl font-light">
                 <span className="absolute -top-6 sm:-top-10 -left-2 sm:-left-10 text-5xl sm:text-7xl text-amber-500/20 font-serif select-none">&ldquo;</span>
-                <p className="mb-5 sm:mb-8 relative z-10 text-left sm:text-justify indent-0 sm:indent-8 md:indent-10">
-                  历经多年探索，WEB3核心支柱——
-                  <span className="text-amber-300 font-medium">去中心化治理</span>、
-                  <span className="text-amber-300 font-medium">用户主权回归</span>及
-                  <span className="text-amber-300 font-medium">数字资产确权机制</span>
-                  仍处于范式构建期。Harmony(ONE)以开创性实践破局；通过链上行为资产化引擎，将用户社交、创作、交互数据转化为可验证数字资产，实现
-                  <span className="text-white font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] border-b border-amber-500/50 pb-1">
-                    数据主权的不可篡改赋权
-                  </span>
-                  。
-                </p>
-                <p className="relative z-10 text-left sm:text-justify indent-0 sm:indent-8 md:indent-10">
-                  HarmonyLink非技术迭代产物，而是资产确权范式的进化跃迁，其本质是重塑
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 font-bold text-lg sm:text-2xl px-0.5 sm:px-1">
-                    「行为及产权」
-                  </span>
-                  的价值操作系统，标志着 WEB3从概念层到价值层的
-                  <span className="text-orange-400 font-bold">工业革命</span>
-                  已然启幕。
-                </p>
+                <p className="mb-5 sm:mb-8 relative z-10 text-left sm:text-justify indent-0 sm:indent-8 md:indent-10" dangerouslySetInnerHTML={{ __html: t("harmony.value_os_description") }} />
+                <p className="relative z-10 text-left sm:text-justify indent-0 sm:indent-8 md:indent-10" dangerouslySetInnerHTML={{ __html: t("harmony.value_os_conclusion") }} />
                 <span className="absolute -bottom-10 sm:-bottom-16 -right-2 sm:-right-10 text-5xl sm:text-7xl text-amber-500/20 font-serif rotate-180 select-none">&rdquo;</span>
               </div>
             </div>
@@ -332,16 +320,23 @@ export default function HarmonyLanding() {
             </div>
             
             <h2 className="flex flex-col items-center gap-1.5 sm:gap-2 text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight text-white mb-5 sm:mb-8 px-1 leading-tight">
-              <span className="block">五大生态引擎构建</span>
+              <span className="block">{t("harmony.engines_heading_line1")}</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
-                价值性后验机制
+                {t("harmony.engines_heading_line2")}
               </span>
             </h2>
             
             <div className="relative">
               <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-pink-500 via-purple-500 to-transparent rounded-full hidden md:block" />
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/70 text-left sm:text-justify md:pl-6">
-                区块链行业不缺乏创新模式，然多数项目因<span className="text-pink-400 font-medium">持续性造血机制缺失</span>终陷困局：所谓盈利模型或脱离用户参与实质，或沦为资本叙事工具，一旦增长遇阻即演变为系统性风险；HarmonyLink以<span className="text-white font-bold border-b border-purple-500/50 pb-1">五大生态引擎</span>支撑用户价值捕获。
+                {t.rich("harmony.engines_intro", {
+                  pink: (chunks) => <span className="text-pink-400 font-medium">{chunks}</span>,
+                  strong: (chunks) => (
+                    <span className="text-white font-bold border-b border-purple-500/50 pb-1">
+                      {chunks}
+                    </span>
+                  ),
+                })}
               </p>
             </div>
           </div>

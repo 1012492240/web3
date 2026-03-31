@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function DownloadPage() {
+  const t = useTranslations("download_page");
+
   type FileType = "pdf" | "jpg" | "mp4";
   type DownloadItem = {
     key: string;
@@ -14,14 +17,14 @@ export default function DownloadPage() {
 
   /** Mock：三类 — 商业计划书、白皮书、其他资料（href 后续可接真实地址） */
   const items: DownloadItem[] = [
-    { key: "business-zh", categoryId: "business", type: "pdf", label: "HarmonyLink商业计划书（中文版）" },
-    { key: "business-en", categoryId: "business", type: "pdf", label: "HarmonyLink商业计划书（英文）" },
-    { key: "whitepaper-zh", categoryId: "whitepaper", type: "pdf", label: "HarmonyLink白皮书（中文版）" },
-    { key: "whitepaper-en", categoryId: "whitepaper", type: "pdf", label: "HarmonyLink白皮书（英文）" },
-    { key: "long-pic-zh", categoryId: "other", type: "jpg", label: "HarmonyLink长图（中文）" },
-    { key: "long-pic-en", categoryId: "other", type: "jpg", label: "HarmonyLink长图（英文）" },
-    { key: "tutorial-zh", categoryId: "other", type: "mp4", label: "HarmonyLink使用教程视频（中文）" },
-    { key: "tutorial-en", categoryId: "other", type: "mp4", label: "HarmonyLink使用教程视频（英文）" },
+    { key: "business-zh", categoryId: "business", type: "pdf", label: t("file_business_zh") },
+    { key: "business-en", categoryId: "business", type: "pdf", label: t("file_business_en") },
+    { key: "whitepaper-zh", categoryId: "whitepaper", type: "pdf", label: t("file_whitepaper_zh") },
+    { key: "whitepaper-en", categoryId: "whitepaper", type: "pdf", label: t("file_whitepaper_en") },
+    { key: "long-pic-zh", categoryId: "other", type: "jpg", label: t("file_long_pic_zh") },
+    { key: "long-pic-en", categoryId: "other", type: "jpg", label: t("file_long_pic_en") },
+    { key: "tutorial-zh", categoryId: "other", type: "mp4", label: t("file_tutorial_zh") },
+    { key: "tutorial-en", categoryId: "other", type: "mp4", label: t("file_tutorial_en") },
   ];
 
   const FILE_ICON_SRC: Record<FileType, string> = {
@@ -125,15 +128,15 @@ export default function DownloadPage() {
 
       <div className="relative z-10 mx-auto w-full max-w-lg px-4 pb-28 pt-16 sm:max-w-xl sm:px-6 sm:pb-32 sm:pt-28">
         <h1 className="text-center text-lg font-semibold tracking-wide text-white drop-shadow-sm sm:text-left sm:text-[20px]">
-          HarmonyLink资料下载
+          {t("page_heading")}
         </h1>
 
         <div className="mt-8 w-full space-y-8 sm:mt-10">
-          <Section id="business" title="商业计划书" sectionItems={businessItems} />
+          <Section id="business" title={t("section_business")} sectionItems={businessItems} />
           <div className="h-px w-full bg-white/15" />
-          <Section id="whitepaper" title="白皮书" sectionItems={whitepaperItems} />
+          <Section id="whitepaper" title={t("section_whitepaper")} sectionItems={whitepaperItems} />
           <div className="h-px w-full bg-white/15" />
-          <Section id="other" title="其他资料" sectionItems={otherItems} />
+          <Section id="other" title={t("section_other")} sectionItems={otherItems} />
         </div>
       </div>
     </div>

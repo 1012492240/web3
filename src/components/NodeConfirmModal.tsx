@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useAppKitAccount } from "@reown/appkit/react";
+import { useTranslations } from "next-intl";
 
 interface NodeConfirmModalProps {
   isOpen: boolean;
@@ -18,6 +19,7 @@ export const NodeConfirmModal: React.FC<NodeConfirmModalProps> = ({
   isBigNode,
   price,
 }) => {
+  const t = useTranslations("node");
   const { address } = useAppKitAccount();
   const [usdtBalance, setUsdtBalance] = useState<string | null>(null);
 
@@ -41,7 +43,7 @@ export const NodeConfirmModal: React.FC<NodeConfirmModalProps> = ({
         type="button"
         className="absolute inset-0"
         onClick={onClose}
-        aria-label="关闭"
+        aria-label={t("modal_close")}
       />
 
       {/* Modal Card — slides up from bottom */}
@@ -57,7 +59,7 @@ export const NodeConfirmModal: React.FC<NodeConfirmModalProps> = ({
       >
         {/* Title */}
         <h2 className="mb-5 text-center text-lg font-bold text-white">
-          确认认购
+          {t("confirm_purchase_title")}
         </h2>
 
         {/* Description */}
@@ -65,14 +67,14 @@ export const NodeConfirmModal: React.FC<NodeConfirmModalProps> = ({
           className="mb-4 text-sm leading-relaxed"
           style={{ color: "rgba(255,255,255,0.88)" }}
         >
-          您将消耗
+          {t("confirm_purchase_spend_prefix")}
           <span className="font-bold text-white"> {price} USDT </span>
-          购买HarmonyLink早期共识者权益包，购买后将无法退回，若想继续购买请点击立即支付完成购买！
+          {t("confirm_purchase_spend_suffix")}
         </p>
 
         {/* Balance */}
         <p className="mb-6 text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>
-          *您的钱包可用余额为：{usdtBalance ?? "…"} USDT
+          {t("confirm_purchase_balance", { balance: usdtBalance ?? "…" })}
         </p>
 
         {/* Confirm Button */}
@@ -86,7 +88,7 @@ export const NodeConfirmModal: React.FC<NodeConfirmModalProps> = ({
             boxShadow: "0 4px 24px rgba(229, 14, 15, 0.35)",
           }}
         >
-          立即支付
+          {t("confirm_purchase_pay_now")}
         </button>
 
         {/* Cancel */}
@@ -96,7 +98,7 @@ export const NodeConfirmModal: React.FC<NodeConfirmModalProps> = ({
           className="w-full py-2 text-center text-sm"
           style={{ color: "rgba(255,255,255,0.45)" }}
         >
-          取消认购
+          {t("confirm_purchase_cancel")}
         </button>
       </div>
     </div>

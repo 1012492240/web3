@@ -1,4 +1,9 @@
 {
+  "common": {
+    "language_menu": "Language",
+    "brand_name": "HarmonyLink",
+    "please_stay": "Please do not leave this page."
+  },
   "welcome": "Welcome",
   "points": "Points",
   "history": "Earnings Record",
@@ -77,11 +82,26 @@
       "engine_title": "Ecosystem Engine",
       "engine_body": "Five engines: creator economy, on-chain governance, interoperability, open finance, and developer tooling.",
       "engine_cards": [
-        { "title": "Creator economy", "desc": "Reward content & community" },
-        { "title": "On-chain governance", "desc": "Transparent rules & votes" },
-        { "title": "Interoperability", "desc": "Assets across chains" },
-        { "title": "Open finance", "desc": "Composable primitives" },
-        { "title": "Developer stack", "desc": "SDKs, wallet & tooling" }
+        {
+          "title": "Creator economy",
+          "desc": "Reward content & community"
+        },
+        {
+          "title": "On-chain governance",
+          "desc": "Transparent rules & votes"
+        },
+        {
+          "title": "Interoperability",
+          "desc": "Assets across chains"
+        },
+        {
+          "title": "Open finance",
+          "desc": "Composable primitives"
+        },
+        {
+          "title": "Developer stack",
+          "desc": "SDKs, wallet & tooling"
+        }
       ],
       "orbit_title": "Ecosystem map",
       "orbit_subtitle": "Partners and protocols orbiting HarmonyLink",
@@ -101,8 +121,27 @@
       "footer_dev_groups": "Developer groups",
       "footer_grants": "Grant program",
       "marquee_empty": "No announcements",
-      "detail_link": "View project details"
-    }
+      "detail_link": "View project details",
+      "hero_subtitle_harmony": "Reshape Web3 Attention Economy",
+      "hero_description_harmony": "Make user behavior programmable assets",
+      "about_subtitle": "High throughput, low latency, EVM-compatible sharding public chain",
+      "about_founding": "Harmony (ONE) was founded in 2018 in Mountain View, California, USA. It went live on Binance Launchpad IEO in May 2019, selling out $5 million in 5 minutes and becoming a legend in blockchain. After 7 years of exploration, we have achieved:",
+      "card_shards_title": "4",
+      "card_shards_desc": "High-speed highway-like parallel sharding chains",
+      "card_fees_title": "One ten-thousandth",
+      "card_fees_desc": "Cross-chain transaction fees reduced to fractions of a dollar",
+      "card_ecosystem_title": "412",
+      "card_ecosystem_desc": "Nurturing ecosystem projects to take root and grow",
+      "value_os_label": "Value Operating System",
+      "value_os_title": "Reshape Web3 Traffic Monetization",
+      "value_os_description": "After years of exploration, the three pillars of Web3—<span class=\"text-amber-300 font-medium\">decentralized governance</span>, <span class=\"text-amber-300 font-medium\">user sovereignty return</span>, and <span class=\"text-amber-300 font-medium\">digital asset confirmation mechanisms</span>—remain in paradigm construction. Harmony (ONE) breaks through with pioneering practice; through on-chain behavior asset engines, user social, creation, and interaction data are transformed into verifiable digital assets, achieving <span class=\"text-white font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] border-b border-amber-500/50 pb-1\">immutable empowerment of data sovereignty</span>.",
+      "value_os_conclusion": "HarmonyLink is not a technical iteration product, but an evolution leap of asset confirmation paradigms. Its essence is reshaping the <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 font-bold text-lg sm:text-2xl px-0.5 sm:px-1\">value operating system of \"behavior and property rights\"</span>, marking the <span class=\"text-orange-400 font-bold\">industrial revolution</span> from Web3's conceptual layer to value layer has already begun.",
+      "about_location": "Mountain View, California, USA",
+      "engines_heading_line1": "Built on Five Ecosystem Engines",
+      "engines_heading_line2": "An Ex-Post Value Mechanism",
+      "engines_intro": "Blockchain doesn't lack innovation, yet many projects ultimately fall into deadlock because <pink>their sustainable cash-flow mechanisms are missing</pink>: profit models either detach from real user participation or degenerate into capital narratives; once growth stalls, they become systemic risks. HarmonyLink relies on <strong>five ecosystem engines</strong> to support user value capture."
+    },
+    "home2_alt": "Home 2"
   },
   "qr_code": {
     "grid_icon_alt": "Invitation QR Code",
@@ -114,7 +153,9 @@
     "warning": "You are not a node yet, and do not receive node referral rewards",
     "screenshot_tip_title": "Save QR Code",
     "screenshot_tip_message": "To save the QR code in the wallet app, please use your phone's screenshot function or the wallet's built-in screenshot feature.",
-    "got_it": "Got it"
+    "got_it": "Got it",
+    "copy_success": "Copied",
+    "error_load": "Copy failed. Please try again."
   },
   "recommender_confirm": {
     "title": "Confirm Your Inviter",
@@ -209,6 +250,18 @@
   "download_page": {
     "title": "Downloads & Documents",
     "subtitle": "App and PDF resources will be updated here.",
+    "page_heading": "HarmonyLink Downloads",
+    "section_business": "Business plan",
+    "section_whitepaper": "Whitepaper",
+    "section_other": "Other resources",
+    "file_business_zh": "HarmonyLink Business Plan (Chinese)",
+    "file_business_en": "HarmonyLink Business Plan (English)",
+    "file_whitepaper_zh": "HarmonyLink Whitepaper (Chinese)",
+    "file_whitepaper_en": "HarmonyLink Whitepaper (English)",
+    "file_long_pic_zh": "HarmonyLink Infographic (Chinese)",
+    "file_long_pic_en": "HarmonyLink Infographic (English)",
+    "file_tutorial_zh": "HarmonyLink Tutorial Video (Chinese)",
+    "file_tutorial_en": "HarmonyLink Tutorial Video (English)",
     "app_title": "HarmonyLink APP",
     "app_hint": "Mobile download links will be available soon.",
     "business_title": "Business plan",
@@ -279,7 +332,6 @@
         "platform_reward": "Streamer guild dividend: share 2% of platform live streaming tips total flow",
         "airdrop": "Airdrop",
         "mining": "Daily mining yield 0.6%"
-
       },
       "COMMUNITY": {
         "title": "Stellar Node",
@@ -332,7 +384,20 @@
     "type": "Type",
     "time": "Time",
     "no_referrals_found": "Not Found",
-    "no_superior_found": "Please bind a referrer first"
+    "no_superior_found": "Please bind a referrer first",
+    "title_and_status": "Title & Status",
+    "node_icon": "Node Icon",
+    "equity_status_or_activation_progress": "Benefits Status / Activation Progress",
+    "invite_friends_button": "Invite Friends",
+    "purchase_button": "Purchase",
+    "benefits_list": "Benefits List",
+    "modal_close": "Close",
+    "confirm_purchase_title": "Confirm Purchase",
+    "confirm_purchase_spend_prefix": "You will spend",
+    "confirm_purchase_spend_suffix": "to purchase the HarmonyLink Early Consensus Benefits Pack. Purchases are non-refundable. To continue, tap Pay Now to complete the purchase!",
+    "confirm_purchase_balance": "*Available wallet balance: {balance} USDT",
+    "confirm_purchase_pay_now": "Pay Now",
+    "confirm_purchase_cancel": "Cancel"
   },
   "earnings": {
     "earnings": "My Earnings",
@@ -350,7 +415,11 @@
     "claim_type": "Token Type",
     "available": "Available Amount",
     "cancel": "Cancel",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "market_expenses": "Market Expenses",
+    "security_fund": "Security Fund",
+    "claim_error_title": "Claim Failed",
+    "claim_success_title": "Claim Successful"
   },
   "stake": {
     "staking_mining": "Burn Mining",
@@ -375,7 +444,10 @@
     "real_time_price": "Real-time Price",
     "minimum": "Minimum Amount",
     "dip": "Minting Mining",
-    "community_level": "Community Level"
+    "community_level": "Community Level",
+    "total_produced": "Total produced",
+    "v_privileges": "V{level} privileges: higher community rewards and perks",
+    "stake_error": "Minting failed"
   },
   "user": {
     "profile": "Profile",
@@ -411,7 +483,7 @@
     "usdt_amount": "USDT Amount",
     "current_price": "Current Price",
     "activated": "Activated",
-    "unactived": "Not Activated",
+    "unactivated": "Not Activated",
     "community_level": "Community",
     "my_address": "My Address",
     "my_minting": "My Minting",
@@ -565,8 +637,16 @@
     },
     "proclaim_page": {
       "title": "Announcement",
-      "no_announcements": "No Announcements"
-    }
+      "no_announcements": "No Announcements",
+      "announcement_not_found": "Announcement not found",
+      "back_to_announcements": "Back to announcements"
+    },
+    "title": "My",
+    "loading": "Loading...",
+    "unit": "Unit",
+    "mining_total": "Total mining output",
+    "tips_line1": "Early subscription participants: please keep the private key of your subscription wallet safe and ensure your account security. After the HarmonyLink app launches, simply import the subscription wallet’s private key into the app to receive all early-subscription benefits and earnings.",
+    "tips_line2": "The HarmonyLink app will open to early subscription participants 3 days before the official launch. Before launch, the platform will be in a content-creation phase: each user can post up to 11 videos per day. Content must not contain political positions, pornography, gambling, drugs, or other prohibited material, and must not include logos of other platforms. You may repost content from platforms such as TikTok and Facebook. Higher-quality content will earn more likes, comments, and rewards after launch—please make good use of your privileges."
   },
   "wallet": {
     "connect_wallet": "Connect Wallet",
@@ -597,5 +677,17 @@
     "CONFIRMED": "Confirmed",
     "FAILED": "Failed",
     "REFUSED": "Refused"
+  },
+  "token": {
+    "chart_load_failed": "Failed to load chart data. Please try again later.",
+    "interval_5m": "5m",
+    "interval_15m": "15m",
+    "interval_1h": "1h",
+    "interval_1d": "1d",
+    "interval_1w": "1w",
+    "high_24h": "24h High",
+    "low_24h": "24h Low",
+    "volume_24h_txt": "24h Volume (TXT)",
+    "market_cap": "Market Cap"
   }
 }

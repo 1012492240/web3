@@ -181,7 +181,7 @@ export default function SideNavDrawer({
       `}</style>
       <button
         type="button"
-        className="absolute inset-0 bg-black/65 backdrop-blur-[2px]"
+        className="absolute inset-0 z-0 bg-black/65 backdrop-blur-[2px]"
         onClick={onClose}
         aria-label={t("close_menu")}
         style={{
@@ -190,7 +190,7 @@ export default function SideNavDrawer({
       />
 
       <aside
-        className="relative flex h-full w-full flex-col overflow-hidden shadow-2xl"
+        className="relative z-10 flex h-full w-full flex-col overflow-hidden shadow-2xl"
         style={{
           boxShadow: "8px 0 32px rgba(0,0,0,0.5)",
           animation: closing ? "xwechat_drawer_slide_out 240ms ease-in forwards" : "xwechat_drawer_slide_in 260ms ease-out forwards",
@@ -254,7 +254,7 @@ export default function SideNavDrawer({
         <div className="relative z-10 flex shrink-0 items-center justify-between border-t border-white/10 bg-black px-4 py-4">
           <Image src="/imgs/menu/logo-samll.png" alt="" width={48} height={48} className="h-8 w-auto object-contain opacity-90" />
           <div className="flex items-center text-white/80">
-            <LanguageSelector showLocaleCode />
+            <LanguageSelector showLocaleCode dropUp />
           </div>
         </div>
       </aside>

@@ -1,0 +1,17 @@
+﻿{
+  "summary": {
+    "locales": [
+      "ar",
+      "en",
+      "ja",
+      "ko",
+      "vi",
+      "zh-Hant",
+      "zh"
+    ],
+    "scannedFiles": 132,
+    "translationCallsChecked": 430,
+    "missingCount": 0
+  },
+  "missing": []
+}

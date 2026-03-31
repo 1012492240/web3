@@ -11,11 +11,16 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WagmiProvider } from 'wagmi'
 import { config } from '@/config/wagmi' // Initialize Reown AppKit configuration
 
+const RTL_LOCALES = new Set(['ar'])
+
 export default function ClientLayout({
   children,
+  locale,
 }: {
   children: React.ReactNode
+  locale: string
 }) {
+  const dir = RTL_LOCALES.has(locale) ? 'rtl' : 'ltr'
   useEffect(() => {
     AOS.init({
       once: true,
@@ -33,7 +38,11 @@ export default function ClientLayout({
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
           <WalletRefProvider>
-            <div className="flex flex-col min-h-screen overflow-hidden bg-black">
+            <div
+              className="flex min-h-screen flex-col overflow-hidden bg-black"
+              dir={dir}
+              lang={locale}
+            >
               <div className="sr-only" aria-hidden>
                 <ConnectWallet size="small" />
               </div>

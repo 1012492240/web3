@@ -386,7 +386,7 @@ export function QRCodeModal({
                   }}
                 >
                   <p className="text-center text-white text-sm font-medium py-1">
-                    邀请码
+                    {t("invite_code")}
                   </p>
                   <div
                     className=" text-white text-sm  text-center cursor-pointer pb-1"
@@ -399,7 +399,7 @@ export function QRCodeModal({
                         navigator.clipboard
                           .writeText(code)
                           .then(() => {
-                            alert("Code copied to clipboard!");
+                            alert(t("copy_success"));
                           })
                           .catch((err) => {
                             const textarea = document.createElement("textarea");
@@ -408,7 +408,7 @@ export function QRCodeModal({
                             textarea.select();
                             document.execCommand("copy");
                             document.body.removeChild(textarea);
-                            alert("Code copied to clipboard!");
+                            alert(t("copy_success"));
                           });
                       } else {
                         const textarea = document.createElement("textarea");
@@ -417,7 +417,7 @@ export function QRCodeModal({
                         textarea.select();
                         document.execCommand("copy");
                         document.body.removeChild(textarea);
-                        alert("Code copied to clipboard!");
+                        alert(t("copy_success"));
                       }
                     }}
                   >
@@ -428,7 +428,7 @@ export function QRCodeModal({
                 {/* Invite Link */}
                 <div className=" rounded-lg overflow-hidden px-1">
                   <p className="text-center text-white text-sm font-medium py-1">
-                    邀请链接
+                    {t("invite_link")}
                   </p>
                   <div
                     style={{
@@ -457,7 +457,7 @@ export function QRCodeModal({
               className="flex-1 bg-blue-500 text-white text-sm py-3 px-4 rounded-lg font-medium hover:bg-blue-600 transition-colors"
               onClick={downloadQRCard}
             >
-              保存图片
+              {t("download_image")}
             </button>
             <button
               className="flex-1 bg-blue-500 text-white text-sm py-3 px-4 rounded-lg font-medium hover:bg-blue-600 transition-colors"
@@ -470,7 +470,7 @@ export function QRCodeModal({
                     navigator.clipboard
                       .writeText(url)
                       .then(() => {
-                        alert("Link copied to clipboard!");
+                        alert(t("copy_success"));
                       })
                       .catch((err) => {
                         // Fallback to the old method if modern API fails
@@ -480,7 +480,7 @@ export function QRCodeModal({
                         textarea.select();
                         document.execCommand("copy");
                         document.body.removeChild(textarea);
-                        alert("Link copied to clipboard!");
+                        alert(t("copy_success"));
                       });
                   } else {
                     // Fallback for browsers without clipboard API
@@ -490,14 +490,14 @@ export function QRCodeModal({
                     textarea.select();
                     document.execCommand("copy");
                     document.body.removeChild(textarea);
-                    alert("Link copied to clipboard!");
+                    alert(t("copy_success"));
                   }
                 } catch (error) {
-                  alert("Could not access clipboard. Please try again.");
+                  alert(t("error_load"));
                 }
               }}
             >
-              复制链接
+              {t("copy_link")}
             </button>
           </div>
         </div>

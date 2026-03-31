@@ -1,4 +1,9 @@
 {
+  "common": {
+    "language_menu": "언어",
+    "brand_name": "HarmonyLink",
+    "please_stay": "이 페이지를 떠나지 마세요."
+  },
   "welcome": "환영합니다",
   "points": "포인트",
   "history": "수익 기록",
@@ -77,11 +82,26 @@
       "engine_title": "Ecosystem Engine",
       "engine_body": "Five engines: creator economy, on-chain governance, interoperability, open finance, and developer tooling.",
       "engine_cards": [
-        { "title": "Creator economy", "desc": "Reward content & community" },
-        { "title": "On-chain governance", "desc": "Transparent rules & votes" },
-        { "title": "Interoperability", "desc": "Assets across chains" },
-        { "title": "Open finance", "desc": "Composable primitives" },
-        { "title": "Developer stack", "desc": "SDKs, wallet & tooling" }
+        {
+          "title": "Creator economy",
+          "desc": "Reward content & community"
+        },
+        {
+          "title": "On-chain governance",
+          "desc": "Transparent rules & votes"
+        },
+        {
+          "title": "Interoperability",
+          "desc": "Assets across chains"
+        },
+        {
+          "title": "Open finance",
+          "desc": "Composable primitives"
+        },
+        {
+          "title": "Developer stack",
+          "desc": "SDKs, wallet & tooling"
+        }
       ],
       "orbit_title": "Ecosystem map",
       "orbit_subtitle": "Partners and protocols orbiting HarmonyLink",
@@ -98,11 +118,30 @@
       "footer_whitepaper": "Whitepaper",
       "footer_community": "Community",
       "footer_docs": "Docs",
-      "footer_dev_groups": "Developer groups",
-      "footer_grants": "Grant program",
-      "marquee_empty": "No announcements",
-      "detail_link": "View project details"
-    }
+      "footer_dev_groups": "개발자 그룹",
+      "footer_grants": "그랜트 프로그램",
+      "marquee_empty": "공지사항 없음",
+      "detail_link": "프로젝트 상세 보기",
+      "hero_subtitle_harmony": "Web3 주의력 경제 재구축",
+      "hero_description_harmony": "사용자 행동을 프로그래밍 가능한 자산으로 전환",
+      "about_subtitle": "높은 처리량, 낮은 지연 시간, EVM 호환 샤딩 퍼블릭 체인",
+      "about_founding": "Harmony (ONE)는 2018년 미국 캘리포니아 산들레이크 지역에서 설립되었습니다. 2019년 5월 바이낸스 런치패드 IEO에서 L1 퍼블릭 체인으로 출시되었으며, 5분 만에 500만 달러를 완판하여 당시 블록체인 전설이 되었습니다. 7년의 탐사를 통해, 우리는 다음을 달성했습니다:",
+      "card_shards_title": "4개",
+      "card_shards_desc": "고속도로 같은 병렬 샤딩 체인",
+      "card_fees_title": "만분의 일",
+      "card_fees_desc": "크로스체인 거래 수수료를 1달러의 만분의 일로 감소",
+      "card_ecosystem_title": "412개",
+      "card_ecosystem_desc": "생태계 프로젝트의 성장을 지원",
+      "value_os_label": "가치 운영 체제",
+      "value_os_title": "Web3 트래픽 수익화 재구축",
+      "value_os_description": "수년간의 탐사 후, Web3의 3가지 핵심 기둥인 <span class=\"text-amber-300 font-medium\">분산 거버넌스</span>, <span class=\"text-amber-300 font-medium\">사용자 주권 복귀</span>, <span class=\"text-amber-300 font-medium\">디지털 자산 확인 메커니즘</span>은 여전히 패러다임 구축 단계에 있습니다. Harmony(ONE)는 획기적인 실천을 통해 이를 극복했으며, 온체인 행동 자산화 엔진을 통해 사용자의 소셜, 창작, 상호작용 데이터를 검증 가능한 디지털 자산으로 변환하여 <span class=\"text-white font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] border-b border-amber-500/50 pb-1\">데이터 주권의 변조 불가능한 권리화</span>를 달성합니다.",
+      "value_os_conclusion": "HarmonyLink는 기술적 반복 산물이 아니라, 자산 확인 패러다임의 진화 비약입니다. 그 본질은 <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 font-bold text-lg sm:text-2xl px-0.5 sm:px-1\">\"행동과 재산권\"</span>의 가치 운영 체제를 재구축하는 것이며, Web3이 개념 레이어에서 가치 레이어로의 <span class=\"text-orange-400 font-bold\">산업 혁명</span>이 이미 시작되었음을 표시합니다.",
+      "about_location": "미국 캘리포니아주 마운틴뷰",
+      "engines_heading_line1": "5대 생태 엔진으로 구축",
+      "engines_heading_line2": "가치 사후 검증 메커니즘",
+      "engines_intro": "블록체인 업계에 혁신 모델이 없는 것은 아니지만, 많은 프로젝트는 <pink>지속적인 자생(조혈) 메커니즘의 부재</pink>로 결국 교착상태에 빠집니다. 수익 모델이 사용자 참여의 본질과 동떨어지거나 자본 서사로 전락하고, 성장이 막히면 시스템 리스크로 번지기 쉽습니다. HarmonyLink는 <strong>5대 생태 엔진</strong>으로 사용자 가치 포착을 뒷받침합니다."
+    },
+    "home2_alt": "홈 2"
   },
   "qr_code": {
     "grid_icon_alt": "초대 QR 코드",
@@ -114,7 +153,9 @@
     "warning": "노드가 아직 아니기 때문에 노드 추천 보상을 받지 못합니다",
     "screenshot_tip_title": "QR 코드 저장",
     "screenshot_tip_message": "지갑 앱에서 QR 코드를 저장하려면 휴대폰의 화면 캡처 기능이나 지갑의 내장 스크린샷 기능을 사용하세요.",
-    "got_it": "확인"
+    "got_it": "확인",
+    "copy_success": "복사되었습니다",
+    "error_load": "복사에 실패했습니다. 다시 시도해 주세요."
   },
   "recommender_confirm": {
     "title": "초대자 확인",
@@ -174,19 +215,19 @@
     "load_more": "더 보기"
   },
   "subscribe_page": {
-    "title": "Early Consensus Subscription",
-    "intro": "Early consensus participants are creators and providers of HarmonyLink’s foundational content, and the first beneficiaries. So that after the HarmonyLink APP launches globally, users see richer content and a more engaging experience sooner, participants in early consensus subscription may join early and publish content before the global launch—on APP launch day, all videos users watch, like, and comment on are from early consensus subscribers. To enrich launch-day content, we encourage participation and offer the following benefits:",
-    "benefit_1": "After HarmonyLink goes live, no re-activation is required; your subscribed account is treated as the highest activation tier by default.",
-    "benefit_2": "Verifier identity with 10 daily “top review” rights and like-revenue from those reviews (valid for 50 days).",
-    "benefit_3": "During the validity period, receive 2% of network-wide trading tax as dividend; this ends after the period.",
-    "benefit_4": "Team level defaults to T2; it remains T2 after account re-activation if the account lapses.",
-    "benefit_5": "During the validity period, if the project posts dynamic ads on the platform, receive 5% of platform ad revenue as dividend.",
-    "note": "Note: Keep your subscription wallet’s private key safe. Import it in the APP after launch to claim benefits. The platform is not responsible for loss due to personal reasons. Thank you for your understanding and support!",
-    "urgency": "Early consensus is limited to 500 seats network-wide—first come, first served until sold out!",
-    "price_line": "1,000 USDT per seat, maximum 1 seat per account.",
-    "cta": "Subscribe now",
-    "footer_1": "* After subscribing, open “Personal Center” in the menu to view your benefits; you may exit only after all benefits are shown.",
-    "footer_2": "We recommend using a newly created wallet when subscribing to avoid unnecessary loss from excessive authorization."
+    "title": "얼리 컨센서스 구독",
+    "intro": "얼리 컨센서스 참여자는 HarmonyLink의 핵심(기반) 콘텐츠를 제작·제공하는 창작자이자 초기 수혜자입니다. HarmonyLink APP이 글로벌 출시된 이후 사용자에게 더 풍부한 콘텐츠와 더 나은 참여 경험을 빠르게 제공하기 위해, 얼리 컨센서스 구독 참여자는 정식 출시 전에 먼저 참여하여 콘텐츠를 게시할 수 있습니다. 앱 출시 당일 사용자가 시청·좋아요·댓글을 남기는 모든 영상은 얼리 컨센서스 구독자의 콘텐츠로 구성됩니다. 출시 당일 콘텐츠를 풍성하게 하기 위해 참여를 권장하며, 아래와 같은 혜택을 제공합니다:",
+    "benefit_1": "HarmonyLink 출시 후 재활성화가 필요 없습니다. 구독 계정은 기본적으로 최고 활성화 티어로 간주됩니다.",
+    "benefit_2": "‘검증자(Verifier)’ 아이덴티티: 하루 10회의 ‘핵심 리뷰(Top Review)’ 권한 및 해당 리뷰의 좋아요 수익(유효기간 50일).",
+    "benefit_3": "유효기간 동안 네트워크 전체 거래세의 2%를 배당으로 지급받습니다(기간 종료 시 종료).",
+    "benefit_4": "팀 레벨은 기본 T2로 설정되며, 계정이 만료되어 재활성화하더라도 T2가 유지됩니다.",
+    "benefit_5": "유효기간 동안 프로젝트가 플랫폼에 동적 광고를 게재하는 경우, 플랫폼 광고 수익의 5%를 배당으로 지급받습니다.",
+    "note": "안내: 구독 지갑의 개인키를 반드시 안전하게 보관하세요. 앱 출시 후 개인키를 APP에 가져오면 혜택을 수령할 수 있습니다. 개인 사유로 인한 손실에 대해 플랫폼은 책임지지 않습니다. 이해와 성원에 감사드립니다.",
+    "urgency": "얼리 컨센서스는 전 네트워크 500석 한정입니다. 선착순이며, 매진 시 종료됩니다!",
+    "price_line": "1석 1,000 USDT, 1계정당 최대 1석까지 가능합니다.",
+    "cta": "지금 구독하기",
+    "footer_1": "* 구독 완료 후 메뉴의 ‘개인센터’에서 혜택을 확인하세요. 모든 혜택이 표시된 뒤에만 나갈 수 있습니다.",
+    "footer_2": "과도한 승인으로 인한 불필요한 손실을 방지하기 위해, 구독 시 새로 생성한 지갑 사용을 권장합니다."
   },
   "equity_activation_page": {
     "title": "계정 활성화",
@@ -207,27 +248,39 @@
     "disclaimer": "* 권익을 확인하세요. 결제 후 변경·환불은 불가합니다. 권익은 게시·좋아요·댓글 등 일일 활동에 적용됩니다."
   },
   "download_page": {
-    "title": "Downloads & Documents",
-    "subtitle": "App and PDF resources will be updated here.",
+    "title": "다운로드 및 문서",
+    "subtitle": "앱과 PDF 자료는 순차적으로 업데이트됩니다.",
+    "page_heading": "HarmonyLink 자료 다운로드",
+    "section_business": "사업 계획서",
+    "section_whitepaper": "백서",
+    "section_other": "기타 자료",
+    "file_business_zh": "HarmonyLink 사업 계획서(중문)",
+    "file_business_en": "HarmonyLink 사업 계획서(영문)",
+    "file_whitepaper_zh": "HarmonyLink 백서(중문)",
+    "file_whitepaper_en": "HarmonyLink 백서(영문)",
+    "file_long_pic_zh": "HarmonyLink 롱 이미지(중문)",
+    "file_long_pic_en": "HarmonyLink 롱 이미지(영문)",
+    "file_tutorial_zh": "HarmonyLink 사용 튜토리얼 영상(중문)",
+    "file_tutorial_en": "HarmonyLink 사용 튜토리얼 영상(영문)",
     "app_title": "HarmonyLink APP",
-    "app_hint": "Mobile download links will be available soon.",
-    "business_title": "Business plan",
-    "business_hint": "PDF download will be available once published.",
-    "whitepaper_title": "Whitepaper",
-    "whitepaper_hint": "PDF download will be available once published."
+    "app_hint": "모바일 다운로드 링크는 곧 제공됩니다.",
+    "business_title": "사업 계획서",
+    "business_hint": "PDF는 공개 후 다운로드 가능합니다.",
+    "whitepaper_title": "백서",
+    "whitepaper_hint": "PDF는 공개 후 다운로드 가능합니다."
   },
   "nav_drawer": {
-    "open_menu": "Open menu",
-    "close_menu": "Close menu",
-    "home": "Home",
-    "home2": "Home 2",
-    "about": "About HarmonyLink",
-    "early_consensus": "Early Consensus Subscription",
-    "personal_center": "Personal Center",
-    "download_app": "Download HarmonyLink APP",
-    "download_business_plan": "HarmonyLink Business Plan (PDF)",
-    "download_whitepaper": "HarmonyLink Whitepaper (PDF)",
-    "account_activation": "Account Activation",
+    "open_menu": "메뉴 열기",
+    "close_menu": "메뉴 닫기",
+    "home": "홈",
+    "home2": "홈2",
+    "about": "HarmonyLink 소개",
+    "early_consensus": "얼리 컨센서스 구독",
+    "personal_center": "마이페이지",
+    "download_app": "HarmonyLink 앱 다운로드",
+    "download_business_plan": "HarmonyLink 사업 계획서(PDF)",
+    "download_whitepaper": "HarmonyLink 백서(PDF)",
+    "account_activation": "계정 활성화",
     "history_records": "기록"
   },
   "user_type": {
@@ -331,7 +384,20 @@
     "type": "유형",
     "time": "시간",
     "no_referrals_found": "찾을 수 없음",
-    "no_superior_found": "먼저 추천인을 연결해주세요"
+    "no_superior_found": "먼저 추천인을 연결해주세요",
+    "title_and_status": "제목 및 상태",
+    "node_icon": "노드 아이콘",
+    "equity_status_or_activation_progress": "혜택 상태 / 활성화 진행",
+    "invite_friends_button": "친구 초대",
+    "purchase_button": "구매",
+    "benefits_list": "혜택 목록",
+    "modal_close": "닫기",
+    "confirm_purchase_title": "구매 확인",
+    "confirm_purchase_spend_prefix": "다음 금액을 사용합니다:",
+    "confirm_purchase_spend_suffix": "로 HarmonyLink 얼리 컨센서스 혜택 패키지를 구매합니다. 구매 후 환불은 불가합니다. 계속하려면 ‘지금 결제’를 눌러 완료하세요.",
+    "confirm_purchase_balance": "*지갑 사용 가능 잔액: {balance} USDT",
+    "confirm_purchase_pay_now": "지금 결제",
+    "confirm_purchase_cancel": "취소"
   },
   "earnings": {
     "earnings": "나의 수익",
@@ -349,7 +415,11 @@
     "claim_type": "토큰 유형",
     "available": "사용 가능 금액",
     "cancel": "취소",
-    "confirm": "확인"
+    "confirm": "확인",
+    "market_expenses": "마케팅 비용",
+    "security_fund": "보안 기금",
+    "claim_error_title": "수령 실패",
+    "claim_success_title": "수령 완료"
   },
   "stake": {
     "staking_mining": "소각 채굴",
@@ -374,7 +444,10 @@
     "real_time_price": "실시간 가격",
     "minimum": "최소 금액",
     "dip": "주조 채굴",
-    "community_level": "커뮤니티 레벨"
+    "community_level": "커뮤니티 레벨",
+    "total_produced": "총 생산량",
+    "v_privileges": "V{level} 특권: 더 높은 커뮤니티 보상과 혜택",
+    "stake_error": "주조에 실패했습니다"
   },
   "user": {
     "profile": "프로필",
@@ -493,6 +566,16 @@
     "community_mining_total": "커뮤니티 주조 채굴 TXT 총량",
     "invite_records": "초대 기록",
     "user_address": "사용자 주소",
+    "user_id": "사용자 ID",
+    "personal_center": "마이페이지",
+    "my_benefits": "내 혜택",
+    "tips": "안내",
+    "invite_link": "초대 링크",
+    "activate_tier": "최고 등급 계정 활성화",
+    "verifier_identity": "감정사 신원",
+    "trading_dividends": "거래세 배당",
+    "team_level_t2": "팀 레벨 T2",
+    "ad_revenue": "광고 수익 배당",
     "identity": "신원",
     "level": "레벨",
     "personal_mining": "개인 주조",
@@ -554,8 +637,16 @@
     },
     "proclaim_page": {
       "title": "공지",
-      "no_announcements": "공지가 없습니다"
-    }
+      "no_announcements": "공지가 없습니다",
+      "announcement_not_found": "공지사항을 찾을 수 없습니다",
+      "back_to_announcements": "공지 목록으로"
+    },
+    "title": "내 정보",
+    "loading": "로딩 중...",
+    "unit": "단위",
+    "mining_total": "채굴 총량",
+    "tips_line1": "얼리 구독에 참여한 사용자는 구독용 지갑의 개인키를 안전하게 보관하고 계정 보안을 유지해 주세요. HarmonyLink 앱 출시 후에는 구독 지갑의 개인키를 앱에 가져오기만 하면 얼리 구독의 모든 혜택과 수익을 받을 수 있습니다.",
+    "tips_line2": "HarmonyLink 앱은 정식 출시 3일 전에 얼리 구독 참여자에게 먼저 공개됩니다. 정식 출시 전에는 콘텐츠 제작 단계로 운영되며, 각 사용자는 하루 최대 11개의 영상을 게시할 수 있습니다. 게시물에는 정치적 입장, 음란물, 도박, 마약 등 금지 콘텐츠가 포함되어서는 안 되며, 다른 플랫폼의 로고도 포함할 수 없습니다. TikTok, Facebook 등 플랫폼의 콘텐츠를 재업로드할 수 있습니다. 콘텐츠 품질이 높을수록 출시 후 좋아요/댓글 등으로 얻는 수익이 더 높아지니, 보유한 특권을 잘 활용해 주세요."
   },
   "wallet": {
     "connect_wallet": "지갑 연결",
@@ -586,5 +677,17 @@
     "CONFIRMED": "완료",
     "FAILED": "실패",
     "REFUSED": "거부"
+  },
+  "token": {
+    "chart_load_failed": "차트를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.",
+    "interval_5m": "5분",
+    "interval_15m": "15분",
+    "interval_1h": "1시간",
+    "interval_1d": "1일",
+    "interval_1w": "1주",
+    "high_24h": "24시간 최고",
+    "low_24h": "24시간 최저",
+    "volume_24h_txt": "24시간 거래량 (TXT)",
+    "market_cap": "시가총액"
   }
 }

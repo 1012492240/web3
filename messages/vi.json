@@ -77,11 +77,26 @@
       "engine_title": "Ecosystem Engine",
       "engine_body": "Five engines: creator economy, on-chain governance, interoperability, open finance, and developer tooling.",
       "engine_cards": [
-        { "title": "Creator economy", "desc": "Reward content & community" },
-        { "title": "On-chain governance", "desc": "Transparent rules & votes" },
-        { "title": "Interoperability", "desc": "Assets across chains" },
-        { "title": "Open finance", "desc": "Composable primitives" },
-        { "title": "Developer stack", "desc": "SDKs, wallet & tooling" }
+        {
+          "title": "Creator economy",
+          "desc": "Reward content & community"
+        },
+        {
+          "title": "On-chain governance",
+          "desc": "Transparent rules & votes"
+        },
+        {
+          "title": "Interoperability",
+          "desc": "Assets across chains"
+        },
+        {
+          "title": "Open finance",
+          "desc": "Composable primitives"
+        },
+        {
+          "title": "Developer stack",
+          "desc": "SDKs, wallet & tooling"
+        }
       ],
       "orbit_title": "Ecosystem map",
       "orbit_subtitle": "Partners and protocols orbiting HarmonyLink",
@@ -101,8 +116,27 @@
       "footer_dev_groups": "Developer groups",
       "footer_grants": "Grant program",
       "marquee_empty": "No announcements",
-      "detail_link": "View project details"
-    }
+      "detail_link": "View project details",
+      "hero_subtitle_harmony": "Tái cấu trúc nền kinh tế chú ý của Web3",
+      "hero_description_harmony": "Biến hành vi người dùng thành tài sản có thể lập trình",
+      "about_subtitle": "Chuỗi công khai sharding thông lượng cao, độ trễ thấp, tương thích EVM",
+      "about_founding": "Harmony (ONE) được thành lập năm 2018 tại Mountain View, California, Hoa Kỳ. Tháng 5/2019 dự án ra mắt trên Binance Launchpad IEO với tư cách chuỗi công khai L1, bán hết 5 triệu USD trong 5 phút và trở thành huyền thoại trong ngành. Sau 7 năm khám phá, chúng tôi đã đạt được:",
+      "card_shards_title": "4",
+      "card_shards_desc": "Các chuỗi shard song song như đường cao tốc",
+      "card_fees_title": "Một phần mười nghìn",
+      "card_fees_desc": "Phí giao dịch cross-chain giảm xuống chỉ còn một phần của đô la",
+      "card_ecosystem_title": "412",
+      "card_ecosystem_desc": "Hỗ trợ các dự án hệ sinh thái phát triển",
+      "value_os_label": "Hệ điều hành giá trị",
+      "value_os_title": "Tái cấu trúc việc kiếm tiền từ lưu lượng Web3",
+      "value_os_description": "Sau nhiều năm khám phá, ba trụ cột cốt lõi của Web3—<span class=\"text-amber-300 font-medium\">quản trị phi tập trung</span>, <span class=\"text-amber-300 font-medium\">chủ quyền người dùng</span> và <span class=\"text-amber-300 font-medium\">cơ chế xác nhận tài sản số</span>—vẫn đang trong giai đoạn xây dựng mô hình. Harmony (ONE) phá vỡ rào cản bằng thực tiễn tiên phong; thông qua động cơ tài sản hóa hành vi on-chain, dữ liệu tương tác/xã hội/sáng tạo của người dùng được chuyển đổi thành tài sản số có thể kiểm chứng, đạt được <span class=\"text-white font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] border-b border-amber-500/50 pb-1\">trao quyền bất biến cho chủ quyền dữ liệu</span>.",
+      "value_os_conclusion": "HarmonyLink không chỉ là một lần lặp kỹ thuật, mà là bước nhảy tiến hóa của mô hình xác nhận tài sản. Bản chất của nó là tái định hình <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 font-bold text-lg sm:text-2xl px-0.5 sm:px-1\">“hành vi và quyền sở hữu”</span> của hệ điều hành giá trị, đánh dấu <span class=\"text-orange-400 font-bold\">cuộc cách mạng công nghiệp</span> của Web3 từ tầng khái niệm sang tầng giá trị đã bắt đầu.",
+      "about_location": "Mountain View, California, Hoa Kỳ",
+      "engines_heading_line1": "Xây dựng với 5 động cơ hệ sinh thái",
+      "engines_heading_line2": "Cơ chế giá trị hậu kiểm",
+      "engines_intro": "Ngành blockchain không thiếu mô hình đổi mới, nhưng nhiều dự án rơi vào bế tắc do <pink>thiếu cơ chế tự tạo dòng tiền bền vững</pink>: mô hình lợi nhuận hoặc tách rời thực chất tham gia của người dùng, hoặc trở thành công cụ kể chuyện vốn; một khi tăng trưởng chững lại sẽ biến thành rủi ro hệ thống. HarmonyLink dựa vào <strong>5 động cơ hệ sinh thái</strong> để hỗ trợ việc nắm bắt giá trị người dùng."
+    },
+    "home2_alt": "Trang chủ 2"
   },
   "qr_code": {
     "grid_icon_alt": "Mã QR mời",
@@ -114,7 +148,9 @@
     "warning": "Bạn chưa phải là nút mạng, và không nhận phần thưởng giới thiệu nút",
     "screenshot_tip_title": "Lưu mã QR",
     "screenshot_tip_message": "Để lưu mã QR trong ứng dụng ví, vui lòng sử dụng chức năng chụp màn hình của điện thoại hoặc tính năng chụp màn hình tích hợp của ví.",
-    "got_it": "Đã hiểu"
+    "got_it": "Đã hiểu",
+    "copy_success": "Đã sao chép",
+    "error_load": "Sao chép thất bại. Vui lòng thử lại."
   },
   "recommender_confirm": {
     "title": "Xác nhận người mời của bạn",
@@ -209,12 +245,24 @@
   "download_page": {
     "title": "Downloads & Documents",
     "subtitle": "App and PDF resources will be updated here.",
-    "app_title": "HarmonyLink APP",
+    "app_title": "Ứng dụng HarmonyLink",
     "app_hint": "Mobile download links will be available soon.",
     "business_title": "Business plan",
     "business_hint": "PDF download will be available once published.",
     "whitepaper_title": "Whitepaper",
-    "whitepaper_hint": "PDF download will be available once published."
+    "whitepaper_hint": "PDF download will be available once published.",
+    "page_heading": "Tải tài liệu HarmonyLink",
+    "section_business": "Kế hoạch kinh doanh",
+    "section_whitepaper": "Sách trắng",
+    "section_other": "Tài liệu khác",
+    "file_business_zh": "Kế hoạch kinh doanh HarmonyLink (bản tiếng Trung)",
+    "file_business_en": "Kế hoạch kinh doanh HarmonyLink (bản tiếng Anh)",
+    "file_whitepaper_zh": "Sách trắng HarmonyLink (bản tiếng Trung)",
+    "file_whitepaper_en": "Sách trắng HarmonyLink (bản tiếng Anh)",
+    "file_long_pic_zh": "Infographic HarmonyLink (tiếng Trung)",
+    "file_long_pic_en": "Infographic HarmonyLink (tiếng Anh)",
+    "file_tutorial_zh": "Video hướng dẫn HarmonyLink (tiếng Trung)",
+    "file_tutorial_en": "Video hướng dẫn HarmonyLink (tiếng Anh)"
   },
   "nav_drawer": {
     "open_menu": "Open menu",
@@ -222,7 +270,7 @@
     "home": "Home",
     "home2": "Home 2",
     "about": "About HarmonyLink",
-    "early_consensus": "Early Consensus Subscription",
+    "early_consensus": "Đăng ký đồng thuận sớm",
     "personal_center": "Personal Center",
     "download_app": "Download HarmonyLink APP",
     "download_business_plan": "HarmonyLink Business Plan (PDF)",
@@ -331,7 +379,20 @@
     "type": "Loại",
     "time": "Thời gian",
     "no_referrals_found": "Không tìm thấy",
-    "no_superior_found": "Vui lòng liên kết người giới thiệu trước"
+    "no_superior_found": "Vui lòng liên kết người giới thiệu trước",
+    "title_and_status": "Tiêu đề & Trạng thái",
+    "node_icon": "Biểu tượng nút",
+    "equity_status_or_activation_progress": "Trạng thái quyền lợi / Tiến độ kích hoạt",
+    "invite_friends_button": "Mời bạn bè",
+    "purchase_button": "Mua",
+    "benefits_list": "Danh sách quyền lợi",
+    "modal_close": "Đóng",
+    "confirm_purchase_title": "Xác nhận mua",
+    "confirm_purchase_spend_prefix": "Bạn sẽ chi",
+    "confirm_purchase_spend_suffix": "để mua gói quyền lợi Người đồng thuận sớm của HarmonyLink. Giao dịch không thể hoàn tiền. Nếu muốn tiếp tục, hãy nhấn “Thanh toán ngay” để hoàn tất!",
+    "confirm_purchase_balance": "*Số dư khả dụng trong ví: {balance} USDT",
+    "confirm_purchase_pay_now": "Thanh toán ngay",
+    "confirm_purchase_cancel": "Hủy"
   },
   "earnings": {
     "earnings": "Thu nhập của tôi",
@@ -349,7 +410,11 @@
     "claim_type": "Loại token",
     "available": "Số tiền khả dụng",
     "cancel": "Hủy",
-    "confirm": "Xác nhận"
+    "confirm": "Xác nhận",
+    "market_expenses": "Chi phí thị trường",
+    "security_fund": "Quỹ bảo mật",
+    "claim_error_title": "Nhận thất bại",
+    "claim_success_title": "Nhận thành công"
   },
   "stake": {
     "staking_mining": "Đào đốt",
@@ -374,7 +439,10 @@
     "real_time_price": "Giá thời gian thực",
     "minimum": "Số tiền tối thiểu",
     "dip": "Đào đúc",
-    "community_level": "Cấp độ cộng đồng"
+    "community_level": "Cấp độ cộng đồng",
+    "total_produced": "Tổng đã tạo ra",
+    "v_privileges": "Đặc quyền V{level}: phần thưởng cộng đồng và đặc quyền cao hơn",
+    "stake_error": "Đúc thất bại"
   },
   "user": {
     "profile": "Hồ sơ",
@@ -554,8 +622,27 @@
     },
     "proclaim_page": {
       "title": "Thông báo",
-      "no_announcements": "Không có thông báo"
-    }
+      "no_announcements": "Không có thông báo",
+      "announcement_not_found": "Không tìm thấy thông báo",
+      "back_to_announcements": "Quay lại danh sách thông báo"
+    },
+    "title": "Của tôi",
+    "loading": "Đang tải...",
+    "unit": "Đơn vị",
+    "mining_total": "Tổng sản lượng khai thác",
+    "unactivated": "Chưa kích hoạt",
+    "user_id": "ID người dùng",
+    "personal_center": "Trung tâm cá nhân",
+    "my_benefits": "Quyền lợi của tôi",
+    "tips": "Lưu ý",
+    "invite_link": "Liên kết mời",
+    "activate_tier": "Kích hoạt gói cấp cao",
+    "verifier_identity": "Danh tính kiểm định",
+    "trading_dividends": "Cổ tức thuế giao dịch",
+    "team_level_t2": "Cấp đội nhóm T2",
+    "ad_revenue": "Cổ tức doanh thu quảng cáo",
+    "tips_line1": "Người tham gia đăng ký sớm vui lòng bảo quản cẩn thận khóa riêng của ví đăng ký và đảm bảo an toàn tài khoản. Sau khi ứng dụng HarmonyLink ra mắt, bạn chỉ cần nhập khóa riêng của ví đăng ký vào ứng dụng để nhận toàn bộ quyền lợi và thu nhập của đăng ký sớm.",
+    "tips_line2": "Ứng dụng HarmonyLink sẽ mở cho người tham gia đăng ký sớm trước 3 ngày so với ngày ra mắt chính thức. Trước khi ra mắt, nền tảng ở giai đoạn sáng tạo nội dung: mỗi người dùng có thể đăng tối đa 11 video mỗi ngày. Nội dung không được chứa quan điểm chính trị, nội dung người lớn, cờ bạc, ma túy hoặc các nội dung bị cấm khác; cũng không được chứa logo của nền tảng khác. Bạn có thể đăng lại nội dung từ các nền tảng như TikTok, Facebook… Chất lượng nội dung càng tốt, sau khi ra mắt bạn càng nhận được nhiều thu nhập từ lượt thích, bình luận… Hãy tận dụng tốt đặc quyền của bạn!"
   },
   "wallet": {
     "connect_wallet": "Kết nối ví",
@@ -586,5 +673,22 @@
     "CONFIRMED": "Đã xác nhận",
     "FAILED": "Thất bại",
     "REFUSED": "Từ chối"
+  },
+  "common": {
+    "language_menu": "Ngôn ngữ",
+    "brand_name": "HarmonyLink",
+    "please_stay": "Vui lòng không rời khỏi trang này"
+  },
+  "token": {
+    "chart_load_failed": "Không thể tải biểu đồ. Vui lòng thử lại sau.",
+    "interval_5m": "5p",
+    "interval_15m": "15p",
+    "interval_1h": "1g",
+    "interval_1d": "1n",
+    "interval_1w": "1t",
+    "high_24h": "Cao nhất 24h",
+    "low_24h": "Thấp nhất 24h",
+    "volume_24h_txt": "Khối lượng 24h (TXT)",
+    "market_cap": "Vốn hóa"
   }
 }

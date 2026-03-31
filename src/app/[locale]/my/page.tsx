@@ -469,27 +469,27 @@ function MyContent() {
   const benefitsData = [
     {
       key: "activate_tier",
-      label: t("activate_tier") || "激活越高套餐账户",
+      label: t("activate_tier"),
       icon: "☆",
     },
     {
       key: "verifier_identity",
-      label: t("verifier_identity") || "鉴定者身份",
+      label: t("verifier_identity"),
       icon: "◉",
     },
     {
       key: "trading_dividends",
-      label: t("trading_dividends") || "交易税点分红",
+      label: t("trading_dividends"),
       icon: "$",
     },
     {
       key: "team_level_t2",
-      label: t("team_level_t2") || "团队级别T2",
+      label: t("team_level_t2"),
       icon: "T2",
     },
     {
       key: "ad_revenue",
-      label: t("ad_revenue") || "广告收益分红",
+      label: t("ad_revenue"),
       icon: "◈",
     },
   ];
@@ -530,7 +530,7 @@ function MyContent() {
           {/* Page Title */}
           <div className="text-center mb-6">
             <h1 className="text-xl font-bold" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
-              {t("personal_center") || "个人中心"}
+              {t("personal_center")}
             </h1>
           </div>
 
@@ -568,7 +568,7 @@ function MyContent() {
                 {/* Identity inline */}
                 <p className="text-sm text-white">
                   <span style={{ color: "rgba(255, 255, 255, 0.6)" }}>
-                    {t("identity") || "身份"}：
+                    {t("identity")}：
                   </span>
                   {address ? (
                     <>
@@ -588,7 +588,7 @@ function MyContent() {
                     className="text-xs shrink-0"
                     style={{ color: "rgba(255, 255, 255, 0.6)" }}
                   >
-                    {t("my_recommender") || "邀请链接"}：
+                    {t("my_recommender")}：
                   </span>
                   <span className="text-xs text-white truncate min-w-0 flex-1">
                     {address ? `www.harmony.Link${formatAddress(address)}` : "--"}
@@ -633,7 +633,7 @@ function MyContent() {
               <div className="flex items-center mb-5">
 
                 <h2 className="text-sm font-bold text-white">
-                  {t("my_benefits") || "我的权益"}
+                  {t("my_benefits")}
                 </h2>
               </div>
 
@@ -656,14 +656,14 @@ function MyContent() {
           {/* Tips Section */}
           <div className="mb-8 p-6 rounded-xl" style={{ background: "rgba(0, 0, 0, 0.5)" }}>
             <h3 className="text-center text-sm font-semibold mb-3 text-white">
-              {t("tips") || "温馨提示"}
+              {t("tips")}
             </h3>
             <p className="text-xs leading-relaxed" style={{ color: "white" }}>
-              参与早期认购的用户请注意保管好认购钱包的私钥，并确保账户安全。HarmonyLink APP上线后，只需导入认购户的私钥到APP中即可获得早期认购的全部权益及收益！
+              {t("tips_line1")}
             </p>
             <br />
             <p className="text-xs leading-relaxed" style={{ color: "white" }}>
-              HarmonyLink APP 正式上线前3天将面向参与早期认购用户开放，正式上线前隐于内容创造期，每位用户每天日发布11条视频内容，内容不可包含政治立场、黄、赌、毒等内容，也不可包含有其它平台LOGO的内容、内容可搬运抖音、Facebook等平台内容，内容质量越好，上线后获得的点赞、评论等收益越高，请用好您手里的特权！
+              {t("tips_line2")}
             </p>
           </div>
 
