@@ -199,6 +199,23 @@
     "section4_p3": "Tool value coefficient exceeds pattern value across dimensions (ratio 3.1:1)",
     "section4_p4": "Through <b>cognition-gap folding—AI tutor system</b>, learning cost drops 87%, building a verifiable Web3 value internet foundation for all and reshaping blockchain social cognition infrastructure."
   },
+  "airdrop_page": {
+    "hero_title": "HarmonyLink：X（旧Twitter）購読エアドロップキャンディ",
+    "intro_body": "<b>より多くのブロックチェーン愛好者に HarmonyLink を理解していただくために</b>。HarmonyLink が正式ローンチに向けた重要な節目を迎えるにあたり、X（旧Twitter）上で世界向けのキャンペーンを実施します。対象投稿への有効なコメントで、エアドロップキャンディ抽選に参加できます。",
+    "participation_title": "参加方法",
+    "participation_body": "X のユーザーで、HarmonyLink を購読し、HarmonyLink APP 正式公開前の投稿に有効なコメントを行った方は対象です。国や地域を問わず、公平に抽選を行います。賞金総額は上場価格換算で <b>200,000 USDT</b> 相当の HAK です。",
+    "banner_alt": "HarmonyLink Airdrop Candy",
+    "cta_subscribe": "今すぐ購読",
+    "subscribe_url": "https://x.com/HarmonyLinkX/status/2039433206991319381?s=20",
+    "prize_title": "今回の購読抽選について",
+    "prize_intro": "本キャンペーンは合計 <b>770</b> 名枠で、1等・2等・3等・奨励賞に分かれます：",
+    "prize_1": "1等：<b>10</b> 枠、1枠あたり <b>2,000 USDT</b> 相当の HAK；",
+    "prize_2": "2等：<b>20</b> 枠、1枠あたり <b>1,000 USDT</b> 相当の HAK；",
+    "prize_3": "3等：<b>40</b> 枠、1枠あたり <b>500 USDT</b> 相当の HAK；",
+    "prize_4": "奨励賞：<b>700</b> 枠、1枠あたり <b>200 USDT</b> 相当の HAK。",
+    "distribution_title": "エアドロップキャンディの配布時間と方法",
+    "distribution_p1": "エアドロップキャンディ<b>HAK</b>は、<b>HAK</b>が<b>PancakeSwap</b>に上場した際の発行価格に基づいてエアドロップされ、ロックアップなしで一括配布されます。配布時間は<b>HAK</b>が<b>PancakeSwap</b>に上場してからの3日以内です。この期間中、<b>HarmonyLink</b>の公式Xアカウントが当選者リストとエアドロップ受け取りアドレスを収集するリンクを公開します。<b>HarmonyLink</b>の最新情報にご注目ください。イベント終了後48時間以内に受け取りアドレスを記入しなかった場合、今回のエアドロップキャンディを受け取る権利を失います。"
+  },
   "history_page": {
     "title": "履歴",
     "col_amount": "金額(USDT)",
@@ -275,6 +292,7 @@
     "home": "ホーム",
     "home2": "ホーム2",
     "about": "HarmonyLinkについて",
+    "airdrop_detail": "購読エアドロップキャンディ",
     "early_consensus": "早期コンセンサス購読",
     "personal_center": "マイページ",
     "download_app": "HarmonyLinkアプリをダウンロード",

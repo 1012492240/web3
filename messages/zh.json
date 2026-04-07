@@ -196,6 +196,23 @@
     "section4_p3": "工具价值系数全维度超越模式价值（系数比3.1: 1）",
     "section4_p4": "通过 <b>认知鸿沟折叠技术——AI助教系统</b> 降低87%学习成本，真正构建全民可验证参与的Web3价值互联网基座，重塑区块链社会认知基础设施。"
   },
+  "airdrop_page": {
+    "hero_title": "HarmonyLink：X（推特）订阅空投糖果",
+    "intro_body": "<b>让更多区块链爱好者更好了解 HarmonyLink</b>。HarmonyLink 通过工程师们不懈的努力面临正式上线的关键节点，为了让全球更多区块链爱好者了解并熟知 HarmonyLink 价值实用工具的每个环节，真正便捷使用 HarmonyLink，为此，我们面向全球区块链爱好者开放 X（原推特）平台的评论抽奖得空投糖果的举措：",
+    "participation_title": "参与方式",
+    "participation_body": "凡是使用 X 平台的用户，订阅并对 HarmonyLink APP 正式上线前的推文进行有效评论的，无论你是哪个国家、地区的 X 用户，我们都将公平地进行抽奖活动，活动总奖金为 <b>200,000 USDT</b> 价值的 HAK（上线价格计算）。",
+    "banner_alt": "HarmonyLink Airdrop Candy",
+    "cta_subscribe": "立即订阅",
+    "subscribe_url": "https://x.com/HarmonyLinkX/status/2039433206991319381?s=20",
+    "prize_title": "关于此次订阅抽奖的活动说明",
+    "prize_intro": "此次活动共设 <b>770</b> 名名额，分为一等奖、二等奖、三等奖和激励奖：",
+    "prize_1": "一等奖：共计 <b>10</b> 席，每席 <b>2,000USDT</b> 价值的 HAK；",
+    "prize_2": "二等奖：共计 <b>20</b> 席，每席 <b>1,000USDT</b> 价值的 HAK；",
+    "prize_3": "三等奖：共计 <b>40</b> 席，每席 <b>500USDT</b> 价值的 HAK；",
+    "prize_4": "激励奖：共计 <b>700</b> 席，每席 <b>200USDT</b> 价值的 HAK。",
+    "distribution_title": "空投糖果的发放时间及方式",
+    "distribution_p1": "发放的空投糖果<b>HAK</b>以 <b>HAK</b>登陆<b>PancakeSwap</b>的发行价对标空投，不锁仓一次性发放;发放时间为<b>HAK</b>登陆<b>PancakeSwap</b>后的3天内全额发放期间，<b>HarmonyLink</b> X官方账号将发布获奖名单及收录获得空投收款地址的链接，请所有用户关注<b>HarmonyLink</b>的最新动态若在活动截至后的48小时内未及时填写收录地址的，将失去此次获得空投糖果的机会。"
+  },
   "history_page": {
     "title": "历史记录",
     "col_amount": "数量(USDT)",
@@ -272,6 +289,7 @@
     "home": "首页",
     "home2": "首页2",
     "about": "关于HarmonyLink",
+    "airdrop_detail": "订阅空投糖果",
     "early_consensus": "早期共识者认购",
     "personal_center": "个人中心",
     "download_app": "下载HarmonyLink APP",

@@ -199,6 +199,23 @@
     "section4_p3": "Tool value coefficient exceeds pattern value across dimensions (ratio 3.1:1)",
     "section4_p4": "Through <b>cognition-gap folding—AI tutor system</b>, learning cost drops 87%, building a verifiable Web3 value internet foundation for all and reshaping blockchain social cognition infrastructure."
   },
+  "airdrop_page": {
+    "hero_title": "HarmonyLink: X(트위터) 구독 에어드롭 캔디",
+    "intro_body": "<b>더 많은 블록체인 유저들이 HarmonyLink 를 잘 이해할 수 있도록</b>, HarmonyLink 는 공식 출시를 앞둔 중요한 시점에 X(구 트위터)에서 전 세계 대상 댓글 추첨 ‘에어드롭 캔디’ 이벤트를 진행합니다.",
+    "participation_title": "참여 방법",
+    "participation_body": "X 플랫폼 사용자라면 누구나 HarmonyLink 를 구독하고, HarmonyLink APP 공식 출시 전 게시물에 유효한 댓글을 남기면 참여할 수 있습니다. 국가/지역과 무관하게 공정하게 추첨하며, 총 상금은 상장가 기준 <b>200,000 USDT</b> 상당의 HAK 입니다.",
+    "banner_alt": "HarmonyLink Airdrop Candy",
+    "cta_subscribe": "지금 구독하기",
+    "subscribe_url": "https://x.com/HarmonyLinkX/status/2039433206991319381?s=20",
+    "prize_title": "이번 구독 추첨 이벤트 안내",
+    "prize_intro": "이번 이벤트는 총 <b>770</b>명 규모이며, 1등·2등·3등·장려상으로 구성됩니다:",
+    "prize_1": "1등: 총 <b>10</b>석, 1석당 <b>2,000 USDT</b> 상당 HAK;",
+    "prize_2": "2등: 총 <b>20</b>석, 1석당 <b>1,000 USDT</b> 상당 HAK;",
+    "prize_3": "3등: 총 <b>40</b>석, 1석당 <b>500 USDT</b> 상당 HAK;",
+    "prize_4": "장려상: 총 <b>700</b>석, 1석당 <b>200 USDT</b> 상당 HAK.",
+    "distribution_title": "에어드롭 캔디 지급 시간 및 방식",
+    "distribution_p1": "에어드롭 캔디 <b>HAK</b>는 <b>HAK</b>가 <b>PancakeSwap</b>에 상장될 때의 발행가를 기준으로 에어드롭되며, 락업 없이 일괄 지급됩니다. 지급 시간은 <b>HAK</b>가 <b>PancakeSwap</b>에 상장된 후 3일 이내입니다. 이 기간 동안 <b>HarmonyLink</b> 공식 X 계정에서 당첨자 명단과 에어드롭 수령 주소를 수집하는 링크를 발표할 예정이니, 모든 사용자분들은 <b>HarmonyLink</b>의 최신 소식을 주시해 주시기 바랍니다. 이벤트 종료 후 48시간 이내에 수령 주소를 작성하지 않으면 이번 에어드롭 캔디를 받을 기회를 잃게 됩니다."
+  },
   "history_page": {
     "title": "기록",
     "col_amount": "수량(USDT)",
@@ -275,6 +292,7 @@
     "home": "홈",
     "home2": "홈2",
     "about": "HarmonyLink 소개",
+    "airdrop_detail": "구독 에어드롭 캔디",
     "early_consensus": "얼리 컨센서스 구독",
     "personal_center": "마이페이지",
     "download_app": "HarmonyLink 앱 다운로드",

@@ -14,6 +14,7 @@ type NavItem = {
 const menuItems: NavItem[] = [
   { key: "home", href: "/" },
   // { key: "home2", href: "/home2" },
+  { key: "airdrop_detail", href: "/airdrop" },
   { key: "history_records", href: "/history" },
   { key: "about", href: "/about" },
   { key: "early_consensus", href: "/node" },
@@ -97,6 +98,7 @@ const iconByKey: Record<string, string> = {
   home: "home",
   home2: "home",
   about: "about",
+  airdrop_detail: "about",
   early_consensus: "early",
   personal_center: "user",
   history_records: "history",

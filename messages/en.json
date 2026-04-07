@@ -199,6 +199,23 @@
     "section4_p3": "Tool value coefficient exceeds pattern value across dimensions (ratio 3.1:1)",
     "section4_p4": "Through <b>cognition-gap folding—AI tutor system</b>, learning cost drops 87%, building a verifiable Web3 value internet foundation for all and reshaping blockchain social cognition infrastructure."
   },
+  "airdrop_page": {
+    "hero_title": "HarmonyLink: X (Twitter) Subscription Airdrop Candy",
+    "intro_body": "<b>To help more blockchain enthusiasts better understand HarmonyLink</b>. As HarmonyLink reaches a key milestone before official launch, we’re opening a global giveaway on X (formerly Twitter): leave a valid comment for a chance to win airdrop candy.",
+    "participation_title": "How to Participate",
+    "participation_body": "Any X user who subscribes and leaves a valid comment on HarmonyLink posts before the app’s official launch is eligible. Regardless of your country or region, we will run a fair draw. Total prizes are worth <b>200,000 USDT</b> in HAK (valued at the listing price).",
+    "banner_alt": "HarmonyLink Airdrop Candy",
+    "cta_subscribe": "Subscribe Now",
+    "subscribe_url": "https://x.com/HarmonyLinkX/status/2039433206991319381?s=20",
+    "prize_title": "About This Subscription Lottery",
+    "prize_intro": "This campaign offers <b>770</b> slots, including First Prize, Second Prize, Third Prize, and Incentive Prize:",
+    "prize_1": "First Prize: <b>10</b> slots, <b>2,000 USDT</b> worth of HAK per slot;",
+    "prize_2": "Second Prize: <b>20</b> slots, <b>1,000 USDT</b> worth of HAK per slot;",
+    "prize_3": "Third Prize: <b>40</b> slots, <b>500 USDT</b> worth of HAK per slot;",
+    "prize_4": "Incentive Prize: <b>700</b> slots, <b>200 USDT</b> worth of HAK per slot.",
+    "distribution_title": "Distribution Time & Method of Airdrop Candy",
+    "distribution_p1": "The airdrop candy <b>HAK</b> will be airdropped based on the listing price of <b>HAK</b> on <b>PancakeSwap</b>, distributed in full at once without lock-up; the distribution time will be within 3 days after <b>HAK</b> is listed on <b>PancakeSwap</b>. During this period, the official <b>HarmonyLink</b> X account will publish the list of winners and the link to collect the airdrop receiving addresses. Please follow the latest updates of <b>HarmonyLink</b>. If the receiving address is not filled in within 48 hours after the end of the event, the opportunity to receive the airdrop candy will be lost."
+  },
   "history_page": {
     "title": "History",
     "col_amount": "Amount (USDT)",
@@ -275,6 +292,7 @@
     "home": "Home",
     "home2": "Home 2",
     "about": "About HarmonyLink",
+    "airdrop_detail": "Subscription Airdrop Candy",
     "early_consensus": "Early Consensus Subscription",
     "personal_center": "Personal Center",
     "download_app": "Download HarmonyLink APP",
