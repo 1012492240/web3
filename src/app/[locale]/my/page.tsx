@@ -494,7 +494,7 @@ function MyContent() {
     },
   ];
 
-  function BenefitCircleIcon({ iconKey, label }: { iconKey: string; label: string }) {
+  function BenefitCircleIcon({ iconKey, label, isActivated }: { iconKey: string; label: string; isActivated: boolean }) {
     let iconSrc = "";
     if (iconKey === "activate_tier") iconSrc = "/imgs/my/1.png";
     else if (iconKey === "verifier_identity") iconSrc = "/imgs/my/2.png";
@@ -514,10 +514,17 @@ function MyContent() {
           }}
         >
           {iconSrc && (
-            <Image src={iconSrc} alt={label} width={26} height={26} className=" object-contain" />
+            <Image 
+              src={iconSrc} 
+              alt={label} 
+              width={26} 
+              height={26} 
+              className={`object-contain transition-opacity ${isActivated ? 'opacity-100' : 'opacity-50'}`}
+              style={{ filter: isActivated ? 'none' : 'brightness(0.6)' }}
+            />
           )}
         </div>
-        <p className="text-xs text-white text-center leading-tight">{label}</p>
+        <p className={`text-xs text-center leading-tight ${isActivated ? 'text-white' : 'text-gray-400'}`}>{label}</p>
       </div>
     );
   }
@@ -640,14 +647,24 @@ function MyContent() {
               {/* Row 1: 3 items */}
               <div className="flex justify-around mb-5">
                 {benefitsData.slice(0, 3).map((benefit) => (
-                  <BenefitCircleIcon key={benefit.key} iconKey={benefit.key} label={benefit.label} />
+                  <BenefitCircleIcon 
+                    key={benefit.key} 
+                    iconKey={benefit.key} 
+                    label={benefit.label} 
+                    isActivated={userInfo?.type === UserType.COMMUNITY || false}
+                  />
                 ))}
               </div>
 
               {/* Row 2: 2 items centered */}
               <div className="flex justify-around mx-auto" style={{ width: "66%" }}>
                 {benefitsData.slice(3).map((benefit) => (
-                  <BenefitCircleIcon key={benefit.key} iconKey={benefit.key} label={benefit.label} />
+                  <BenefitCircleIcon 
+                    key={benefit.key} 
+                    iconKey={benefit.key} 
+                    label={benefit.label} 
+                    isActivated={userInfo?.type === UserType.COMMUNITY || false}
+                  />
                 ))}
               </div>
             </div>
